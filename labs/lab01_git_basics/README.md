@@ -48,11 +48,11 @@ to see the various git configuration settings.
 ### csci3081-shared-upstream: The Read-Only 3081 Course Repository
 
 Computer Science courses are setup for github by first establishing a GitHub
-organization (e.g. _umn-csci-3081-f19_), as well as a read-only course repository (e.g. _csci3081-shared-upstream_). Course materials will be distributed via the read-only repository, which will be merged into the master branch of your repository.
+organization (e.g. _umn-csci-3081-s20_), as well as a read-only course repository (e.g. _csci3081-shared-upstream_). Course materials will be distributed via the read-only repository, which will be merged into the master branch of your repository.
 
 Open your browser and enter the following URL:
 
-https://github.umn.edu/umn-csci-3081-f19/csci3081-shared-upstream
+https://github.umn.edu/umn-csci-3081-s20/csci3081-shared-upstream
 
 By default, you will be shown the default branch. In this case, that is the support-code branch. This branch will contain all of the material files which are necessary to complete the labs, exercises, and eventually, the project.
 
@@ -64,7 +64,7 @@ Take some time and poke around in this repository, especially if you have never 
 
 This can be done in two ways. If you'd like to create the repository on your own in command line, you are free to do so. The TAs may be able to help. These instructions will show the steps for the other method: creating the repository through the Github interface.
 
-1. Navigate to the umn-csci-3081-F19 (https://github.umn.edu/orgs/umn-csci-3081-f19) organization page. If you are still in the csci3081-shared-upstream repository, you can click on the organization name at the top of the page, just under the black header bar. Otherwise, you'll find it in your profile (click on the icon on the top right and select _Your Profile_).
+1. Navigate to the umn-csci-3081-s20 (https://github.umn.edu/orgs/umn-csci-3081-s20) organization page. If you are still in the csci3081-shared-upstream repository, you can click on the organization name at the top of the page, just under the black header bar. Otherwise, you'll find it in your profile (click on the icon on the top right and select _Your Profile_).
 
 2. Click on the green button on the right that says 'New'.
 
@@ -88,8 +88,8 @@ Go back to your terminal. At the top level of your cselabs account or within a s
 directory. Replace **_&lt;clone-ref&gt;_** below with the repository reference we copied earlier (i.e. paste, typically Shift+Insert in a terminal).
 
     $ (optional) cd <location of your choosing>
-    $ mkdir 3081_f19
-    $ cd 3081_f19
+    $ mkdir 3081_s20
+    $ cd 3081_s20
     $ git clone <clone-ref>
     $ ls
 
@@ -134,11 +134,11 @@ to confirm that you are in the directory repo-&lt;student-umnid&gt;.
 IF you completed the ssh key section above:
 
 ```
-$ git remote add upstream git@github.umn.edu:umn-csci-3081-F19/csci3081-shared-upstream.git
+$ git remote add upstream git@github.umn.edu:umn-csci-3081-s20/csci3081-shared-upstream.git
 ```
 OTHERWISE, if you did not complete the ssh key section above and will use your X.500 username and password to log in to the UMN github server:
 ```
-$ git remote add upstream https://github.umn.edu/umn-csci-3081-F19/csci3081-shared-upstream.git
+$ git remote add upstream https://github.umn.edu/umn-csci-3081-s20/csci3081-shared-upstream.git
 ```
 
 > Note: If you get an error saying that the remote already exists, you can remove it and add again with the command `% git remote rm upstream`.
