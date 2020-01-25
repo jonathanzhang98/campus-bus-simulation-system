@@ -12,7 +12,7 @@
 6. How to initiate and read automated testing of course assignments.
 
 _For additional information about Linux, see
-https://tutorials.ubuntu.com/tutorial/command-line-for-beginners#2 or
+https://tutorials.ubuntu.com/tutorial/command-line-for-beginners#2 and/or
 https://www.tutorialspoint.com/unix/index.htm
 
 ### Configuring GitHub
