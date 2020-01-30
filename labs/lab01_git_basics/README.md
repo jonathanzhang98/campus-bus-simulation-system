@@ -12,7 +12,8 @@
 6. How to initiate and read automated testing of course assignments.
 
 _For additional information about Linux, see
-https://www-users.cs.umn.edu/~larson/repo-website-resources/website/examples/csresources/linux.html_
+https://tutorials.ubuntu.com/tutorial/command-line-for-beginners#2 and/or
+https://www.tutorialspoint.com/unix/index.htm
 
 ### Configuring GitHub
 
