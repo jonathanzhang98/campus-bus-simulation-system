@@ -6,7 +6,7 @@
 2. When to use destructors.
 3. When to use the copy constructor.
 
-> There is no feedback for this lab. You submit your results through the corresponding **Canvas quiz**. Unlike the last quiz, you will have ONLY 3 ATTEMPTS at the lab. Again, you will have **3 ATTEMPTS**. It looks like Canvas saves your answers as you go along and that you can leave the quiz then resume later (BUT -- please test this first!).
+> There is no feedback for this lab. You submit your results through the corresponding **Canvas quiz**. Like the last quiz, you will have ONLY 3 ATTEMPTS at the lab. Again, you will have **3 ATTEMPTS**. It looks like Canvas saves your answers as you go along and that you can leave the quiz then resume later (BUT -- please test this first!).
 
 ## Git Reminder - DO NOT FORGET
 ### Retrieve Class Materials
