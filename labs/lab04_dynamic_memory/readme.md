@@ -6,7 +6,7 @@
 3. How memory is freed after dynamic allocation.
 
 
-**__There is no grading script for this lab. Simultaneously view this lab and the Canvas quiz on dynamic allocation. The quiz will give some options in completing the code, and you can answer the questions on the quiz as you work through the lab.__**
+**__There is no grading script for this lab. Simultaneously view this lab and the Canvas quiz on dynamic allocation. The quiz will give some options in completing the code, and you can answer the questions on the quiz as you work through the lab. You will have ONLY 3 ATTEMPTS at the Canvas quiz, and the highest score will be recorded.__**
 
 ## Git Reminder - DO NOT FORGET
 ### Retrieve Class Materials
