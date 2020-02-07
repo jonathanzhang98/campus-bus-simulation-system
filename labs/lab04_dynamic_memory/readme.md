@@ -66,7 +66,6 @@ Naming ducks1
 Naming ducks2
 Naming ducks3
 Naming ducks4
-Naming ducks3
 
 ducks1
 lemon in ducks1 says Quack.
