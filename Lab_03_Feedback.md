@@ -1,6 +1,6 @@
 ### Feedback for Lab 03
 
-Run on January 30, 19:21:40 PM.
+Run on February 07, 12:33:36 PM.
 
 
 #### Necessary Files and Structure
@@ -31,35 +31,42 @@ Run on January 30, 19:21:40 PM.
 
 #### .gitignore set up properly
 
-+ Pass: Check that file/directory "cluster" does not exist.
++ Fail: Check that file/directory "cluster" does not exist.
 
-+ Pass: Check that file/directory "point2_unittest" does not exist.
+     "cluster" found.
 
-+ Pass: Check that no files with extension ".o" exist in directory "."
++ Skip: Check that file/directory "point2_unittest" does not exist.
 
-+ Pass: Check that no files with extension ".out" exist in directory "."
+  This test was not run because of an earlier failing test.
+
++ Skip: Check that no files with extension ".o" exist in directory "."
+
+  This test was not run because of an earlier failing test.
+
++ Skip: Check that no files with extension ".out" exist in directory "."
+
+  This test was not run because of an earlier failing test.
 
 
 #### Test that code compiles and creates the exectuable
 
-+ Pass: Check that make compiles.
++ Skip: Check that make compiles.
 
+  This test was not run because of an earlier failing test.
 
++ Skip: Check that file "cluster" exists.
 
-+ Pass: Check that file "cluster" exists.
+  This test was not run because of an earlier failing test.
 
-+ Pass: Check that make compiles for Makefile:Makefile.test.
++ Skip: Check that make compiles for Makefile:Makefile.test.
 
-    make successful.
-    Check point2_unittest exists...OK: result point2_unittest found
+  This test was not run because of an earlier failing test.
 
-+ Pass: Check that a GoogleTest test passes.
-    passes the test: Point2Test.DistBtwnBothPositive.
++ Skip: Check that a GoogleTest test passes.
 
+  This test was not run because of an earlier failing test.
 
++ Skip: Check that a GoogleTest test passes.
 
-+ Pass: Check that a GoogleTest test passes.
-    passes the test: Point2Test.DistBtwnInverses.
-
-
+  This test was not run because of an earlier failing test.
 
