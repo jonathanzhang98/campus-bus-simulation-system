@@ -6,6 +6,7 @@
 1. How to add the debugging flag to your Makefile compilation targets
 2. How to enter the gdb environment
 3. How to use gdb commands to debug your programs
+4. How to detect memory inefficiencies using Valgrind
 
 ### Retrieve class materials and merge into your personal repository
 
