@@ -55,10 +55,9 @@ static const char* NameStemsArray[20] = {
 // Code for name generation adapted from:
 // https://www.dreamincode.net/forums/topic/27024-data-modeling-for-games-in-c-part-ii/
 Passenger * PassengerFactory::Generate(int curr_stop, int last_stop) {
-
   std::string new_name = NameGeneration();
 
-  //common use of random integer generation to determine
+  // common use of random integer generation to determine
   //  what stop the passenger will depart the bus
 
   int destination = (dist(e) % (last_stop - curr_stop)) + curr_stop + 1;
@@ -68,7 +67,8 @@ Passenger * PassengerFactory::Generate(int curr_stop, int last_stop) {
 
 std::string PassengerFactory::NameGeneration() {
   // assume rand is seeded
-  std::string name = std::string (NamePrefixArray[(dist(e) % 7)]) + std::string (NameStemsArray[(dist(e) % 20)])
+  std::string name = std::string(NamePrefixArray[(dist(e) % 7)])
+  + std::string(NameStemsArray[(dist(e) % 20)])
   + std::string(NameSuffixArray[(dist(e) % 16)]);
   name[0] = toupper(name[0]);  // don't forget to capitalize!
   return name;
