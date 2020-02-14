@@ -14,13 +14,13 @@
 Delivery::Delivery(std::string package) :
   package_(package), days_to_deliver_(7) {
     std::cout << "Creating a delivery." << std::endl;
-    //IncrementCount();
+    IncrementCount();
     protected_variable_ = 100;
 }
 
 Delivery::~Delivery() {
   std::cout << "Deleting a delivery." << std::endl;
-  //DecrementCount();
+  DecrementCount();
 }
 
 void Delivery::Transport() {

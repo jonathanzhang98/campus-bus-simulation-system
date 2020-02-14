@@ -78,7 +78,7 @@ void RunStaticDemo() {
   deliveries[0] = Overnight("Very Important Package!");
   deliveries[1] = Ground("your average package.");
   deliveries[2] = TwoDay("Kind of important.");
-
+  
   PrintCount();
 
   std::cout << "______  PROCESSING DELIVERIES _______" << std::endl;
