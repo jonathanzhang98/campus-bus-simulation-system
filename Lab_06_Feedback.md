@@ -1,36 +1,49 @@
 ### Feedback for Lab 06
 
-Run on February 14, 13:46:44 PM.
+Run on February 14, 15:18:49 PM.
 
 
 #### System Files and Directory Structure
 
 + Pass: Check that directory "labs" exists.
 
-+ Fail: Check that directory "labs/lab06_gdb" exists.
++ Pass: Check that directory "labs/lab06_gdb" exists.
 
-     "labs/lab06_gdb" not found.
-
-+ Skip: Change into directory "labs/lab06_gdb".
-
-  This test was not run because of an earlier failing test.
++ Pass: Change into directory "labs/lab06_gdb".
 
 
 #### Test that code compiles and creates the exectuable
 
-+ Skip: Check that make compiles.
++ Pass: Check that make compiles.
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Check that file "date" exists.
 
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "date" exists.
 
-+ Skip: Program executes flawlessly.
++ Pass: Program executes flawlessly.
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Check for correct output.
 
-  This test was not run because of an earlier failing test.
++ Fail: Check for correct output.
+
+    Files are not equal.
+6,8d5
+< date is: January 1, 1993
+< date is: January 1, 1992
+< date is: January 1, 1991
+9a7,9
+> date is: January 1, 1991
+> date is: January 1, 1992
+> date is: January 1, 1993
+16,18d15
+< date is: January 1, 1993
+< date is: January 1, 1992
+< date is: January 1, 1991
+19a17,19
+> date is: January 1, 1991
+> date is: January 1, 1992
+> date is: January 1, 1993
+
+
+
 
