@@ -1,189 +1,61 @@
 ### Assessment for Lab 06
 
-#### Total score: _0_ / _85_
+#### Total score: _100_ / _100_
 
-Run on February 18, 09:41:52 AM.
+Run on February 18, 13:38:47 PM.
 
 
-#### System Files and Lab Directory Structure
-
-+ Pass: Check that directory "googletest" exists.
+#### System Files and Directory Structure
 
 + Pass: Check that directory "labs" exists.
 
-+ Fail: Check that directory "labs/lab06_google_tests" exists.
++ Pass: Check that directory "labs/lab06_gdb" exists.
 
-     "labs/lab06_google_tests" not found.
++ Pass: Change into directory "labs/lab06_gdb".
 
-+ Skip: Make directory "Lab06_Testing".
++  _10_ / _10_ : Pass: Replace doInterestingThing(1999); with doInterestingThing(1999);doInterestingThing(2018); in main.cc.
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Change into directory "Lab06_Testing".
 
-  This test was not run because of an earlier failing test.
 
+#### Test that code compiles and creates the exectuable
 
-#### Essential Files Exist
++  _30_ / _30_ : Pass: Check that make compiles.
 
-+ Skip: Check that file "../labs/lab06_google_tests/date_unittest.cc" exists.
 
-  This test was not run because of an earlier failing test.
 
++  _10_ / _10_ : Pass: Check that file "date" exists.
 
-### Testing correct implementation
 
-+ Skip: Copy directory "Lab06 files.".
+#### Test Output Execution
 
-  This test was not run because of an earlier failing test.
++  _10_ / _10_ : Pass: Program executes flawlessly.
 
-+ Skip: Copy directory "Files for correct version".
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Change into directory "correct".
++  _5_ / _5_ : Pass: Check for correct output.
 
-  This test was not run because of an earlier failing test.
+    Complete.
 
-+ Skip: Check that make compiles.
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Check that file "date_unittest" exists.
++ Pass: Replace i <= with i < in main.cc.
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Get all google tests.
 
-  This test was not run because of an earlier failing test.
++ Pass: Check that make compiles.
 
 
-#### Results
 
++  _20_ / _20_ : Pass: Most of the program works.
 
-### Testing Mutants
 
 
-#### Testing Mutant 1 for failure
++  _15_ / _15_ : Pass: Check for correct output.
 
-+  _0_ / _5_ : Skip: Abstract test class.
+    Complete.
 
-  This test was not run because of an earlier failing test.
 
 
-#### Testing Mutant 2 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 3 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 4 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 5 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 6 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 7 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 8 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 9 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 10 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 11 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 12 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 13 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 14 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 15 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 16 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Testing Mutant 17 for failure
-
-+  _0_ / _5_ : Skip: Abstract test class.
-
-  This test was not run because of an earlier failing test.
-
-
-#### Results
-
-#### Total score: _0_ / _85_
+#### Total score: _100_ / _100_
 
