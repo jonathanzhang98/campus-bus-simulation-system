@@ -17,7 +17,7 @@ Date::Date(void) {
   //tm year's value is years since 1900
   yyyy_ = now->tm_year + 1900;
   //tm month's value is zero-indexed
-  mm_ = now->tm_mon;
+  mm_ = now->tm_mon + 1;
   //tm day's value is one-indexed
   dd_ = now->tm_mday;
 }
@@ -39,7 +39,7 @@ Date::Date(int epoch) {
   std::tm* yyyy_mm_dd = std::gmtime( &epoch_t );
   
   //tm year's value is years since 1900
-  yyyy_ = yyyy_mm_dd->tm_year + 1970;
+  yyyy_ = yyyy_mm_dd->tm_year + 1900;
   //tm month's value is zero-indexed
   mm_ = yyyy_mm_dd->tm_mon + 1;
   //tm day's value is one-indexed
@@ -68,7 +68,7 @@ Date Date::operator+(int days) const {
 **/
 Date Date::operator-(int days) const{
   int old_date = ConvertToDays(yyyy_, mm_, dd_);
-  int * new_date = ConvertFromDays(old_date + days);
+  int * new_date = ConvertFromDays(old_date - days);
   return Date(new_date[0], new_date[1], new_date[2]);
 }
 
@@ -82,7 +82,7 @@ int Date::DaysBetween(const Date& date) const {
   //std::cout << "Debugging ConvertToDays (LHS): " << this_days << std::endl;
   int that_days = ConvertToDays(date.yyyy_, date.mm_, date.dd_);
   //std::cout << "Debugging ConvertToDays: (RHS)" << that_days << std::endl;
-  return std::abs(this_days + that_days);
+  return std::abs(this_days - that_days);
 }
 
 /**
@@ -93,7 +93,7 @@ std::string Date::GetDate() const {
   char numstr[5]; //large enough for years, months, days
   std::string date = "";
   sprintf(numstr, "%d", yyyy_);
-  date = date + numstr;
+  date = date + numstr + "-";
   if (mm_ < 10)
     date = date + "0";
   sprintf(numstr, "%d", mm_);
@@ -111,9 +111,8 @@ std::string Date::GetDate() const {
 **/
 std::string Date::GetUsDate() const {
   char numstr[5]; //large enough for years, months, days
-  std::string date = "";
-  sprintf(numstr, "%d", yyyy_);
-  date = date + numstr;
+
+  std::string date;
   if (mm_ < 10)
     date = date + "0";
   sprintf(numstr, "%d", mm_);
@@ -122,6 +121,8 @@ std::string Date::GetUsDate() const {
     date = date + "0";
   sprintf(numstr, "%d", dd_);
   date = date + numstr;
+  sprintf(numstr, "%d", yyyy_);
+  date = date + "-" + numstr;
   return date;
 }
 
@@ -130,7 +131,7 @@ std::string Date::GetUsDate() const {
 * param [in] boolean flag, true: print newline, false: don't
 **/
 void Date::PrintDate(bool newline) const {
-  std::cout << yyyy_ << "-" << mm_ << "-" << dd_;
+  std::cout << yyyy_ << "-" << std::setw(2) << std::setfill('0') << mm_ << "-" << std::setw(2) << std::setfill('0') << dd_;
   if (newline)
     std::cout << std::endl;
 }
@@ -140,7 +141,7 @@ void Date::PrintDate(bool newline) const {
 * param [in] boolean flag, true: print newline, false: don't
 **/
 void Date::PrintUsDate(bool newline) const {
-  std::cout << mm_ << "-" << dd_ << "-" << yyyy_;
+  std::cout << std::setw(2) << std::setfill('0') << mm_ << "-" << std::setw(2) << std::setfill('0') << dd_ << "-" << yyyy_;
   if (newline)
     std::cout << std::endl;
 }
