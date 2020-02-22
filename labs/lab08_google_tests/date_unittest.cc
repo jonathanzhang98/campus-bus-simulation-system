@@ -14,11 +14,21 @@ class DateTest : public ::testing::Test {
 	first_day = Date(2018, 9, 4);
 	last_day = Date(2018, 12, 11);
   date_today = Date();
+  leap1 = Date(2020, 2, 1);
+  leap2 = Date(2020, 2, 29);
+  leap3 = Date(2020, 3, 10);
+  epoch = Date(0);
+  class_start_epoch = Date(1536066000);
   }
  protected:
   Date first_day;          // first day of classes
   Date last_day;           // last day of classes
   Date date_today;
+  Date leap1;
+  Date leap2;
+  Date leap3;
+  Date epoch;
+  Date class_start_epoch;
 };
 
 TEST_F(DateTest, DefaultConstructor) {
@@ -163,27 +173,45 @@ TEST_F(DateTest, PrintUsDateTestsWithoutNewline) {
 TEST_F(DateTest, operatorPlusTests) {
   EXPECT_EQ(first_day.operator+(10).GetDate(), "2018-09-14");
   EXPECT_EQ(last_day.operator+(5).GetDate(), "2018-12-16");
+  EXPECT_EQ(leap1.operator+(28).GetDate(), "2020-02-29");
+  EXPECT_EQ(leap1.operator+(30).GetDate(), "2020-03-02");
 }
 
 TEST_F(DateTest, operatorMinusTests) {
   EXPECT_EQ(first_day.operator-(5).GetDate(), "2018-08-30");
   EXPECT_EQ(last_day.operator-(10).GetDate(), "2018-12-01");
+  EXPECT_EQ(leap3.operator-(10).GetDate(), "2020-02-29");
+  EXPECT_EQ(leap3.operator-(15).GetDate(), "2020-02-24");
 }
 
 TEST_F(DateTest, DaysBetweenTests) {
   EXPECT_EQ(first_day.GetUsDate(), "09-04-2018") << "First day of class not setup properly";
   EXPECT_EQ(last_day.GetUsDate(), "12-11-2018") << "Last day of class not setup properly";
   EXPECT_EQ(first_day.DaysBetween(last_day), 98) << "Days between is not calculated properly";
+  EXPECT_EQ(leap1.DaysBetween(leap2), 28) << "Days between is not calculated properly";
+  EXPECT_EQ(leap1.DaysBetween(leap3), 38) << "Days between is not calculated properly";
+  EXPECT_EQ(leap2.DaysBetween(leap3), 10) << "Days between is not calculated properly";
+  EXPECT_EQ(epoch.DaysBetween(class_start_epoch), 17778) << "Days between is not calculated properly";
 }
 
 TEST_F(DateTest, GetDateTests) {
   EXPECT_EQ(first_day.GetDate(), "2018-09-04") << "First day of class not setup properly";
   EXPECT_EQ(last_day.GetDate(), "2018-12-11") << "Last day of class not setup properly";
+  EXPECT_EQ(leap1.GetDate(), "2020-02-01") << "Leap1 day of class not setup properly";
+  EXPECT_EQ(leap2.GetDate(), "2020-02-29") << "Leap2 day of class not setup properly";
+  EXPECT_EQ(leap3.GetDate(), "2020-03-10") << "Leap3 day of class not setup properly";
+  EXPECT_EQ(epoch.GetDate(), "1970-01-01") << "Epoch day of class not setup properly";
+  EXPECT_EQ(class_start_epoch.GetDate(), "2018-09-04") << "Class start epoch day of class not setup properly";
 }
 
 TEST_F(DateTest, GetUsDateTests) {
   EXPECT_EQ(first_day.GetUsDate(), "09-04-2018") << "First day of class not setup properly";
   EXPECT_EQ(last_day.GetUsDate(), "12-11-2018") << "Last day of class not setup properly";
+  EXPECT_EQ(leap1.GetUsDate(), "02-01-2020") << "Leap1 day of class not setup properly";
+  EXPECT_EQ(leap2.GetUsDate(), "02-29-2020") << "Leap2 day of class not setup properly";
+  EXPECT_EQ(leap3.GetUsDate(), "03-10-2020") << "Leap3 day of class not setup properly";
+  EXPECT_EQ(epoch.GetUsDate(), "01-01-1970") << "Epoch day of class not setup properly";
+  EXPECT_EQ(class_start_epoch.GetUsDate(), "09-04-2018") << "Class start epoch day of class not setup properly";
 }
 
 /**
