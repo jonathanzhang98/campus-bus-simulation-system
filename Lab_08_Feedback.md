@@ -1,6 +1,6 @@
 ### Fuller Feedback for Lab 08
 
-Run on February 22, 12:36:15 PM.
+Run on February 22, 13:33:52 PM.
 
 
 #### System Files and Lab Directory Structure
@@ -105,8 +105,7 @@ Run on February 22, 12:36:15 PM.
 
 #### Testing Mutant 1 for failure
 
-+ Fail: There is no test case for this mutant (since all tests pass).
-   - Reason - Dates constructed with epoch are about 70 years in the future
++ Pass: At least one test failed for Mutant 1
 
 
 #### Testing Mutant 2 for failure
@@ -126,8 +125,7 @@ Run on February 22, 12:36:15 PM.
 
 #### Testing Mutant 5 for failure
 
-+ Fail: There is no test case for this mutant (since all tests pass).
-   - Reason - 1/1/2016 to 3/1/2016 is 60 days, but this version returns 59
++ Pass: At least one test failed for Mutant 5
 
 
 #### Testing Mutant 6 for failure
