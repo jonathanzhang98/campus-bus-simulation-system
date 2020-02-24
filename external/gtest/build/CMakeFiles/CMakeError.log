@@ -1,0 +1,59 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4513c/fast"
+make[3]: Entering directory '/home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_4513c.dir/build.make CMakeFiles/cmTC_4513c.dir/build
+make[4]: Entering directory '/home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4513c.dir/CheckSymbolExists.c.o
+/soft/gcc/7.1.0/Linux_x86_64/bin/gcc    -o CMakeFiles/cmTC_4513c.dir/CheckSymbolExists.c.o   -c /home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_4513c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4513c.dir/link.txt --verbose=1
+/soft/gcc/7.1.0/Linux_x86_64/bin/gcc      -rdynamic CMakeFiles/cmTC_4513c.dir/CheckSymbolExists.c.o  -o cmTC_4513c 
+CMakeFiles/cmTC_4513c.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4513c.dir/build.make:97: recipe for target 'cmTC_4513c' failed
+make[4]: *** [cmTC_4513c] Error 1
+make[4]: Leaving directory '/home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4513c/fast' failed
+make[3]: *** [cmTC_4513c/fast] Error 2
+make[3]: Leaving directory '/home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp'
+
+File /home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b35cc/fast"
+make[3]: Entering directory '/home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b35cc.dir/build.make CMakeFiles/cmTC_b35cc.dir/build
+make[4]: Entering directory '/home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b35cc.dir/CheckFunctionExists.c.o
+/soft/gcc/7.1.0/Linux_x86_64/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b35cc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b35cc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b35cc.dir/link.txt --verbose=1
+/soft/gcc/7.1.0/Linux_x86_64/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_b35cc.dir/CheckFunctionExists.c.o  -o cmTC_b35cc -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b35cc.dir/build.make:97: recipe for target 'cmTC_b35cc' failed
+make[4]: *** [cmTC_b35cc] Error 1
+make[4]: Leaving directory '/home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b35cc/fast' failed
+make[3]: *** [cmTC_b35cc/fast] Error 2
+make[3]: Leaving directory '/home/zhan7230/Documents/3081_s20/repo-zhan7230/external/gtest/build/CMakeFiles/CMakeTmp'
+
+
