@@ -84,7 +84,7 @@ What is given here is a working version of a transit simulation.  This a startin
 
 ---
 
-Push your code up to your repository for feedback.
+Push your code up to your repository for feedback (don't forget to add the new files and commit before pushing...).
 
 ---
 
