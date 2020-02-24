@@ -137,7 +137,7 @@ As part of good documentation, it is important to record how the code was modifi
 
 >The default editor is vim. If you want another editor, see the git usage document for how to change that.
 >Also, previous labs are a good resource to remember git syntax and functionality.
->Make sure to let your TA know if you reach a dead end. 
+>Make sure to let your TA know if you reach a dead end.
 
 Start the commit process with
 
@@ -207,3 +207,14 @@ Keep in mind that the issues are there to remind you what needs doing and fixing
 It probably took you awhile in this lab to add the issue, make the branch, then merge it back into devel after the changes were made. This will go very quickly once you get in the habit, and we think you will eventually appreciate the documentation of the changes that have been made and the ones that still need to be made.
 
 If you are addressing one of the priority points, follow this full process of issues and branching (and it might involve multiple issues and branches). But you don't have to do this _every_ time you make a change! If you have something minor -- skip making an issue, make the change in the devel branch, and use the command line for commit messages. The important part is to be consistent.
+
+
+---
+
+### Note on feedback regeneration
+
+To trigger a feedback regeneration for this lab, you must modify a (any) file in `labs/lab10_advanced_git`.
+
+The feedback server looks for changes in that folder and only regenerates if something within it has changed. Since the work for this lab will be done in `/project`, it will not regenerate automatically when you change files in that directory.
+
+I would recommend that you just make a trivial change to the this file (e.g. add a word) to trigger the feedback regeneration!

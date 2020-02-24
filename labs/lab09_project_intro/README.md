@@ -89,6 +89,18 @@ Push your code up to your repository for feedback (don't forget to add the new f
 ---
 
 
+### Note on feedback regeneration
+
+To trigger a feedback regeneration for this lab, you must modify a (any) file in `labs/lab09_project_intro`.
+
+The feedback server looks for changes in that folder and only regenerates if something within it has changed. Since the work for this lab will be done in `/project`, it will not regenerate automatically when you change files in that directory.
+
+I would recommend that you just make a trivial change to the this file (e.g. add a word) to trigger the feedback regeneration!
+
+
+---
+
+
 ### OPTIONAL documentation
 
 Read and add to the documentation (by making your header files Doxygen compliant, and writing self-documenting code in the `*.cc` files) for the c++ code (`*.h` and `*.cc` files) we have provided to you in the `project/src` directory. You should read and add to the documentation and figure out how use Doxygen to generate documentation from the header files in the `project/webcode/web` directory.  For the project, all the code you submit should be well-documented, and every header file should be commented using Doxygen, so get into the habit of making your code Doxygen compliant and self-documenting.
