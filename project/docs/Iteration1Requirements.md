@@ -188,7 +188,7 @@ The UML diagram is a visual aid that helps other programmers better understand t
 
 The final diagram you submit for iteration 1 UML should reflect the changes you made while completing the code requirements. We will be looking for proper use of UML components, and a correct depiction of the code structure.
 
-There are many free tools that you can use to create the UML including Doxygen (see: https://inneka.com/programming/cpp/how-to-use-doxygen-to-create-uml-class-diagrams-from-c-source/), and  draw.io (see: https://www.draw.io/). **Submit your UML  in a .pdf file  via the submission item on Canvas**.
+There are many free tools that you can use to create the UML including Doxygen, and  draw.io (see: https://www.draw.io/). **Submit your UML  in a .pdf file  via the submission item on Canvas**.
 
 #### Doxygen
 
