@@ -1,6 +1,6 @@
 ### Feedback for Lab 10
 
-Run on February 24, 15:12:13 PM.
+Run on February 25, 10:41:18 AM.
 
 
 ### Necessary Files and Structure
@@ -12,34 +12,41 @@ Run on February 24, 15:12:13 PM.
 
 ### Git Usage
 
-+ Fail: Run git ls-remote to check for existence of specific branch- Branch devel not found
++ Pass: Run git ls-remote to check for existence of specific branch- Branch devel found
 
-+ Skip: Checkout devel branch.
++ Pass: Checkout devel branch.
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Run git ls-remote gather all branches in repo
 
-  This test was not run because of an earlier failing test.
++ Pass: Run git ls-remote gather all branches in repo
 
-+ Skip: Checking for the correct number of branches
+		7ac083142f7c1c21f86914e7ca6651ff35a56a98	refs/heads/devel
 
-  This test was not run because of an earlier failing test.
+		18697241aa98a738c86a4682714f874990db4cbe	refs/heads/master
+
+
+
++ Pass: Checking for the correct number of branches
+
+Insufficient branches found (found=0, required=2):
+
+
 
 
 #### Counting commits on devel
 
-+ Skip: Checkout devel branch.
++ Pass: Checkout devel branch.
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Gather commit history
 
-  This test was not run because of an earlier failing test.
++ Pass: Gather commit history
 
-+ Skip: Check git commit history
 
-  This test was not run because of an earlier failing test.
+
+
+
++ Fail: Check git commit history
+Insufficient commits (found=0,required=4)
 
 
 ### Git Issue Usage
@@ -63,24 +70,17 @@ Run on February 24, 15:12:13 PM.
 
 ### Test that code on  devel compiles
 
-+ Fail: Checkout devel branch.
-
-<pre>error: pathspec 'devel' did not match any file(s) known to git.
-</pre>
++ Pass: Checkout devel branch.
 
 
 
-+ Skip: Check that directory "project" exists.
++ Pass: Check that directory "project" exists.
 
-  This test was not run because of an earlier failing test.
++ Pass: Change into directory "project".
 
-+ Skip: Change into directory "project".
++ Fail: Check that file "makefile" exists.
 
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file "makefile" exists.
-
-  This test was not run because of an earlier failing test.
+     "makefile" not found.
 
 + Skip: Check that make compiles.
 
