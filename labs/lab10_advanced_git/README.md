@@ -59,11 +59,13 @@ Notice in the image above that the "Simulation lag" bug is issue \#3. To address
 ### Steps before you start the lab
 
 1. Finish lab09 and make sure your code compiles.
-2. Delete the `src` directory in `repo-x500/project/`
-3. Stage (i.e. `git add`), commit (i.e. `git commit`) and push (i.e. `git push`) your changes into your remote repo.
-4. Replace the `src` directory you just deleted with the `src` directory in the `lab10_advanced_git/` directory.  
-5. Stage (i.e. `git add`), commit (i.e. `git commit`) and push (i.e. `git push`) your changes into your remote repo.  
-6. Compile your project code and see if there are any changes.
+2. `git checkout master`  
+3. `git pull`
+4. Delete the `src` directory in `repo-x500/project/`
+5. Stage (i.e. `git add`), commit (i.e. `git commit`) and push (i.e. `git push`) your changes into your remote repo.
+6. Replace the `src` directory you just deleted with the `src` directory in the `lab10_advanced_git/` directory.  
+7. Stage (i.e. `git add`), commit (i.e. `git commit`) and push (i.e. `git push`) your changes into your remote repo.  
+8. Compile your project code and see if there are any changes.
 
 <hr>
 
