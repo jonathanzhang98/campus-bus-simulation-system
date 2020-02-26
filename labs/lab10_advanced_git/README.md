@@ -56,6 +56,17 @@ Notice in the image above that the "Simulation lag" bug is issue \#3. To address
 
 <hr>
 
+### Steps before you start the lab
+
+1. Finish lab09 and make sure your code compiles.
+2. Delete the `src` directory in `repo-x500/project/`
+3. Stage (i.e. `git add`), commit (i.e. `git commit`) and push (i.e. `git push`) your changes into your remote repo.
+4. Replace the `src` directory you just deleted with the `src` directory in the `lab10_advanced_git/` directory.  
+5. Stage (i.e. `git add`), commit (i.e. `git commit`) and push (i.e. `git push`) your changes into your remote repo.  
+6. Compile your project code and see if there are any changes.
+
+<hr>
+
 ### Getting Started with devel
 
 **Start preparing your repo.**  If your local repo differs from the server, you should commit and push before starting this process. In your `repo-<username>` repo:
@@ -77,16 +88,6 @@ After you have pushed the branch, you can move between branches using checkout w
 
 To confirm which branch you are currently working on and to see a list of all branches use `git branch`.
 
-<hr>
-
-### Steps before you start the lab
-
-1. Finish lab09 and make sure your code compiles.
-2. Delete the `src` directory in `repo-x500/project/`
-3. Stage (i.e. `git add`), commit (i.e. `git commit`) and push (i.e. `git push`) your changes into your remote repo.
-4. Replace the `src` directory you just deleted with the `src` directory in the `lab10_advanced_git/` directory.  
-5. Stage (i.e. `git add`), commit (i.e. `git commit`) and push (i.e. `git push`) your changes into your remote repo.  
-6. Compile your project code and see if there are any changes.
 
 <hr>
 
