@@ -203,6 +203,8 @@ For the other issue related to the Google style, repeat the above process of cre
 
 #### Parting Thoughts
 
+Since we injected the bug directly into `master`, our `master` branch will not compile. So, **you need to merge your `devel` branch into `master` so that your `master` contains code that compiles.**  
+
 Keep in mind that the issues are there to remind you what needs doing and fixing. This means that you use it like a todo list, writing things down as they occur to you.
 
 It probably took you awhile in this lab to add the issue, make the branch, then merge it back into devel after the changes were made. This will go very quickly once you get in the habit, and we think you will eventually appreciate the documentation of the changes that have been made and the ones that still need to be made.
