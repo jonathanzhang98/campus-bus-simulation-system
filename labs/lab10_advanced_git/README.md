@@ -74,10 +74,7 @@ Notice in the image above that the "Simulation lag" bug is issue \#3. To address
 **Start preparing your repo.**  If your local repo differs from the server, you should commit and push before starting this process. In your `repo-<username>` repo:
 
 ```
-git checkout support-code
-git pull upstream support-code
 git checkout master
-git merge support-code
 git checkout -b devel
 git push --set-upstream origin devel
 ```
