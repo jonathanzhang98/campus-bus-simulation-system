@@ -1,6 +1,6 @@
 ### Feedback for Lab 10
 
-Run on February 28, 14:54:57 PM.
+Run on February 28, 14:55:29 PM.
 
 
 ### Necessary Files and Structure
@@ -20,11 +20,11 @@ Run on February 28, 14:54:57 PM.
 
 + Pass: Run git ls-remote gather all branches in repo
 
-		83904d980a1365cfc37566144d766a60c8d180ba	refs/heads/devel
+		f664efc229e898adfd744cdb4dd1f7784e3aa37e	refs/heads/devel
 
 		dbc7539ac7c7cce99c409ef7f3f86c2c79b75951	refs/heads/fix/01-compilation-errors
 
-		ce48a63646a988f5957c56460edf2d8b031f778d	refs/heads/master
+		1cd9d8b0c49238ce9318822adb31605111f1eb2c	refs/heads/master
 
 		21ce9f4aed9ba2c73518f2f6c412b10c2266ea23	refs/heads/style/02-cpplint_errors
 
@@ -47,7 +47,8 @@ style/02-cpplint_errors
 
 + Pass: Gather commit history
 
-		[Zixuan Zhang] 2020-02-28 (HEAD -> devel, origin/devel) Merge branch 'style/02-cpplint_errors' into devel 
+
+		[Zixuan Zhang] 2020-02-28 Merge branch 'style/02-cpplint_errors' into devel 
 
 		[Zixuan Zhang] 2020-02-28 style(src): style #2 Make code in src cpplint compliant 
 
