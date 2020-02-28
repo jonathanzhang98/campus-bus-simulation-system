@@ -99,9 +99,9 @@ void Route::NextStop() {
     destination_stop_ = *iter;
   } else {
       destination_stop_ = (*stops_.end());
-      //std::list<Stop *>::const_iterator iter = stops_.begin();
-      //std::advance(iter, num_stops_ - 1);
-      //destination_stop_ = *iter;
+      // std::list<Stop *>::const_iterator iter = stops_.begin();
+      // std::advance(iter, num_stops_ - 1);
+      // destination_stop_ = *iter;
   }
 }
 
@@ -143,7 +143,6 @@ int Route::GenerateNewPassengers() {
 }
 
 void Route::UpdateRouteData() {
-
     route_data_.id = name_;
 
     std::vector<StopData> stopDataVec = std::vector<StopData>();

@@ -23,6 +23,6 @@ class PassengerGenerator {
   std::list<Stop *> stops_;
 
   // should we be using a singleton here somehow?
-  //PassengerFactory * pass_factory;
+  // PassengerFactory * pass_factory;
 };
 #endif  // SRC_PASSENGER_GENERATOR_H_
