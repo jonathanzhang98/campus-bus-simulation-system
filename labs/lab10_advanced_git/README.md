@@ -196,7 +196,7 @@ We would normally suggest that you delete the branch, but then we won't be able 
 
 ### Repeat
 
-For the other issue related to the Google style, repeat the above process of creating a branch, working on the enhancment, merging the branch back into _devel_, and resolving the issue in Github. To finish the enhancment for this issue, fix the errors from the output of cpplint after running it from the src directory in your project directory (i.e. `repo-x500/project/src/`) run `../../cpplint/cpplint-cse.sh --root=. *.cc *.h`.
+For the other issue related to the Google style, repeat the above process of creating a branch, working on the enhancment, merging the branch back into _devel_, and resolving the issue in Github. To finish the enhancment for this issue, fix the errors from the output of cpplint after running it from the src directory in your project directory (i.e. `repo-x500/project/src/`) run `../../cpplint/cpplint-cse.sh --root=.. *.cc *.h`.
 
 <hr>
 
