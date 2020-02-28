@@ -1,6 +1,6 @@
 ### Feedback for Lab 10
 
-Run on February 25, 10:41:18 AM.
+Run on February 28, 14:54:57 PM.
 
 
 ### Necessary Files and Structure
@@ -20,17 +20,23 @@ Run on February 25, 10:41:18 AM.
 
 + Pass: Run git ls-remote gather all branches in repo
 
-		7ac083142f7c1c21f86914e7ca6651ff35a56a98	refs/heads/devel
+		83904d980a1365cfc37566144d766a60c8d180ba	refs/heads/devel
 
-		18697241aa98a738c86a4682714f874990db4cbe	refs/heads/master
+		dbc7539ac7c7cce99c409ef7f3f86c2c79b75951	refs/heads/fix/01-compilation-errors
+
+		ce48a63646a988f5957c56460edf2d8b031f778d	refs/heads/master
+
+		21ce9f4aed9ba2c73518f2f6c412b10c2266ea23	refs/heads/style/02-cpplint_errors
 
 
 
 + Pass: Checking for the correct number of branches
 
-Insufficient branches found (found=0, required=2):
+Sufficient branches found (found=2, required=2):
 
+fix/01-compilation-errors
 
+style/02-cpplint_errors
 
 
 #### Counting commits on devel
@@ -41,27 +47,180 @@ Insufficient branches found (found=0, required=2):
 
 + Pass: Gather commit history
 
+		[Zixuan Zhang] 2020-02-28 (HEAD -> devel, origin/devel) Merge branch 'style/02-cpplint_errors' into devel 
+
+		[Zixuan Zhang] 2020-02-28 style(src): style #2 Make code in src cpplint compliant 
+
+		[Zixuan Zhang] 2020-02-28 (origin/style/02-cpplint_errors, style/02-cpplint_errors) Fix some style problems 
+
+		[Zixuan Zhang] 2020-02-28 Merge branch 'fix/01-compilation-errors' into devel 
+
+		[Zixuan Zhang] 2020-02-28 (origin/fix/01-compilation-errors, fix/01-compilation-errors) fix(files): fix #1 Solve linking errors - uncommment one include statement and some function definition to solve linking errors
+
+
+		[Zixuan Zhang] 2020-02-25 Replace src 
+
+		[Zixuan Zhang] 2020-02-25 Delete src directory 
+
+		[Zixuan Zhang] 2020-02-25 Merge branch 'support-code' 
+
+		[Zixuan Zhang] 2020-02-25 Merge branch 'support-code' of github.umn.edu:umn-csci-3081-s20/csci3081-shared-upstream into support-code 
 
 
 
 
-+ Fail: Check git commit history
-Insufficient commits (found=0,required=4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+		[Zixuan Zhang] 2020-02-24 Merge branch 'master' of github.umn.edu:umn-csci-3081-s20/repo-zhan7230 
+
+		[Zixuan Zhang] 2020-02-24 Add lab09 deliverables 
+
+		[Zixuan Zhang] 2020-02-24 Merge branch 'support-code' 
+
+		[Zixuan Zhang] 2020-02-24 Merge branch 'support-code' of github.umn.edu:umn-csci-3081-s20/csci3081-shared-upstream into support-code 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		[Zixuan Zhang] 2020-02-22 Merge branch 'master' of github.umn.edu:umn-csci-3081-s20/repo-zhan7230 
+
+		[Zixuan Zhang] 2020-02-22 Add tests for leap year and epoch constructor 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		[Zixuan Zhang] 2020-02-21 Merge branch 'master' of github.umn.edu:umn-csci-3081-s20/repo-zhan7230 
+
+		[Zixuan Zhang] 2020-02-21 Add lab8 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++ Pass: Check git commit history
+Sufficient commits (found=18,required=4)
 
 
 ### Git Issue Usage
 
 + Pass: Configuring GHI
 
-+ Pass: Run ghi for total number of open issues in Github repo (Found: 0)
++ Pass: Run ghi for total number of open issues in Github repo (Found: 1)
 
-+ Pass: Run ghi for total number of closed issues in Github repo (Found: 0)
+[OPEN issue #2] :  style/02-cpplint_errors [enhancement]
 
-+ Fail: Run ghi for total number of issues in Github repo (Found: 0, Expected: 2) 
 
- [OPEN issue #] : 
 
-[CLOSED issue #] : 
+
+
++ Pass: Run ghi for total number of closed issues in Github repo (Found: 1)
+
+[CLOSED issue #1] :  fix/01-compilation-errors [bug]
+
+
+
+
+
++ Pass: Run ghi for total number of issues in Github repo (Found: 2, Expected: 2) 
+
+ [OPEN issue #2] :  style/02-cpplint_errors [enhancement]
+
+[CLOSED issue #1] :  fix/01-compilation-errors [bug]
 
  
 
@@ -74,15 +233,13 @@ Insufficient commits (found=0,required=4)
 
 
 
-+ Pass: Check that directory "project" exists.
++ Pass: Check that directory "project/src" exists.
 
-+ Pass: Change into directory "project".
++ Pass: Change into directory "project/src".
 
-+ Fail: Check that file "makefile" exists.
++ Pass: Check that file "makefile" exists.
 
-     "makefile" not found.
++ Pass: Check that make compiles.
 
-+ Skip: Check that make compiles.
 
-  This test was not run because of an earlier failing test.
 
