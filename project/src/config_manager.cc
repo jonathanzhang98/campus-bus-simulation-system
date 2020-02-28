@@ -9,7 +9,7 @@
 #include <fstream>
 #include <list>
 #include <algorithm>
-//#include <functional>
+#include <functional>
 
 
 ConfigManager::ConfigManager() : routes(std::vector<Route *>()) {

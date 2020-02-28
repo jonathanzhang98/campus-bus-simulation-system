@@ -29,7 +29,7 @@ bool Bus::IsTripComplete() {
   return is_complete;
 }
 
-/*
+
 bool Bus::LoadPassenger(Passenger * new_passenger) {
   bool added_passenger = false;
   if (loader_->LoadPassenger(new_passenger, passenger_max_capacity_,
@@ -39,7 +39,7 @@ bool Bus::LoadPassenger(Passenger * new_passenger) {
   }
   return added_passenger;
 }
-*/
+
 
 bool Bus::Move() {
   // update all passengers FIRST
