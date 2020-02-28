@@ -4,7 +4,7 @@ In this lab, you will prepare the iteration1 code (in the _project_ folder) and 
 
 There is an informative guide on the use of git and branching that was developed by John Harwell, a former teaching assistant for this course. Please review this because, as part of project assessment, we will be looking at your use of _issues_, branching, and commit messages. This guide can be found in **_git-usage.pdf_** in the lab10_advanced_git folder.
 
-### Git Branching and Merging (and other things!)
+### Git Branching and Merging (and other things!) 
 
 First, to give you good practice with the technical aspects of merging, branching, and other Git tasks, the website below is a nice, interactive practice application. It will walk you through a variety of tasks, giving you some experience with the actions you'll be required to make in the project work to come. Consider completing the Introduction Sequence.
 
