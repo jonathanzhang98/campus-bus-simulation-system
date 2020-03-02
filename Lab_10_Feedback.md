@@ -1,6 +1,6 @@
 ### Feedback for Lab 10
 
-Run on February 28, 14:55:29 PM.
+Run on March 01, 21:09:25 PM.
 
 
 ### Necessary Files and Structure
@@ -24,7 +24,7 @@ Run on February 28, 14:55:29 PM.
 
 		dbc7539ac7c7cce99c409ef7f3f86c2c79b75951	refs/heads/fix/01-compilation-errors
 
-		1cd9d8b0c49238ce9318822adb31605111f1eb2c	refs/heads/master
+		c5dfde37a988afd08eba9a9153576b467ce9ee13	refs/heads/master
 
 		21ce9f4aed9ba2c73518f2f6c412b10c2266ea23	refs/heads/style/02-cpplint_errors
 
@@ -201,15 +201,11 @@ Sufficient commits (found=18,required=4)
 
 + Pass: Configuring GHI
 
-+ Pass: Run ghi for total number of open issues in Github repo (Found: 1)
++ Pass: Run ghi for total number of open issues in Github repo (Found: 0)
 
-[OPEN issue #2] :  style/02-cpplint_errors [enhancement]
++ Pass: Run ghi for total number of closed issues in Github repo (Found: 2)
 
-
-
-
-
-+ Pass: Run ghi for total number of closed issues in Github repo (Found: 1)
+[CLOSED issue #2] :  style/02-cpplint_errors [enhancement]
 
 [CLOSED issue #1] :  fix/01-compilation-errors [bug]
 
@@ -219,7 +215,9 @@ Sufficient commits (found=18,required=4)
 
 + Pass: Run ghi for total number of issues in Github repo (Found: 2, Expected: 2) 
 
- [OPEN issue #2] :  style/02-cpplint_errors [enhancement]
+ [OPEN issue #] : 
+
+[CLOSED issue #2] :  style/02-cpplint_errors [enhancement]
 
 [CLOSED issue #1] :  fix/01-compilation-errors [bug]
 
