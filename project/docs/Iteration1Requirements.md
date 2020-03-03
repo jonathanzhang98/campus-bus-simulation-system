@@ -264,7 +264,7 @@ TAs will inspect code for good naming conventions, good code organization, and i
 
 In the week prior to the due date of the completed iteration, we will confirm that you have submitted work for Preliminary Turn-in #2. You must include tests for **all** public methods in the Passenger class, and at a minimum, the constructors of the Bus, Stop, and Route class, along with any methods that return a Boolean value to receive full points for the preliminary submission. There will be no manual inspection of the code at this point -- it is strictly a test for completed functionality and testing. We will ensure that your tests are effective using automatic means, similar to the Testing lab. There will be transparency in this process in that you will know what functionality will be tested, and you will see the results. Points earned at this stage are independent of the 40% points for the final submission.
 
-In the in the `project/tests` directory, the file `passenger\_UT.cc` has been started as an example for you. You should add the rest of the required tests to this file, and create `bus\_UT.cc`, `stop\_UT.cc`, and `route\_UT.cc` files in the same directory to test the other classes.
+In the `project/tests` directory, the file `passenger_UT.cc` has been started as an example for you. You should add the rest of the required tests to this file, and create `bus_UT.cc`, `stop_UT.cc`, and `route_UT.cc` files in the same directory to test the other classes.
 
 
 #### Completed Iteration Code ( 40% )
