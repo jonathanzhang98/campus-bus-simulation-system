@@ -268,6 +268,7 @@ In the week prior to the due date of the completed iteration, we will confirm th
 
 In the `project/tests` directory, the file `passenger_UT.cc` has been started as an example for you. You should add the rest of the required tests to this file, and create `bus_UT.cc`, `stop_UT.cc`, and `route_UT.cc` files in the same directory to test the other classes.
 
+##### Note that your google tests are not required to be google-style compliant.  You should put the tests under revision control using git, but you do not have to follow the process specified in lab 10 to create, compile and run your google tests. Finally, see the README.md  file in the `project/src` directory for instructions on how to compile and run your google tests. 
 
 #### Completed Iteration Code ( 40% )
 
