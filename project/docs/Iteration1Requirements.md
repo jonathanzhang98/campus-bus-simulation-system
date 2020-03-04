@@ -1,6 +1,8 @@
 # Understanding and  Extending the Visual Transit System Simulator
 
-## Iteration 1 - VERSION 1, February 24th  - **NOTE, THE REQUIREMENTS IN THIS DOCUMENT ARE SUBJECT TO CHANGE. CHECK IT EVERY DAY OR TWO**<hr>
+## Iteration 1 - **NOTE, THE REQUIREMENTS IN THIS DOCUMENT ARE SUBJECT TO CHANGE. CHECK IT EVERY DAY OR TWO**<hr>
+### Version 1 Issued February 24th
+### UPDATE 1 - March 2nd - Updated Assement Discussion on Google Tests
 
 | Date | Item | Description of Verification and Validation of Deliverable(s) |
 |:----:|:-----|:------------|
@@ -17,7 +19,7 @@ Intermediate deadlines are designed to keep you on  track in the iterative devel
 For this iteration you will be submitting the following deliverables  based upon the timetable specified above. Below is the order of submission:
 
 1. First deliverable:  Create a UML class diagram of the domain classes in the `project/src` directory and the visualization\_simulator class in the `project/web_code/web` directory  you were given in Lab 09.  
-2. Second deliverable:  Create Google Unit tests for the classes 'Bus', 'Stop'', 'Passenger', and 'Route' classes in the ` project/src` directory.
+2. Second deliverable:  Create Google Unit tests for the classes 'Bus', 'Stop'', 'Passenger', and 'Route' classes in the ` project/src` directory. As specified in lab 9, you create the tests, make the tests, and run the tests from the `project/tests` directory. Refer to lab 8 for a review of how to create, compile, and execute google tests.
 3. Third set of deliverables:
     1. *Clean up* a few existing issues
     2.  Add a new route to the simulation by adding it to the config.txt file in the `project/config` directory.
@@ -146,7 +148,7 @@ https://github.com/google/googletest
 
 Unit tests are essential in a large-scale project, because the entire code base can be tested regularly and automatically as it is being developed. In the strictest application of Test-Driven Development (TDD), the tests are written _before_ the code, which helps solidify requirements and write testable code.
 
-A sample test file is provided in the /project/tests directory. This directory must be a sibling to your _src_ directory. When you _make_ the tests, they will generate an executable (in build/bin) which, when executed, displays a report of the tests. Use this file as a guide to your own testing. While the requirements for testing in Preliminary Turn-in #2 (more later) are rather light, you can expect a much more robust testing requirement in later iterations. Do not slack on making good tests for your code!
+A sample test file is provided in the /project/tests directory. This directory must be a sibling to your _src_ directory. When you _make_ the tests by running the makefile in the `project/tests` directory , they will generate an executable (in build/bin) which, when executed, displays a report of the tests. Use this file as a guide to your own testing. While the requirements for testing in Preliminary Turn-in #2 (more later) are rather light, you can expect a much more robust testing requirement in later iterations. Do not slack on making good tests for your code!
 
 ### Google Style Guide Compliance
 
@@ -262,7 +264,7 @@ TAs will inspect code for good naming conventions, good code organization, and i
 
 #### Preliminary Testing Submission ( 10% )  **UPDATE**
 
-In the week prior to the due date of the completed iteration, we will confirm that you have submitted work for Preliminary Turn-in #2. You must include tests for **all** public methods in the Passenger class, and at a minimum, the constructors of the Bus, Stop, and Route class, along with any methods that return a Boolean value to receive full points for the preliminary submission. There will be no manual inspection of the code at this point -- it is strictly a test for completed functionality and testing. We will ensure that your tests are effective using automatic means, similar to the Testing lab. There will be transparency in this process in that you will know what functionality will be tested, and you will see the results. Points earned at this stage are independent of the 40% points for the final submission.
+In the week prior to the due date of the completed iteration, we will confirm that you have submitted work for Preliminary Turn-in #2. You must include tests for **all** public methods in the Passenger class, and at a minimum, the constructors of the Bus, Stop, and Route class, along with any methods that return a Boolean value to receive full points for the preliminary submission. There will be no manual inspection of the code at this point -- it is strictly a test for completed functionality and testing. We will ensure that your tests are effective using automatic means, similar to the Testing lab (Lab 8). There will be transparency in this process in that you will know what functionality will be tested, and you will see the results. Points earned at this stage are independent of the 40% points for the final submission.
 
 In the `project/tests` directory, the file `passenger_UT.cc` has been started as an example for you. You should add the rest of the required tests to this file, and create `bus_UT.cc`, `stop_UT.cc`, and `route_UT.cc` files in the same directory to test the other classes.
 
