@@ -3,7 +3,7 @@
 ## Iteration 1 - **NOTE, THE REQUIREMENTS IN THIS DOCUMENT ARE SUBJECT TO CHANGE. CHECK IT EVERY DAY OR TWO**<hr>
 ### Version 1 Issued February 24th
 ### UPDATE 1 - March 2nd - Updated Assement Discussion on Google Tests
-### UPDATE 1 - March 5th - More clarification on Google Tests (Iteration 1, Deliverable 2)
+### UPDATE 2 - March 5th - More clarification on Google Tests (Iteration 1, Deliverable 2)
 
 | Date | Item | Description of Verification and Validation of Deliverable(s) |
 |:----:|:-----|:------------|
