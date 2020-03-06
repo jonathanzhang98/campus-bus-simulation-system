@@ -33,7 +33,11 @@ protected:
     delete pass_loader;
     delete pass_unloader;
     delete passenger;
+    delete passenger1;
+    delete passenger2;
     passenger = NULL;
+    passenger1 = NULL;
+    passenger2 = NULL;
     pass_loader = NULL;
     pass_unloader = NULL;
   }
@@ -53,66 +57,235 @@ protected:
 // Test Constructor destination_stop_id_
 TEST_F(PassengerTests, ConstructorDestinationStopId) {
   passenger = new Passenger();
-  
-  passenger->GetOnBus();
-  
+  EXPECT_EQ(passenger->GetDestination(), -1);
+
+  passenger1 = new Passenger(10);
+  EXPECT_EQ(passenger1->GetDestination(), 10);
+
+  passenger2 = new Passenger(-10, "Luke");
+  EXPECT_EQ(passenger2->GetDestination(), -10);
 };
 
 
 // Test Constructor wait_at_stop_
 TEST_F(PassengerTests, ConstructorWaitAtStop) {
-  // test wait_at_stop_ is initialized to 0 (Use GetTotalWait, Report)
   passenger = new Passenger();
   EXPECT_EQ(passenger->GetTotalWait(), 0);
+  EXPECT_EQ(passenger->IsOnBus(), false);
 
-  // test wait_at_stop_ is still 0 after GetOnBus() is called (Use GetTotalWait, Report)
   passenger->GetOnBus();
   EXPECT_EQ(passenger->GetTotalWait(), 1);
+  EXPECT_EQ(passenger->IsOnBus(), true);
+
+  passenger->Update();
+  EXPECT_EQ(passenger->GetTotalWait(), 2);
+  EXPECT_EQ(passenger->IsOnBus(), true);
+
+  passenger->Update();
+  EXPECT_EQ(passenger->GetTotalWait(), 3);
+  EXPECT_EQ(passenger->IsOnBus(), true);
+
+
+  passenger1 = new Passenger();
+  EXPECT_EQ(passenger1->GetTotalWait(), 0);
+  EXPECT_EQ(passenger1->IsOnBus(), false);
+
+  passenger1->Update();
+  EXPECT_EQ(passenger1->GetTotalWait(), 1);
+  EXPECT_EQ(passenger1->IsOnBus(), false);
+
+  passenger1->GetOnBus();
+  EXPECT_EQ(passenger1->GetTotalWait(), 2);
+  EXPECT_EQ(passenger1->IsOnBus(), true);
+
+  passenger1->Update();
+  EXPECT_EQ(passenger1->GetTotalWait(), 3);
+  EXPECT_EQ(passenger1->IsOnBus(), true);
 };
 
 // Test Constructor time_on_bus_
 TEST_F(PassengerTests, ConstructorTimeOnBus) {
-  // test time_on_bus_ is initialized to 0 (Use IsOnBus)
   passenger = new Passenger();
+  EXPECT_EQ(passenger->GetTotalWait(), 0);
   EXPECT_EQ(passenger->IsOnBus(), false);
 
-  // test time_on_bus_ is incremented correctly (Use IsOnBus)
   passenger->GetOnBus();
+  EXPECT_EQ(passenger->IsOnBus(), true);
+  EXPECT_EQ(passenger->GetTotalWait(), 1);
+
+
+  passenger1 = new Passenger();
+  EXPECT_EQ(passenger1->GetTotalWait(), 0) << "Not initialized to 0";
+  EXPECT_EQ(passenger1->IsOnBus(), false) << "Not initialized to 0 (false)";
+
+  passenger1->Update();
+  EXPECT_EQ(passenger1->GetTotalWait(), 1) << "Not staying 0";
+  EXPECT_EQ(passenger1->IsOnBus(), false) << "Not staying 0 (false)"; 
+
+  passenger1->GetOnBus();
+  EXPECT_EQ(passenger1->IsOnBus(), true) << "Not changed to true";
+  EXPECT_EQ(passenger1->GetTotalWait(), 2);
+
+  passenger1->Update();
+  EXPECT_EQ(passenger1->GetTotalWait(), 3) << "Not incremented";
+  EXPECT_EQ(passenger1->IsOnBus(), true) << "Still not changed to true";
+};
+
+
+// Test Update() wait_at_stop_
+TEST_F(PassengerTests, UpdateWaitAtStop) {
+  passenger = new Passenger();
+  EXPECT_EQ(passenger->GetTotalWait(), 0);
+  EXPECT_EQ(passenger->IsOnBus(), false);
+
+  passenger->GetOnBus();
+  EXPECT_EQ(passenger->GetTotalWait(), 1);
+  EXPECT_EQ(passenger->IsOnBus(), true);
+
+  passenger->Update();
+  EXPECT_EQ(passenger->GetTotalWait(), 2);
+  EXPECT_EQ(passenger->IsOnBus(), true);
+
+  passenger->Update();
+  EXPECT_EQ(passenger->GetTotalWait(), 3);
+  EXPECT_EQ(passenger->IsOnBus(), true);
+};
+
+// Test Update() time_on_bus_
+TEST_F(PassengerTests, UpdateTimeOnBus) {
+  passenger = new Passenger();
+  EXPECT_EQ(passenger->GetTotalWait(), 0);
+  EXPECT_EQ(passenger->IsOnBus(), false);
+
+  passenger->Update();
+  EXPECT_EQ(passenger->GetTotalWait(), 1);
+  EXPECT_EQ(passenger->IsOnBus(), false);
+
+  passenger->GetOnBus();
+  EXPECT_EQ(passenger->GetTotalWait(), 2);
+  EXPECT_EQ(passenger->IsOnBus(), true);
+
+  passenger->Update();
+  EXPECT_EQ(passenger->GetTotalWait(), 3);
   EXPECT_EQ(passenger->IsOnBus(), true);
 };
 
 
-// Test Update()
-TEST_F(PassengerTests, Update) {
-
-};
-
 
 // Test GetOnBus()
 TEST_F(PassengerTests, GetOnBus) {
+  passenger = new Passenger();
+  EXPECT_EQ(passenger->IsOnBus(), false);
 
+  passenger->GetOnBus();
+  EXPECT_EQ(passenger->IsOnBus(), true);
+
+
+  passenger1 = new Passenger();
+  EXPECT_EQ(passenger1->IsOnBus(), false);
+
+  passenger1->Update();
+  EXPECT_EQ(passenger1->IsOnBus(), false); 
+
+  passenger1->GetOnBus();
+  EXPECT_EQ(passenger1->IsOnBus(), true);
+
+  passenger1->Update();
+  EXPECT_EQ(passenger1->IsOnBus(), true);
 };
 
 
 // Test GetTotalWait()
 TEST_F(PassengerTests, GetTotalWait) {
+  passenger = new Passenger();
+  EXPECT_EQ(passenger->GetTotalWait(), 0);
 
+  passenger->GetOnBus();
+  EXPECT_EQ(passenger->GetTotalWait(), 1);
+
+  passenger->Update();
+  EXPECT_EQ(passenger->GetTotalWait(), 2);
+
+  passenger->Update();
+  EXPECT_EQ(passenger->GetTotalWait(), 3);
+
+
+  passenger1 = new Passenger();
+  EXPECT_EQ(passenger1->GetTotalWait(), 0);
+
+  passenger1->Update();
+  EXPECT_EQ(passenger1->GetTotalWait(), 1);
+
+  passenger1->GetOnBus();
+  EXPECT_EQ(passenger1->GetTotalWait(), 2);
+
+  passenger1->Update();
+  EXPECT_EQ(passenger1->GetTotalWait(), 3);
 };
 
 
 // Test IsOnBus
 TEST_F(PassengerTests, IsOnBus) {
+  passenger = new Passenger();
+  EXPECT_EQ(passenger->IsOnBus(), false);
 
+  passenger->GetOnBus();
+  EXPECT_EQ(passenger->IsOnBus(), true);
+
+
+  passenger1 = new Passenger();
+  EXPECT_EQ(passenger1->IsOnBus(), false);
+
+  passenger1->Update();
+  EXPECT_EQ(passenger1->IsOnBus(), false); 
+
+  passenger1->GetOnBus();
+  EXPECT_EQ(passenger1->IsOnBus(), true);
+
+  passenger1->Update();
+  EXPECT_EQ(passenger1->IsOnBus(), true);
 };
 
 
 // Test GetDestination()
 TEST_F(PassengerTests, GetDestination) {
+  passenger = new Passenger();
+  EXPECT_EQ(passenger->GetDestination(), -1);
 
+  passenger1 = new Passenger(8);
+  EXPECT_EQ(passenger1->GetDestination(), 8);
+
+  passenger2 = new Passenger(-5, "Luke");
+  EXPECT_EQ(passenger2->GetDestination(), -5);
 };
 
 
-// Test Report()
-TEST_F(PassengerTests, Report) {
+// Test Report() name
+TEST_F(PassengerTests, ReportName) {
+  passenger = new Passenger(10, "Darth Vader");
+  passenger1 = new Passenger(-3, "3CPO");
+  passenger2 = new Passenger(5, "Luke Skywalker");
+  std::string expected_output_0 = "Name: Darth Vader";
+  std::string expected_output_1 = "Name: R2-D2";
+  std::string expected_output_2 = "Name: Luke Skywalker";
 
+  testing::internal::CaptureStdout();
+  passenger->Report(std::cout);
+  std::string output0 = testing::internal::GetCapturedStdout();
+
+  testing::internal::CaptureStdout();
+  passenger1->Report(std::cout);
+  std::string output1 = testing::internal::GetCapturedStdout();
+
+  testing::internal::CaptureStdout();
+  passenger2->Report(std::cout);
+  std::string output2 = testing::internal::GetCapturedStdout();
+
+  int p0 = output0.find(expected_output_0);
+  int p1 = output1.find(expected_output_1);
+  int p2 = output2.find(expected_output_2);
+
+  EXPECT_GE(p0, 0);
+  EXPECT_EQ(p1, string::npos);
+  EXPECT_GE(p2, 0);
 };
