@@ -12,11 +12,11 @@ Note the values of small, regular, and large should be, 30, 60, 90.
 
 Add a pause/resume button to the simulation. If a user presses the pause/resume button, the simulation should pause. When the user presses the button again, the simulation should resume from where it left off.
 
-This will entail adding a button to the graphical user interface, and depending on the design, could require the addition of command to the command pattern implemented in the `my_web_server_command` files in the directory `project/web_code/web`."
+This will entail adding a button to the graphical user interface, and depending on the design, could require the addition of command to the command pattern implemented in the `my_web_server_command` files in the directory `project/web_code/web`.
 
 There are **two deliverables for this lab**:
 1. UML of the Bus Factory you choose to Implement for interation 1 integrated into your updated UML diagram of the Transit Simulation.   
-2. Pause/Resume Button Pseudocode
+2. Pause/Resume Button code
 
 These should be submitted on Canvas, and they are due at **11:55pm on Friday, March 20** at the same time as the rest of the Iteration 1 requirements.
 ​
