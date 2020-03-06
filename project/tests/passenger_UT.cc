@@ -176,22 +176,28 @@ TEST_F(PassengerTests, UpdateTimeOnBus) {
 TEST_F(PassengerTests, GetOnBus1) {
   passenger = new Passenger();
   EXPECT_EQ(passenger->IsOnBus(), false);
+  EXPECT_EQ(passenger->GetTotalWait(), 0);
 
   passenger->GetOnBus();
   EXPECT_EQ(passenger->IsOnBus(), true);
+  EXPECT_EQ(passenger->GetTotalWait(), 1);
 
 
   passenger1 = new Passenger();
   EXPECT_EQ(passenger1->IsOnBus(), false);
+  EXPECT_EQ(passenger1->GetTotalWait(), 0);
 
   passenger1->Update();
-  EXPECT_EQ(passenger1->IsOnBus(), false); 
+  EXPECT_EQ(passenger1->IsOnBus(), false);
+  EXPECT_EQ(passenger1->GetTotalWait(), 1); 
 
   passenger1->GetOnBus();
   EXPECT_EQ(passenger1->IsOnBus(), true);
+  EXPECT_EQ(passenger1->GetTotalWait(), 2);
 
   passenger1->Update();
   EXPECT_EQ(passenger1->IsOnBus(), true);
+  EXPECT_EQ(passenger1->GetTotalWait(), 3);
 };
 
 // Test GetOnBus()
