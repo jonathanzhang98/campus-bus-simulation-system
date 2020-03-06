@@ -1,11 +1,13 @@
-### Feedback for Lab 09
+### Assessment for Lab 09
 
-Run on March 02, 11:33:11 AM.
+#### Total score: _100_ / _100_
+
+Run on March 03, 11:58:49 AM.
 
 
 #### Necessary Files and Structure
 
-+ Pass: Check that directory "project" exists.
++  _40_ / _40_ : Pass: Check that directory "project" exists.
 
 + Pass: Change into directory "project".
 
@@ -28,18 +30,20 @@ Run on March 02, 11:33:11 AM.
 
 + Pass: Check that file/directory "build" does not exist.
 
-+ Pass: Check that file/directory "build/bin/vis_sim" does not exist.
++  _20_ / _20_ : Pass: Check that file/directory "build/bin/vis_sim" does not exist.
 
 
 #### Compile Tests
 
 + Pass: Change into directory "src".
 
-+ Pass: Check that make compiles.
++  _30_ / _30_ : Pass: Check that make compiles.
 
 
 
 + Pass: Change into directory "..".
 
-+ Pass: Check that file "build/bin/vis_sim" exists.
++  _10_ / _10_ : Pass: Check that file "build/bin/vis_sim" exists.
+
+#### Total score: _100_ / _100_
 
