@@ -54,6 +54,12 @@ protected:
     stop = NULL;
     stop1 = NULL;
     stop2 = NULL;
+    delete route;
+    delete route1;
+    delete route2;
+    route = NULL;
+    route1 = NULL;
+    route2 = NULL;
   }
 };
 
