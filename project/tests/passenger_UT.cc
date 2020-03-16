@@ -1,3 +1,9 @@
+/*
+ * Students: Use this file as a guide to writing your own unit tests.
+ * See the project instructions for more information on which classes
+ * and methods must be tested.
+ */
+
 /*******************************************************************************
  * Includes
  ******************************************************************************/
@@ -23,7 +29,7 @@ protected:
   PassengerLoader* pass_loader;
   PassengerUnloader* pass_unloader;
   Passenger *passenger, *passenger1, *passenger2;
-    
+
   virtual void SetUp() {
     pass_loader = new PassengerLoader();
     pass_unloader = new PassengerUnloader();
