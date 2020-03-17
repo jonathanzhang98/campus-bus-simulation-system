@@ -4,16 +4,17 @@
 ### Version 1 Issued February 24th
 ### UPDATE 1 - March 2nd - Updated Assement Discussion on Google Tests
 ### UPDATE 2 - March 5th - More clarification on Google Tests (Iteration 1, Deliverable 2)
+### UPDATE 3 - March 17th - Adjusted due dates following COVID-19 impacts (Iteration 1, Deliverable 3)
 
 | Date | Item | Description of Verification and Validation of Deliverable(s) |
 |:----:|:-----|:------------|
 | FRI, Feb 28, 11:55pm | UML diagram of the existing simulation (in the `project/src` directory and *visual\_simulation* class in the `project/web_code/web` directory - submit via Canvas | inspection |
 | FRI, March 6, 11:55pm | Preliminary Google Tests for 'Bus', 'Stop', 'Passenger' and 'Route'   | Pass automated tests and inspection |
-| FRI, March 20, 11:55pm | Documentation and Code Implementation | Automated tests and inspection |
+| TUE, March 24, 11:55pm | Documentation and Code Implementation | Automated tests and inspection |
 
 In lab 9, you are (were) given a working version of a transit system simulation with a visualization capability.  For this semester's 3081 project, you will refactor (update and extend) the functionality of the  simulation you were given in lab 9 while rigorously following the process for using version control specified in lab 10. The current simulation models transit around the University of Minnesota campus via bus. The simulation you were given consists a single route with multiple stops and runs until the upper bound number of update time steps  specified in the simulation is reached. 
 
-Your completed project deliverables should demonstrate good software design and development practices using good design methodologies, and rigorously follow the process for using version control you learned in lab 10
+Your completed project deliverables should demonstrate good software design and development practices using good design methodologies, and rigorously follow the process for using version control you learned in lab 10.
 
 Intermediate deadlines are designed to keep you on  track in the iterative development process you are using to develop iteration 1 and the rest of the project this semester. 
 
@@ -89,7 +90,7 @@ Buses do not make more than one trip through their routes. When they finish both
 
 Before discussing various levels of priority for iteration 1 development, there is one method which requires a special note.
 
-###### _ Report _
+###### _Report_
 
 All of our principal domain entities (passenger, bus, stop, route) have this method. This method was created during the high-level design discussions. This output format has been specified and will very likely not change.  It is used not only for functional purposes for visualization of data in a non-graphical application, but also for verifying functional operation in testing.
 
@@ -123,7 +124,7 @@ One other note, the probability of a passenger being generated during a simulati
 
 You should create a bus factory class that is capable of creating large, regular, or small capacity busses and implement it in the simulation.  You can do this by creating a concrete factory class or an abstract factory.
 
-Note the values of small, regular, and large should be, 30, 60, 90.  Moreover, this document will be updated with more information specific requirements for the factory as we discuss it further in class.
+Note the values of small, regular, and large should be 30, 60, 90.  Moreover, this document will be updated with more information specific requirements for the factory as we discuss it further in class.
 
 ##### Priority Level 3: Add Functionality to Pause / Resume
 
@@ -255,7 +256,7 @@ We will compile the code to generate _Doxygen_ web pages. All classes and major 
 
 Your repository must include Issues that communicate to the TAs. If there are no bugs in your code, include a GitHub Issue that states that there are no known bugs to report  and that further verification is necessary (never say that there aren't bugs, because we know that that is typically not the case :-). We anticipate that a few bugs will exist in your project and they will reveal themselves during testing. If you have a few bugs AND you report them, then you will lose fewer points than if you don't report them - provided the bugs aren't preventing the simulation from running to completion. Also, keep in mind that development will continue throughout the semester, and if you can't fix your code this iteration, you *might* have an opportunity in successive iterations to do so(there are no implied guarantees on this though), so keep use github to keep track of all your bugs.
 
-For this iteration, every time you make one single change to your code, you should follow the process documented in lab 10.  Create an issue, a new branch, address the issue (add or fix functionality, etc.), test.  When it works, commit and include a ** meaningful** commit message (what did you fix, add, etc.),  merge the new branch back in with the development branch, and then test again.  We will grade you on your adherence to the process. You should have at LEAST as many issues, branches, commits, and merges as there are updates and new functionality required by the iteration. 
+For this iteration, every time you make one single change to your code, you should follow the process documented in lab 10.  Create an issue, a new branch, address the issue (add or fix functionality, etc.), test.  When it works, commit and include a **meaningful** commit message (what did you fix, add, etc.),  merge the new branch back in with the development branch, and then test again.  We will grade you on your adherence to the process. You should have at LEAST as many issues, branches, commits, and merges as there are updates and new functionality required by the iteration. 
 
 #### Self-Documenting Code
 
@@ -287,7 +288,7 @@ AFTER reading this document, if you have not done so, complete lab 9. If you hav
 
 <hr>
 
-##Important notes to remember
+## Important notes to remember
 
 >Your software is a reflection of your understanding of the requirements as specified in this document. If you do not understand any portion of the requirements or you think that the requirements are underspecified, it is your responsibility to get clarification from the instructor or a TA. Please read this document carefully and review it prior to turning in your iteration for assessment.
 
