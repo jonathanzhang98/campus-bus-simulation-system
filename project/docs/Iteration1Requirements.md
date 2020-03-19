@@ -2,9 +2,10 @@
 
 ## Iteration 1 - **NOTE, THE REQUIREMENTS IN THIS DOCUMENT ARE SUBJECT TO CHANGE. CHECK IT EVERY DAY OR TWO**<hr>
 ### Version 1 Issued February 24th
-### UPDATE 1 - March 2nd - Updated Assement Discussion on Google Tests
+### UPDATE 1 - March 2nd - Updated Assessment Discussion on Google Tests
 ### UPDATE 2 - March 5th - More clarification on Google Tests (Iteration 1, Deliverable 2)
 ### UPDATE 3 - March 17th - Adjusted due dates following COVID-19 impacts (Iteration 1, Deliverable 3)
+### UPDATE 4 - March 19th - Updated Doxygen requirements (Iteration 1, Deliverable 3)
 
 | Date | Item | Description of Verification and Validation of Deliverable(s) |
 |:----:|:-----|:------------|
@@ -29,7 +30,7 @@ For this iteration you will be submitting the following deliverables  based upon
     4.  Add a pause button to the simulation.
     5.  Add the ability for the bus to skip a stop if there are no passengers waiting at an upcoming stop, and no passengers are planning to unload at the upcoming stop. 
     6.  In your Doxygen mainpage, create a user guide that tutors a new user, with your level of experience, on  obtaining, configuring, compiling, and running the simulation, and discuss the alternate design choices you considered for your bus factory. Your discussion should include  at least one pro and con of each design, and why you chose to implement the design you implemented. 
-    7.  Ensure all classes in the `project/src` directory and the visualization\_simulator class in the  directory  `project/web_code/web` are properly documented (All header functions document the classes and their methods using Doxygen, and all implementation (that is, *.cc) files have self-documenting code).
+    7.  Ensure all new classes and methods you have written are properly documented. All header files must document the classes and their methods using Doxygen, and all implementation (that is, *.cc) files must have self-documenting code.
     8. Correct and update the first UML diagram you delivered to include changes to your code including your factory class(es) and their relationships to the classes that already existed in the simulation. 
 
 
@@ -202,7 +203,7 @@ Doxygen automatically generates documentation of class and code structure when y
 
 - a _mainpage.h_ file that serves as the homepage of your automated documentation. This is an introduction to the code to other programmers who might be new to the project and need to know how to obtain it, configure it, compile it, and execute it. After you complete lab 9, you should have a mainpage.h file that you can extend in your `project/src` directory. 
 
-- fully documented classes and methods.
+- full documentation for new classes and methods.
 
 - a discussion of at least two ways in which you could have implemented the bus factory.  The discussion should clearly describe each possible implementation (use a UML diagram), and discuss at least one pro and one con of implementing each of the alternatives.  Finally, you should specify which alternative you implemented, and why. 
 
