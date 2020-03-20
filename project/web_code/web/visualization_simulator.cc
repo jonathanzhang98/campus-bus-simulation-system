@@ -16,6 +16,8 @@ VisualizationSimulator::~VisualizationSimulator() {
 void VisualizationSimulator::Start(const std::vector<int>& busStartTimings, const int& numTimeSteps) {
     busStartTimings_ = busStartTimings;
     numTimeSteps_ = numTimeSteps;
+    started = true;
+    paused = false;
 
     timeSinceLastBus_.resize(busStartTimings_.size());
     for (int i = 0; i < static_cast<int>(timeSinceLastBus_.size()); i++) {
@@ -35,6 +37,10 @@ void VisualizationSimulator::Start(const std::vector<int>& busStartTimings, cons
 }
 
 void VisualizationSimulator::Update() {
+    if (paused || !started) {
+        return;
+    }
+
     simulationTimeElapsed_++;
 
     std::cout << "~~~~~~~~~~ The time is now " << simulationTimeElapsed_;
@@ -89,4 +95,11 @@ void VisualizationSimulator::Update() {
         prototypeRoutes_[i]->Report(std::cout);
     }
  
+}
+
+void VisualizationSimulator::Pause() {
+    if (!started) {
+        return;
+    }
+    paused = !paused;
 }
