@@ -40,6 +40,7 @@ class Bus {
   Stop * GetNextStop() const { return next_stop_; }
   size_t GetNumPassengers() const { return passengers_.size(); }
   int GetCapacity() const { return passenger_max_capacity_; }
+  void skip();
 
  private:
   int UnloadPassengers();  // returning revenue delta
