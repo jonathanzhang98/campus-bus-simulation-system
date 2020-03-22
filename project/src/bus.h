@@ -31,7 +31,7 @@ class Bus {
   bool LoadPassenger(Passenger *);  // returning revenue delta
   bool Move();
   void Update();
-  void Report(std::ostream&);
+  virtual void Report(std::ostream&);
 
   // Vis Getters
   void UpdateBusData();
@@ -40,6 +40,7 @@ class Bus {
   Stop * GetNextStop() const { return next_stop_; }
   size_t GetNumPassengers() const { return passengers_.size(); }
   int GetCapacity() const { return passenger_max_capacity_; }
+  void skip();
 
  private:
   int UnloadPassengers();  // returning revenue delta

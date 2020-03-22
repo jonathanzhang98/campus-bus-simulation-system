@@ -87,7 +87,7 @@ Stop * Route::PrevStop() {
     }
 }
 
-void Route::NextStop() {
+void Route::ToNextStop() {
   destination_stop_index_++;
 
   if (destination_stop_index_ < num_stops_) {
@@ -131,7 +131,7 @@ double Route::GetNextStopDistance() const {
       std::advance(iter, destination_stop_index_-1);
       return *iter;  // resolving the iterator gets you the Stop * from the list
   // return distances_between_[destination_stop_index_ - 1];
-  // CAN'T DO THIS (return statement above) ; see NextStop()
+  // CAN'T DO THIS (return statement above) ; see ToNextStop()
   } else {
         return 0;
     }

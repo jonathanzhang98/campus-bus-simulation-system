@@ -66,4 +66,13 @@ class InitRoutesCommand : public MyWebServerCommand {
         ConfigManager* cm;
 };
 
+
+class PauseCommand : public MyWebServerCommand {
+    public:
+        PauseCommand(VisualizationSimulator* sim);
+        void execute(MyWebServerSession* session, picojson::value& command, MyWebServerSessionState* state) override;
+    private:
+        VisualizationSimulator* mySim;
+};
+
 #endif // MY_WEB_SERVER_COMMAND_H

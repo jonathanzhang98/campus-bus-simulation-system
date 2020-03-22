@@ -28,7 +28,7 @@ class Route {
   bool IsAtEnd() const;
 
   Stop *  PrevStop();  // Returns stop before destination stop
-  void NextStop();  // Change destination_stop_ to next stop
+  void ToNextStop();  // Change destination_stop_ to next stop
   Stop * GetDestinationStop() const;    // Get pointer to next stop
   double GetTotalRouteDistance() const;
   double GetNextStopDistance() const;

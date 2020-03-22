@@ -42,6 +42,8 @@ bool Bus::LoadPassenger(Passenger * new_passenger) {
 
 
 bool Bus::Move() {
+  skip();
+
   // update all passengers FIRST
   // new passengers will get "updated" when getting on the bus
   for (std::list<Passenger *>::iterator it = passengers_.begin();
@@ -93,7 +95,7 @@ bool Bus::Move() {
                     did_move = true;  // We move if we have gotten passengers?
                 }
 
-                current_route->NextStop();
+                current_route->ToNextStop();
                 next_stop_ = current_route->GetDestinationStop();
                 distance_remaining_ += current_route->GetNextStopDistance();
                 return did_move;
@@ -121,7 +123,7 @@ bool Bus::Move() {
             did_move = true;
         }
 
-        current_route->NextStop();
+        current_route->ToNextStop();
 
         // If we have incremented past the end of the outgoing route, set our
         // next stop to actually be the first stpo in incoming
@@ -140,6 +142,26 @@ bool Bus::Move() {
   return did_move;
 }
 
+void Bus::skip() {
+  // 1. no one will get up at next stop
+  bool no_one_up = false;
+  if (next_stop_->GetNumPassengersPresent() == 0)
+    no_one_up = true;
+
+  // 2. no one will get off at next stop
+  bool no_one_off = true;
+  for (std::list<Passenger *>::iterator it = passengers_.begin();
+                                  it != passengers_.end(); it++) {
+    if ((*it)->GetDestination() == next_stop_->GetId()) {
+      no_one_off = false;
+      break;
+    }
+  }
+
+  if (no_one_up && no_one_off) {
+    std::cout << "~~~~~~~~~~~~~~ Skip this stop: " << next_stop_->GetId() << " ~~~~~~~~~~~~~~" << std::endl;
+  }
+}
 
 // bool Refuel() {
 // //This may become more complex in the future

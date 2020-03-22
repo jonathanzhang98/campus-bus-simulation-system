@@ -145,3 +145,13 @@ void InitRoutesCommand::execute(MyWebServerSession* session, picojson::value& co
 
 }
 
+PauseCommand::PauseCommand(VisualizationSimulator* sim): mySim(sim) {}
+
+void PauseCommand::execute(MyWebServerSession* session, picojson::value& command, MyWebServerSessionState* state) {
+    // TODO: Call Pause() on the associated VisualizationSimulator
+    (void)session;
+    (void)state;
+    (void)command;
+    
+    mySim->Pause();
+}
