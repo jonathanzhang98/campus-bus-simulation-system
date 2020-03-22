@@ -31,7 +31,7 @@ class Bus {
   bool LoadPassenger(Passenger *);  // returning revenue delta
   bool Move();
   void Update();
-  void Report(std::ostream&);
+  virtual void Report(std::ostream&);
 
   // Vis Getters
   void UpdateBusData();
