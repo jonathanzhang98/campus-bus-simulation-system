@@ -14,7 +14,7 @@
 
 class LargeBus : public Bus {
  public:
-  LargeBus(std::string name, Route * out, Route * in, double speed = 1): Bus(name, out, in, 30, speed) {}
+  LargeBus(std::string name, Route * out, Route * in, double speed = 1): Bus(name, out, in, 90, speed) {}
   void Report(std::ostream&) override;
 };
 

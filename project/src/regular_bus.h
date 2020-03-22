@@ -14,7 +14,7 @@
 
 class RegularBus : public Bus {
  public:
-  RegularBus(std::string name, Route * out, Route * in, double speed = 1): Bus(name, out, in, 30, speed) {}
+  RegularBus(std::string name, Route * out, Route * in, double speed = 1): Bus(name, out, in, 60, speed) {}
   void Report(std::ostream&) override;
 };
 
