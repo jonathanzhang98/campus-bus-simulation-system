@@ -93,7 +93,7 @@ bool Bus::Move() {
                     did_move = true;  // We move if we have gotten passengers?
                 }
 
-                current_route->NextStop();
+                current_route->ToNextStop();
                 next_stop_ = current_route->GetDestinationStop();
                 distance_remaining_ += current_route->GetNextStopDistance();
                 return did_move;
@@ -121,7 +121,7 @@ bool Bus::Move() {
             did_move = true;
         }
 
-        current_route->NextStop();
+        current_route->ToNextStop();
 
         // If we have incremented past the end of the outgoing route, set our
         // next stop to actually be the first stpo in incoming
