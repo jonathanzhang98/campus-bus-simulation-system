@@ -7,6 +7,11 @@
 
 #include "web_interface.h"
 #include "config_manager.h"
+#include "src/concrete_bus_factory.h"
+
+#include <vector>
+#include <random>
+
 
 class Route;
 class Bus;
