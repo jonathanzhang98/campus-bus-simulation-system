@@ -102,7 +102,7 @@ All of our principal domain entities (passenger, bus, stop, route) have this met
 In the `project/src` directory:
 
 1. Fix the indentation in the` Bus` class in any areas that need it (check both the `h` and `cc` file)
-2. Change the definition of `LoadPassener()` so it returns a `bool` instead of an `int` - and make sure it the result is style compliant
+2. Change the definition of `PassengerLoader::LoadPassenger()` so it returns a `bool` instead of an `int` - and make sure it the result is style compliant
 3. Refactor naming:  Change `Route::NextStop` to `Route::ToNextStop`
 
 In the `project/web_code/web` directory:
