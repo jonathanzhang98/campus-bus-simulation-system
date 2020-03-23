@@ -6,6 +6,10 @@
 #ifndef SRC_BUS_H_
 #define SRC_BUS_H_
 
+
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
 #include <iostream>
 #include <list>
 #include <string>
@@ -23,23 +27,153 @@ class PassengerLoader;
 class Route;
 class Stop;
 
+/*******************************************************************************
+ * Class Definitions
+ ******************************************************************************/
+/**
+ * @brief The main class for the buses.
+ *
+ * 
+ *
+ */
 class Bus {
  public:
+ /**
+  * @brief Construct a Passenger obejct with a destination_stop_id and a name.
+  *
+  * This function will be used for simulation purposes.
+  *
+  * @param[in] name
+  * @param[in] out 
+  * @param[in] in 
+  * @param[in] capacity 
+  * @param[in] speed 
+  *
+  * @return Constructor does not return anything.
+  */
   Bus(std::string name, Route * out, Route * in, int capacity = 60,
                                                  double speed = 1);
+
+ /**
+  * @brief Check if the trip is complete.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return IsTripComplete returns if the trip is complete as a bool.
+  */
   bool IsTripComplete();
+
+ /**
+  * @brief Load a passenger onto the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  * @param[in] passenger 
+  *
+  * @return LoadPassenger returns if the passenger is loaded on bus successfully.
+  */
   bool LoadPassenger(Passenger *);  // returning revenue delta
+
+ /**
+  * @brief Move the bus if possible.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return Move returns if the bus actually moved.
+  */
   bool Move();
+
+ /**
+  * @brief Updates the states of the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return Update does not return anything.
+  */
   void Update();
+
+ /**
+  * @brief Report the states of the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return Report does not return anything.
+  */
   virtual void Report(std::ostream&);
 
   // Vis Getters
+ /**
+  * @brief Updates the data concerning the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return UpdateBusData does not return anything.
+  */
   void UpdateBusData();
+
+ /**
+  * @brief Get the data concerning the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return GetBusData returns the data concerning the bus as a BusData struct.
+  */
   BusData GetBusData() const;
+
+ /**
+  * @brief Get the name of the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return GetName returns the name of the bus as string.
+  */
   std::string GetName() const { return name_; }
+
+ /**
+  * @brief Get the next stop.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return GetNextStop return the next stop as a Stop object.
+  */
   Stop * GetNextStop() const { return next_stop_; }
+
+ /**
+  * @brief Get the number of passengers on the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return GetNumPassengers returns the number of passengers on the bus as a size_t struct.
+  */
   size_t GetNumPassengers() const { return passengers_.size(); }
+
+ /**
+  * @brief Get the capacity of the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return GetCapacity returns the capacity of the bus.
+  */
   int GetCapacity() const { return passenger_max_capacity_; }
+
+ /**
+  * @brief Skip prints "skip" if the next stop should be skipped.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return Update does not return anything.
+  */
   void skip();
 
  private:

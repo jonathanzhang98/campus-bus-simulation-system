@@ -24,6 +24,15 @@ class VisualizationSimulator {
 
         void Start(const std::vector<int>&, const int&);
         void Update();
+
+       /**
+        * @brief Pause the simulation by not updating.
+        *
+        * This function will be used for simulation purposes.
+        *
+        *
+        * @return Pause does not return anything.
+        */
         void Pause();
 
     private:

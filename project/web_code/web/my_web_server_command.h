@@ -67,6 +67,15 @@ class InitRoutesCommand : public MyWebServerCommand {
 };
 
 
+/*******************************************************************************
+ * Class Definitions
+ ******************************************************************************/
+/**
+ * @brief The main class for the pause command of the simulator.
+ *
+ * 
+ * 
+ */
 class PauseCommand : public MyWebServerCommand {
     public:
         PauseCommand(VisualizationSimulator* sim);
