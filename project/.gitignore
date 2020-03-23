@@ -1,5 +1,8 @@
 # Ignore the build directory.
 build
 
+# Ignore the html directory.
+html
+
 # OSX automatically includes these, so ignore them as well.
 .DS_Store
