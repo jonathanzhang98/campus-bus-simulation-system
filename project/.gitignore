@@ -3,6 +3,7 @@ build
 
 # Ignore the html directory.
 html
+latex
 
 # OSX automatically includes these, so ignore them as well.
 .DS_Store
