@@ -27,7 +27,7 @@ class Passenger;
  * 
  */
 class PassengerUnloader {
- public: 
+ public:
  /**
   * @brief Unload passengers.
   *

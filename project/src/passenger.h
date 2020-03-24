@@ -94,6 +94,7 @@ class Passenger {  // : public Reporter {
   * @return Report does not return anything.
   */
   void Report(std::ostream&) const;
+
  private:
   std::string name_;
   int destination_stop_id_;

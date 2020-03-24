@@ -39,7 +39,7 @@ class PassengerGenerator {
   * @return Constructor does not return anything.
   */
   PassengerGenerator(std::list<double>, std::list<Stop *>);
-  
+
   /**
   * @brief Generate a list of passengers.
   *
@@ -50,6 +50,7 @@ class PassengerGenerator {
   */
   // Makes the class abstract, cannot instantiate and forces subclass override
   virtual int GeneratePassengers() = 0;  // pure virtual
+
  protected:
   std::list<double> generation_probabilities_;
   std::list<Stop *> stops_;

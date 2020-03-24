@@ -159,7 +159,9 @@ void Bus::skip() {
   }
 
   if (no_one_up && no_one_off) {
-    std::cout << "~~~~~~~~~~~~~~ Skip this stop: " << next_stop_->GetId() << " ~~~~~~~~~~~~~~" << std::endl;
+    std::cout << "~~~~~~~~~~~~~~ Skip this stop: "
+              << next_stop_->GetId()
+              << " ~~~~~~~~~~~~~~" << std::endl;
   }
 }
 

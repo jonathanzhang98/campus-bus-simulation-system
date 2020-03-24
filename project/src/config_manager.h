@@ -56,7 +56,7 @@ class ConfigManager {
    * @return ReadConfig does not return anything.
    */
     void ReadConfig(const std::string filename);
-  
+
   /**
    * @brief Load a passenger onto the bus.
    *

@@ -14,6 +14,7 @@
 #include <list>
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include "./data_structs.h"
 
@@ -58,7 +59,7 @@ class Route {
   * @return Clone returns a copy of the route as a pointer.
   */
   Route * Clone();
- 
+
  /**
   * @brief Updates the states of the route.
   *

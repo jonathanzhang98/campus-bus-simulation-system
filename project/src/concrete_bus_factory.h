@@ -45,6 +45,7 @@ class ConcreteBusFactory {
   *
   * @return GenerateBus returns a bus pointer.
   */
-  static Bus * GenerateBus(string id, Route * outbound, Route * inbound, int busType, double speed = 1);
+  static Bus * GenerateBus(string id, Route * outbound, Route * inbound
+                                      , int busType, double speed = 1);
 };
 #endif  // SRC_CONCRETE_BUS_FACTORY_H_

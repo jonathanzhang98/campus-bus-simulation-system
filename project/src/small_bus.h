@@ -38,7 +38,8 @@ class SmallBus : public Bus {
   *
   * @return Constructor does not return anything.
   */
-  SmallBus(std::string name, Route * out, Route * in, double speed = 1): Bus(name, out, in, 30, speed) {}
+  SmallBus(std::string name, Route * out, Route * in, double speed = 1)
+                                    : Bus(name, out, in, 30, speed) {}
 
  /**
   * @brief Report the states of the bus.
