@@ -77,15 +77,6 @@ Teaching staff (Undergraduate TA's, Graduate TA's, and Instructors)  will also b
 
 In the first iteration, you enhanced the core functionality of the simulation. In this iteration, you will design and implement: a regression test to ensure the core functionality of the simulation continues to function as expected when changes are made to the simulation; an observer pattern to display information about a single bus to the user; and finally, logic to determine what size buses will be deployed based upon conditions within the simulation. 
 
-Everything will be submitted via GitHub and where indicated through Canvas. We will pull your repository at the specified due dates and grade according to the contents at that time.
-
-> Please verify that your submission compiles on a cselabs machine and it is complete. You will receive no grade or be heavily penalized if your code does not compile upon submission.
-
-The schedule is very tight, and it is important that you keep up with the project. The project will continue to build throughout the semester, and if you get behind, it will be very difficult to catch up. For this reason, **late
-assignments will not be accepted**, but you will receive partial credit for partial completion of the requirements.
-
-You can convert this requirements document to pdf using this tool: http://www.markdowntopdf.com/
-
 <hr>
 
 ## Documentation and Code Implementation Requirements
@@ -101,13 +92,13 @@ Doxygen syntax and test for Google Style compliance using cpplint.
 
 Below we specify the three sets of functionality you are to design and deliver for this iteration.
 
-#### Priority Level 1 : Implement a Regresssion Test and Fix Previous Unit Tests
+#### Priority Level 1 : Implement a Regression Test and Fix Previous Unit Tests
 
-For regression tests, the goal is to verify that features that worked once stay working, even as you continue to fix, add, and/or refactor the code base and the development environment (e.g. makefiles) .
+For regression tests, the goal is to verify that features that worked once stay working, even as you continue to fix, add, and/or refactor the code base and the development environment (e.g. makefiles).
 
 For our transit simulation, that means designing and implementing a structured scenario that can be run repeatedly and produce the same output each time it is executed while employing as many of the domain classes as possible.
 
-While developing this test, you should store any config files you need in project/config/ and anything else that might be helpful in a new directory you create named `project/resources/`, to ensure that changes you make to create the regression test do not break anything that was already working.
+While developing this test, you should store any config files you need in `project/config/` and anything else that might be helpful in a new directory you create named `project/resources/`, to ensure that changes you make to create the regression test do not break anything that was already working.
 
 Designing and implementing a regression test, and how to proceed, will be covered in more detail in lecture and lab.
 
