@@ -1,4 +1,4 @@
-# Enhancing and Extending The Visual Transit System Simululator
+# Enhancing and Extending The Visual Transit System Simulator
 
 ## Iteration 2
 
@@ -11,9 +11,9 @@
 
 ![Image of a simulation running](simulation.png)
 
-In the first iteration you implemented unit tests for the major classes used to implement the domain login in the transit simulation, added a new route, enhanced the GUI,  designed and implemented a bus factory, and added (or augmented) the a skip-stops capability.  Most importantly you created and augemented design documentation using UML to document the classes used in the simulation, and updating the UML to incorporate the classes and methods you added.  You also documented your code using doxygen and self-documenting code techniques. Finally, you created user-documentation on how to obtain and run the transit simulation along with and a design discussion of 2 alternate designs of a bus factory. 
+In the first iteration you implemented unit tests for the major classes used to implement the domain logic in the transit simulation, added a new route, enhanced the GUI, designed and implemented a bus factory, and added (or augmented) a skip-stops capability.  Most importantly, you created and augmented design documentation, first using UML to document the classes used in the simulation, and then updating the UML to incorporate the classes and methods you added.  You also documented your code using Doxygen and self-documenting code techniques. Finally, you created user documentation on how to obtain and run the transit simulation, along with a design discussion of two alternate designs of a bus factory. 
 
-In this next iteration we will be implementing regression testing, the observer pattern, and bus deployment strategies to further extend and enhance the simulation. These topics will be the focus of classroom lectures and labs.  
+In this next iteration we will implement regression testing, the observer pattern, and bus deployment strategies to further extend and enhance the simulation. These topics will be the focus of classroom lectures and labs.  
 
 <hr>
 
@@ -22,39 +22,38 @@ In this next iteration we will be implementing regression testing, the observer 
 | <span id="a1">Date</a> | Item | Description of Verification and Validation of Deliverable(s) |
 |:----:|:-----|:------------|
 | WED, April 1, 11:55pm | Regression Tests and Fixing the Unit Tests from Iteration 1 | submit via Github; Pass automated tests and by inspection |
-| Fri, April 10, 11:55pm | Design and Implement the Observer Pattern for observing one Bus, and a Bus Depot that incorporates strategies for deploying busses. | Pass automated tests and by inspection |
+| Fri, April 10, 11:55pm | Design and Implement the Observer Pattern for observing one Bus, and a Bus Depot that incorporates strategies for deploying buses. | Pass automated tests and by inspection |
 
 Your completed project deliverables should demonstrate good software design by implementing the appropriate design methodologies and development practices. You should rigorously follow the process for using version control you learned in lab 10 and documentation procedures learned in lab 07. 
 
-Intermediate deadlines are designed to keep you on track in the iterative development process you are using to develop iteration 2 and the rest of the project this semester.
+Intermediate deadlines are designed to keep you on track in the iterative development process you are using for iteration 2 and the rest of the project this semester.
 
 For this iteration you will be submitting the following deliverables based upon the timetable specified above. Below is the order of submission:
 
 1. First deliverables: 
 
-Create a  regression test designed to ensure that changes to your existing program development evironment (e.g., makefile) or code does not adversely affect the existing features of the simulation that have already been implemented (that is, your code still works as it was working before - unless you intentionally altered it and expected new results). Fix the unit tests from the first iteration based upon the feedback you received.  Further details can be found in the section Deliverables and Submission Process.
+Create a regression test designed to ensure that changes to your existing program development environment (e.g., makefile) or code does not adversely affect the existing features of the simulation that have already been implemented (that is, your code still works as it was working before -- unless you intentionally altered it and expected new results). Fix the unit tests from the first iteration based upon the feedback you received.  Further details can be found in the section Deliverables and Submission Process.
 
 2. Final deliverables: 
 
     1. Implementation of an observer pattern for one bus. Further details can be found in the section Deliverables and Submission Process. **See: [Observer Pattern]( https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/)** for an overview of the observer pattern. 
-    2.  Implementation of a Bus Depot utilizing different strategies for the deployment of buses based upon differing sets of criteria, for example: Time of day and/or route information, etc. Further details can be found in the section Deliverables and Submission Process.
-The strategy pattern may be useful for designing and implementing this capability. **See: [Strategy Pattern](https://www.geeksforgeeks.org/strategy-pattern-set-1/)** for an overview of the strategy pattern.  See the following links for examples of implementation of the strategy patten in java and C++: </br>
-         a. https://www.geeksforgeeks.org/strategy-pattern-set-2 (in java), </br>
-         b. https://sourcemaking.com/design_patterns/strategy/cpp/1) (in c++)</br>
-    2. In your Doxygen mainpage add a section named: **"Desiging and Implementing the Observer Pattern"** that discusses the design and implementation of your observer patter for observing information about a bus as it proceeds along a route. Specify what classes and methods you had to add and where you had to add them - and include pictures where applicable and possible. Note which parts of the design and implementation were most difficult for you, and include any tips or advice on how to understand and implement the pattern (for example, what sources of information (documentation, lecture, lab) that helped you understand that pattern and enabled you to design and implement it (for example, what sources of information (e.g., links to web sites, books, lecture, lab)).
+    2.  Implementation of a Bus Depot utilizing different strategies for the deployment of buses based upon differing sets of criteria, for example: time of day and/or route information, etc. Further details can be found in the section Deliverables and Submission Process.
+The strategy pattern may be useful for designing and implementing this capability. **See: [Strategy Pattern](https://www.geeksforgeeks.org/strategy-pattern-set-1/)** for an overview of the strategy pattern.  See the following links for examples of implementation of the strategy patten in Java and C++: </br>
+         a. https://www.geeksforgeeks.org/strategy-pattern-set-2 (in Java), </br>
+         b. https://sourcemaking.com/design_patterns/strategy/cpp/1) (in C++)</br>
+    2. In your Doxygen mainpage add a section named: **"Desiging and Implementing the Observer Pattern"** that discusses the design and implementation of your observer pattern for observing information about a bus as it proceeds along a route. Specify what classes and methods you had to add and where you had to add them -- and include pictures where applicable and possible. Note which parts of the design and implementation were most difficult for you, and include any tips or advice on how to understand and implement the pattern -- for example, what sources of information (e.g. documentation, lecture, lab) helped you understand that pattern, and what enabled you to design and implement it (e.g. links to web sites, books, lecture, lab).
     4.  Ensure all new classes and methods you have written are properly documented. All header files must document the classes and their methods using Doxygen, and all implementation (that is, \*.cc) files must have self-documenting code. **You do not need to document the web server code base.** 
-    5. Correct and update your UML class diagram from Iteration 1 to include the changes to your code including all classes you added to complete the iteration 2 requirements and their relationships to each other and the classes that previously existed in the simulation.
+    5. Correct and update your UML class diagram from Iteration 1 to include the changes to your code, including all classes you added to complete the iteration 2 requirements and their relationships to each other and the previously existing classes.
     
-**NOTE, if you are unable to complete all or a portion of an implementation item, include a discussion of your PROPOSED design of the observer pattern in your mainpage, and your PROPOSED class design / changes for all your implementation items in your UML and and note that in a paragraph at the top of your mainpage (Tell us what you did not sucessfully implement - success is defined as the functionality compiles and executes) so you recieve credit for your design efforts.**
+**NOTE, if you are unable to complete all or a portion of an implementation item, include a discussion of your PROPOSED design of the observer pattern in your mainpage, and your PROPOSED class design / changes for all your implementation items in your UML, and note that in a paragraph at the top of your mainpage so you receive credit for your design efforts. (Tell us what you did not sucessfully implement -- success is defined as the functionality compiles and executes.)**
 
 #### Deliverables and Submission Process
 
-With the exception of the PDF versions of your UML diagrams, which will be submitted via an assignment item on Canvas, you will submit all your deliverables via GitHub according to the process specified lab 10.  We will tag and pull your repository at the specified due dates and grade them according to the contents at that time. **The first deliverables due on April 1 (Regression test, updated unit tests), should be in your devel branch.  Your final deliverables (due April 10) should in your master branch.**
+With the exception of the PDF versions of your UML diagrams, which will be submitted via an assignment item on Canvas, you will submit all your deliverables via GitHub according to the process specified lab 10.  We will tag and pull your repository at the specified due dates and grade them according to the contents at that time. **The first deliverables due on April 1 (regression test, updated unit tests) should be in your devel branch. Your final deliverables (due April 10) should in your master branch.**
 
->#### You must verify that your submission compiles on a cselabs machine and it is complete. You will receive zero or be heavily penalized if your code does not compile and/or we cannot generate documentation using Doxygen as specified in  Lab 7 upon submission.
+>#### You must verify that your submission compiles on a cselabs machine and it is complete. You will receive zero or be heavily penalized if your code does not compile and/or we cannot generate documentation using Doxygen as specified in Lab 7 upon submission.
 
-The schedule is very tight, and it is important that you keep up with the project. The project will continue to build throughout the semester, and if you get behind, it will be very difficult to catch up. For this reason, **late
-assignments will not be accepted**, but you will receive partial credit for partial completion of the requirements - so **ALWAYS MAKE SURE TO SUBMIT SOMETHING - SOME POINTS ARE BETTER THAN NONE**.
+The schedule is very tight, and it is important that you keep up with the project. The project will continue to build throughout the semester, and if you get behind, it will be very difficult to catch up. For this reason, **late assignments will not be accepted**, but you will receive partial credit for partial completion of the requirements -- so **ALWAYS MAKE SURE TO SUBMIT SOMETHING - SOME POINTS ARE BETTER THAN NONE**.
 
 You can convert this requirements document to pdf using this tool: http://www.markdowntopdf.com/
 
@@ -66,19 +65,19 @@ In this iteration, you will do the following development:
 
 - enhancing/modifying the base code.
 - formulating regression tests with Google Test.
-- implementing at least one new design pattern, the observer pattern, and potentially the strategy pattern.
-- augmenting to the simulation class structure. 
-- augmenting the design discussion in your doxygen mainpage to include a discussion on your design and implementation of the observer pattern. 
+- implementing at least one new design pattern: the observer pattern, and potentially the strategy pattern.
+- augmenting the simulation class structure. 
+- augmenting the design discussion in your Doxygen mainpage to include a discussion on your design and implementation of the observer pattern. 
 - ensuring Google style guide compliance.
-- modify/update your iteration UML design documentation to include the classes and methods you add or refactor in iteration 2.
+- modifying/updating your iteration UML design documentation to include the classes and methods you add or refactor in iteration 2.
 - using Doxygen to document and generate documentation.
-- Use git, and produce self-documenting code (i.e. good organization and naming conventions). 
+- using Git, and producing self-documenting code (i.e. good organization and naming conventions). 
 
-Teaching staff (Undergraduate TA's, Graduate TA's, and Instructors)  will also be working diligently to provide the structure and support for development, testing, and documentation. Automation in unit testing, style compliance, in-house github testing, and documentation will make this an easier process, however it means that you will have to develop within the constraints of these systems. Often there is a learning curve and a lot of systems trouble-shooting to get it all working, so start early!
+Teaching staff (Undergraduate TA's, Graduate TA's, and Instructors)  will also be working diligently to provide the structure and support for development, testing, and documentation. Automation in unit testing, style compliance, in-house GitHub testing, and documentation will make this an easier process, however, it means that you will have to develop within the constraints of these systems. Often there is a learning curve and a lot of systems troubleshooting to get it all working, so start early!
 
-In the first iteration, you enhanced the core functionality of the simulation. In this iteration you will be designing and implementing a regression test to ensure the continued core functionality of the simulation continues to function as expected when changes are made to the simulation; an observer pattern to display information about a single bus to the user, and finally, you will enhance the simulation even further by adding logic for determining what size buses will be deployed based upon conditions within the simulation. 
+In the first iteration, you enhanced the core functionality of the simulation. In this iteration, you will design and implement: a regression test to ensure the core functionality of the simulation continues to function as expected when changes are made to the simulation; an observer pattern to display information about a single bus to the user; and finally, logic to determine what size buses will be deployed based upon conditions within the simulation. 
 
-Everything will be submitted via Github and where indicated through Canvas. We will pull your repository at the specified due dates and grade according to the contents at that time.
+Everything will be submitted via GitHub and where indicated through Canvas. We will pull your repository at the specified due dates and grade according to the contents at that time.
 
 > Please verify that your submission compiles on a cselabs machine and it is complete. You will receive no grade or be heavily penalized if your code does not compile upon submission.
 
@@ -93,7 +92,7 @@ You can convert this requirements document to pdf using this tool: http://www.ma
 
 ### Overview
 
-In this iteration, we need to add a few new elements to our design in order to allow for configuration and visualization of our simulations. Much of this has already been designed and implemented. The primary task will be to extend your domain elements to produce the data needed for visualization and merging the provided configuration and visualization code into your project code.
+In this iteration, we need to add a few new elements to our design in order to allow for configuration and visualization of our simulation. Much of this has already been designed and implemented. The primary task will be to extend your domain elements to produce the data needed for visualization, and to merge the provided configuration and visualization code into your project code.
 
 ### Functional Requirements
 
@@ -106,28 +105,28 @@ Below we specify the three sets of functionality you are to design and deliver f
 
 For regression tests, the goal is to verify that features that worked once stay working, even as you continue to fix, add, and/or refactor the code base and the development environment (e.g. makefiles) .
 
-For our transit simulation, that  means designing and implementing structured scenario that can be run repeately and produce the same output each time it is executed that employs as many of the domain classes as possible.
+For our transit simulation, that means designing and implementing a structured scenario that can be run repeatedly and produce the same output each time it is executed while employing as many of the domain classes as possible.
 
-While developing this test, you should store any config files you need in project/config/ and anything else that might be helpful in a new directory you create named project/resources/, to ensure that changes you make to create the regression test do not break anything that was already working.
+While developing this test, you should store any config files you need in project/config/ and anything else that might be helpful in a new directory you create named `project/resources/`, to ensure that changes you make to create the regression test do not break anything that was already working.
 
-Designing and Implementing a regression test, and how to proceed, will be covered in more detail in lecture and lab
+Designing and implementing a regression test, and how to proceed, will be covered in more detail in lecture and lab.
 
-#### Priority Level 2 : Implementing an Observer Pattern to Display Relevant Bus Information on One Bus.
+#### Priority Level 2 : Implement an Observer Pattern to Display Relevant Bus Information on One Bus.
 
 ![An example of the observer pattern, with Bus 1003 as the observed bus.](observer_pattern.png)
 
-This will allow the user of the simulation to gather information on a specific bus via the simulation display. To accomplish this you will need to add at least two classes: the observer class (abstract/interface) and an observable/subject class. Templates may be useful for implementing the observable/subject classes -- See zybooks for a refresher on templates. The observer pattern will be utilized to observe a single bus. 
+This will allow the user of the simulation to gather information on a specific bus via the simulation display. To accomplish this you will need to add at least two classes: the observer class (abstract/interface) and an observable/subject class. Templates may be useful for implementing the observable/subject classes -- see zybooks for a refresher on templates. The observer pattern will be utilized to observe a single bus. 
 
-Implementing the observer pattern  will entail modifying the graphical user interface, and once again require the addition of command to the command pattern implemented in the `my_web_server_command` files in the directory `project/web_code/web`.  
+Implementing the observer pattern will entail modifying the graphical user interface, and once again require the addition of a command to the command pattern implemented in the `my_web_server_command` files in the directory `project/web_code/web`.  
 
-Designing and Implementing the observer design pattern, and how to proceed, will be covered in more detail in lecture and lab
+Designing and implementing the observer design pattern, and how to proceed, will be covered in more detail in lecture and lab.
 
 #### Priority Level 3 : Implement a Bus Depot Utilizing a Strategy Pattern
 
-To enhance the simulation even further, the Bus Depot will be using strategies to determine the type of buses to be deployed on a route. 
-For example, if depending on the name of the route and the time of day, only medium and large busses may be deployed in an alternating  - or only small busses. 
+To enhance the simulation even further, you will create a Bus Depot that uses strategies to determine the type of buses to be deployed on a route. 
+For example, depending on the name of the route and the time of day, only medium and large buses may be deployed in an alternating manner -- or only small buses. 
 
-This document will by updated with more information on the specifications for this functionality in the coming weeks.
+This document will be updated with more information on the specifications for this functionality in the coming weeks.
 
 <hr>
 
@@ -161,7 +160,7 @@ The tag `--root=..` impacts the header guard. The header guards provided in the 
 - Doxygen generated web pages including mainpage.h 
 - Self-Documenting code that is Google Style compliant
 
-Code documentation comes in many forms for many audiences. For this project, **your audience is other programmers**, who need to understand class interfaces, function parameters, function behavior, code organization, class organization, and code logic. Self-documenting code (i.e. using good organization and naming conventions) is an efficient means of communicating, since you have to write the code anyway. _Good_ comments - not too much, not too little - help guide others through the logic and class interfaces. For the larger picture of code and class structure, use UML diagrams and Doxygen-generated (automatic) web pages.
+Code documentation comes in many forms for many audiences. For this project, **your audience is other programmers**, who need to understand class interfaces, function parameters, function behavior, code organization, class organization, and code logic. Self-documenting code (i.e. using good organization and naming conventions) is an efficient means of communicating, since you have to write the code anyway. _Good_ comments -- not too much, not too little -- help guide others through the logic and class interfaces. For the larger picture of code and class structure, use UML diagrams and Doxygen-generated (automatic) web pages.
 
 #### UML
 
@@ -177,11 +176,11 @@ The UML diagram is a visual aid that helps other programmers better understand t
 
 The final diagram you submit for iteration 2 UML should reflect the changes you made while completing the code requirements. We will be looking for proper use of UML components, and a correct depiction of the code structure.
 
-There are many free tools that you can use to create the UML including Doxygen, and  draw.io (see: https://www.draw.io/). **Submit your UML  in a .pdf file  via the submission item on Canvas**.
+There are many free tools that you can use to create the UML including Doxygen, and  draw.io (see: https://www.draw.io/). **Submit your UML in a .pdf file via the submission item on Canvas**.
 
 #### Doxygen
 
-Doxygen automatically generates documentation of class and code structure when you follow some simple conventions for commenting within your code (_see_ http://www.doxygen.nl/manual/index.html and https://caiorss.github.io/C-Cpp-Notes/Doxygen-documentation.html). You have had a lab on Doxygen (lab 7) and we will likely cover a bit more in class. To start with, look over the documentation provided with the code base to understand how to document classes, methods, parameters, and even _todo's_ and _bugs_ in your code. In lab 7, you learned how to compile with your Doxyfile and generate web pages. Please look over the generated web pages for missing and incorrect information. The requirements for Doxygen include:
+Doxygen automatically generates documentation of class and code structure when you follow some simple conventions for commenting within your code (_see_ http://www.doxygen.nl/manual/index.html and https://caiorss.github.io/C-Cpp-Notes/Doxygen-documentation.html). You have had a lab on Doxygen (Lab 7) and we will likely cover a bit more in class. To start with, look over the documentation provided with the code base to understand how to document classes, methods, parameters, and even _todo's_ and _bugs_ in your code. In Lab 7, you learned how to compile with your Doxyfile and generate web pages. Please look over the generated web pages for missing and incorrect information. The requirements for Doxygen include:
 
 - the file `project/docs/Doxyfile` to generate documentation (in your `project/docs` directory).
 
@@ -189,14 +188,14 @@ Doxygen automatically generates documentation of class and code structure when y
 
 - document all classes, methods, and functions that you add in interation 2 in their header (.h) files. 
 
--  add a section named: **"Desiging and Implementing the Observer Pattern"** that discusses the design and implementation of your observer patter for observing information on a bus, as per the description in the final deliverables above. 
+-  add a section named: **"Designing and Implementing the Observer Pattern"** that discusses the design and implementation of your observer pattern for observing information on a bus, as per the description in the final deliverables above. 
 
 
-***- FINALLY The /html directory generated by Doxygen should *not* be in your repo in github.umn.edu - nor should your build directory, executable files, or object files.***
+***- FINALLY: The /html directory generated by Doxygen should *not* be in your repo in github.umn.edu - nor should your build directory, executable files, or object files.***
 
-> As part of your fresh clone prior to submission, please also compile the Doxygen and look at the generated webpages.
+> As part of your fresh clone prior to submission, please also compile the Doxygen documentation and look at the generated webpages.
 
-All of these elements of documentation will be assessed, accounting for a significant portion of your grade for each iteration (for this iteration - iteration 2, documentation will account for 1/2 of your grade). Think about these two extremes: 1) your code functions perfectly and you have almost no documentation - you will likely fail on this iteration; 2) your code is not functional and will only compile when you comment most of it out, but if you have complete, great documentation - you will likely get a decent grade on this iteration. **Get in the habit of creating the documentation along with the code.**
+All of these elements of documentation will be assessed, accounting for a significant portion of your grade for each iteration (for this iteration, iteration 2, documentation will account for 1/2 of your grade). Think about these two extremes: 1) your code functions perfectly and you have almost no documentation -- you will likely fail on this iteration; 2) your code is not functional and will only compile when you comment most of it out, but if you have complete, great documentation, you will likely get a decent grade on this iteration. **Get in the habit of creating the documentation along with the code.**
 
 <hr>
 
@@ -213,7 +212,7 @@ This is the breakdown for point distribution:
 - 50% : Final Documentation
 - 40% : Final Code
 
-#### Complete Iteration Documentation Assessment ( 50% )
+### Complete Iteration Documentation Assessment ( 50% )
 
 #### Design Document and UML 
 
@@ -240,13 +239,13 @@ For this iteration, every time you create or fix the functionality required by t
 #### Self-Documenting Code
 
 TAs will inspect code for good naming conventions, good code organization, and internal comments to highlight logic. You should not nest conditional statements too deep. Methods should not be more than a screen full, if possible. Names should be descriptive of the variable's or function's purpose. Like elements should be next to each other in the file.  Review Chapter 32 in the McConnell text, available on the Class Canvas site, for more information on how to create self-documenting code. 
-Finally, self-documenting code should be present for all classes, methods, and functions that you implement in the .cc files in iteration 2 - **Note: self-documenting code is not done with Doxygen, follow the guidelines specified in McConnell, Code Complete, Chapter 32**
+Finally, self-documenting code should be present for all classes, methods, and functions that you implement in the .cc files in iteration 2. **Note: self-documenting code is not done with Doxygen -- follow the guidelines specified in McConnell, Code Complete, Chapter 32**
 
 ### Code Assessment ( 50% )
 
 #### First Deliverable: Regression Testing Submission and Fixed Google Tests From Iteration 1 ( 10% )  **UPDATE**
 
-In the week prior to the due date of the completed iteration, we will confirm that you have submitted work for Preliminary Turn-in #1.
+Prior to the due date of the completed iteration, we will confirm that you have submitted work for Preliminary Turn-in #1.
 
 Your Google Tests from iteration 1 should be revised and updated based upon the feedback provided to you in the first iteration. 
 
@@ -259,7 +258,7 @@ Points you earn in the first deliverable are independent of the 40% points for t
 
 #### Completed Iteration Code ( 40% )
 
-Code functionality will be tested with automated tests through Github. We expect you to have basic feedback running by the end of week two of Iteration 2. In that case, you will see _some_ of the elements we'll be testing in our assessment. Review the automated feedback prior to final submission, as it will identify any issues with directory structure, compilation issues, or failed unit tests. Assessment will also include a visual inspection of the simulation and its output, as well as a visual inspection of the code.
+Code functionality will be tested with automated tests through GitHub. We expect you to have basic feedback running by the end of week two of Iteration 2. In that case, you will see _some_ of the elements we'll be testing in our assessment. Review the automated feedback prior to final submission, as it will identify any issues with directory structure, compilation issues, or failed unit tests. Assessment will also include a visual inspection of the simulation and its output, as well as a visual inspection of the code.
 
 <hr>
 
