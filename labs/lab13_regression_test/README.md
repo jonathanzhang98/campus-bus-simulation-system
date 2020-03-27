@@ -61,6 +61,7 @@ To create the regression test executable, perform the following steps with the f
   _If your makefile in the _project/src_ directory does **not** successfully create an executable file named *regression_test* in the _project/build/bin_ directory, 
   contact a TA for help_
   
+> If the error you're getting after running make is related to your factory implemetation, feel free to modify the regression test code to match your implementation.
 
 5) Next, change directory to the _project/build/bin_ directory.  Then run the regression test twice, piping each output to a different output file as such:
 
