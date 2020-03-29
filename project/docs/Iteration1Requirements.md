@@ -2,18 +2,20 @@
 
 ## Iteration 1 - **NOTE, THE REQUIREMENTS IN THIS DOCUMENT ARE SUBJECT TO CHANGE. CHECK IT EVERY DAY OR TWO**<hr>
 ### Version 1 Issued February 24th
-### UPDATE 1 - March 2nd - Updated Assement Discussion on Google Tests
+### UPDATE 1 - March 2nd - Updated Assessment Discussion on Google Tests
 ### UPDATE 2 - March 5th - More clarification on Google Tests (Iteration 1, Deliverable 2)
+### UPDATE 3 - March 17th - Adjusted due dates following COVID-19 impacts (Iteration 1, Deliverable 3)
+### UPDATE 4 - March 19th - Updated Doxygen requirements (Iteration 1, Deliverable 3)
 
 | Date | Item | Description of Verification and Validation of Deliverable(s) |
 |:----:|:-----|:------------|
 | FRI, Feb 28, 11:55pm | UML diagram of the existing simulation (in the `project/src` directory and *visual\_simulation* class in the `project/web_code/web` directory - submit via Canvas | inspection |
 | FRI, March 6, 11:55pm | Preliminary Google Tests for 'Bus', 'Stop', 'Passenger' and 'Route'   | Pass automated tests and inspection |
-| FRI, March 20, 11:55pm | Documentation and Code Implementation | Automated tests and inspection |
+| TUE, March 24, 11:55pm | Documentation and Code Implementation | Automated tests and inspection |
 
 In lab 9, you are (were) given a working version of a transit system simulation with a visualization capability.  For this semester's 3081 project, you will refactor (update and extend) the functionality of the  simulation you were given in lab 9 while rigorously following the process for using version control specified in lab 10. The current simulation models transit around the University of Minnesota campus via bus. The simulation you were given consists a single route with multiple stops and runs until the upper bound number of update time steps  specified in the simulation is reached. 
 
-Your completed project deliverables should demonstrate good software design and development practices using good design methodologies, and rigorously follow the process for using version control you learned in lab 10
+Your completed project deliverables should demonstrate good software design and development practices using good design methodologies, and rigorously follow the process for using version control you learned in lab 10.
 
 Intermediate deadlines are designed to keep you on  track in the iterative development process you are using to develop iteration 1 and the rest of the project this semester. 
 
@@ -28,7 +30,7 @@ For this iteration you will be submitting the following deliverables  based upon
     4.  Add a pause button to the simulation.
     5.  Add the ability for the bus to skip a stop if there are no passengers waiting at an upcoming stop, and no passengers are planning to unload at the upcoming stop. 
     6.  In your Doxygen mainpage, create a user guide that tutors a new user, with your level of experience, on  obtaining, configuring, compiling, and running the simulation, and discuss the alternate design choices you considered for your bus factory. Your discussion should include  at least one pro and con of each design, and why you chose to implement the design you implemented. 
-    7.  Ensure all classes in the `project/src` directory and the visualization\_simulator class in the  directory  `project/web_code/web` are properly documented (All header functions document the classes and their methods using Doxygen, and all implementation (that is, *.cc) files have self-documenting code).
+    7.  Ensure all new classes and methods you have written are properly documented. All header files must document the classes and their methods using Doxygen, and all implementation (that is, *.cc) files must have self-documenting code.
     8. Correct and update the first UML diagram you delivered to include changes to your code including your factory class(es) and their relationships to the classes that already existed in the simulation. 
 
 
@@ -89,7 +91,7 @@ Buses do not make more than one trip through their routes. When they finish both
 
 Before discussing various levels of priority for iteration 1 development, there is one method which requires a special note.
 
-###### _ Report _
+###### _Report_
 
 All of our principal domain entities (passenger, bus, stop, route) have this method. This method was created during the high-level design discussions. This output format has been specified and will very likely not change.  It is used not only for functional purposes for visualization of data in a non-graphical application, but also for verifying functional operation in testing.
 
@@ -100,7 +102,7 @@ All of our principal domain entities (passenger, bus, stop, route) have this met
 In the `project/src` directory:
 
 1. Fix the indentation in the` Bus` class in any areas that need it (check both the `h` and `cc` file)
-2. Change the definition of `LoadPassener()` so it returns a `bool` instead of an `int` - and make sure it the result is style compliant
+2. Change the definition of `PassengerLoader::LoadPassenger()` so it returns a `bool` instead of an `int` - and make sure it the result is style compliant
 3. Refactor naming:  Change `Route::NextStop` to `Route::ToNextStop`
 
 In the `project/web_code/web` directory:
@@ -123,7 +125,7 @@ One other note, the probability of a passenger being generated during a simulati
 
 You should create a bus factory class that is capable of creating large, regular, or small capacity busses and implement it in the simulation.  You can do this by creating a concrete factory class or an abstract factory.
 
-Note the values of small, regular, and large should be, 30, 60, 90.  Moreover, this document will be updated with more information specific requirements for the factory as we discuss it further in class.
+Note the values of small, regular, and large should be 30, 60, 90.  Moreover, this document will be updated with more information specific requirements for the factory as we discuss it further in class.
 
 ##### Priority Level 3: Add Functionality to Pause / Resume
 
@@ -201,7 +203,7 @@ Doxygen automatically generates documentation of class and code structure when y
 
 - a _mainpage.h_ file that serves as the homepage of your automated documentation. This is an introduction to the code to other programmers who might be new to the project and need to know how to obtain it, configure it, compile it, and execute it. After you complete lab 9, you should have a mainpage.h file that you can extend in your `project/src` directory. 
 
-- fully documented classes and methods.
+- full documentation for new classes and methods.
 
 - a discussion of at least two ways in which you could have implemented the bus factory.  The discussion should clearly describe each possible implementation (use a UML diagram), and discuss at least one pro and one con of implementing each of the alternatives.  Finally, you should specify which alternative you implemented, and why. 
 
@@ -255,7 +257,7 @@ We will compile the code to generate _Doxygen_ web pages. All classes and major 
 
 Your repository must include Issues that communicate to the TAs. If there are no bugs in your code, include a GitHub Issue that states that there are no known bugs to report  and that further verification is necessary (never say that there aren't bugs, because we know that that is typically not the case :-). We anticipate that a few bugs will exist in your project and they will reveal themselves during testing. If you have a few bugs AND you report them, then you will lose fewer points than if you don't report them - provided the bugs aren't preventing the simulation from running to completion. Also, keep in mind that development will continue throughout the semester, and if you can't fix your code this iteration, you *might* have an opportunity in successive iterations to do so(there are no implied guarantees on this though), so keep use github to keep track of all your bugs.
 
-For this iteration, every time you make one single change to your code, you should follow the process documented in lab 10.  Create an issue, a new branch, address the issue (add or fix functionality, etc.), test.  When it works, commit and include a ** meaningful** commit message (what did you fix, add, etc.),  merge the new branch back in with the development branch, and then test again.  We will grade you on your adherence to the process. You should have at LEAST as many issues, branches, commits, and merges as there are updates and new functionality required by the iteration. 
+For this iteration, every time you make one single change to your code, you should follow the process documented in lab 10.  Create an issue, a new branch, address the issue (add or fix functionality, etc.), test.  When it works, commit and include a **meaningful** commit message (what did you fix, add, etc.),  merge the new branch back in with the development branch, and then test again.  We will grade you on your adherence to the process. You should have at LEAST as many issues, branches, commits, and merges as there are updates and new functionality required by the iteration. 
 
 #### Self-Documenting Code
 
@@ -287,7 +289,7 @@ AFTER reading this document, if you have not done so, complete lab 9. If you hav
 
 <hr>
 
-##Important notes to remember
+## Important notes to remember
 
 >Your software is a reflection of your understanding of the requirements as specified in this document. If you do not understand any portion of the requirements or you think that the requirements are underspecified, it is your responsibility to get clarification from the instructor or a TA. Please read this document carefully and review it prior to turning in your iteration for assessment.
 
