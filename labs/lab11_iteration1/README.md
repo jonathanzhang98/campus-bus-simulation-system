@@ -1,4 +1,5 @@
 ## Iteration 1 Information and Tutorials
+### UPDATE 1 - March 17th - Adjusted due date following COVID-19 impacts
 
 This lab is intended to help you with some of the deliverables for the final stage of Iteration 1, specifically implementing a bus factory and implementing a pause button for the simulation. As a reminder, here is more detailed information from the Iteration 1 Requirements:
 
@@ -6,7 +7,7 @@ This lab is intended to help you with some of the deliverables for the final sta
 
 You should create a bus factory class that is capable of creating large, regular, or small capacity busses and implement it in the simulation. You can do this by creating a concrete factory class or an abstract factory.
 
-Note the values of small, regular, and large should be, 30, 60, 90.
+Note the values of small, regular, and large should be 30, 60, 90.
 
 **Add Functionality to Pause / Resume**
 
@@ -18,7 +19,7 @@ There are **two deliverables for this lab**:
 1. UML of the Bus Factory you choose to Implement for interation 1 integrated into your updated UML diagram of the Transit Simulation.   
 2. Pause/Resume Button code
 
-These should be submitted on Canvas, and they are due at **11:55pm on Friday, March 20** at the same time as the rest of the Iteration 1 requirements.
+These should be submitted on Canvas, and they are due at **11:55pm on Tuesday, March 24** at the same time as the rest of the Iteration 1 requirements.
 ​
 ### (IMPORTANT!) Before you start 
 
@@ -140,5 +141,5 @@ You have reached the end of this lab. As a reminder, this lab **has two delivera
 1. UML of the Bus Factory you choose to Implement for interation 1 integrated into your updated UML diagram of the Transit Simulation.
 2. Pause/Resume Button functionality implemented in the simulation
 
-Your updated UML diagram which includes the UML class design of the factory pattern you implemented should be submitted via Canvas, and the documented code that implements the Pause/Resume button should be submitted with the rest of the functionality you are required to implement for iteration 1 as per the development process documented in Lab 10.  The deliverables are due at **11:55pm on Friday, March 20** at the same time as the rest of the Iteration 1 requirements.
+Your updated UML diagram which includes the UML class design of the factory pattern you implemented should be submitted via Canvas, and the documented code that implements the Pause/Resume button should be submitted with the rest of the functionality you are required to implement for iteration 1 as per the development process documented in Lab 10.  The deliverables are due at **11:55pm on Tuesday, March 24** at the same time as the rest of the Iteration 1 requirements.
 
