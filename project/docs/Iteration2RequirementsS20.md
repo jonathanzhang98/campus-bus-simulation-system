@@ -1,7 +1,7 @@
 # Enhancing and Extending The Visual Transit System Simulator
 
 ## Iteration 2
-
+### Version 1, March 31st - Unit tests update moved to final deliverable, regression test requirements updated, code assessment section revised. 
 ### Initial Release, March 23
 ## NOTE: This document will be subject to change. In most cases you will be notified of the changes via the announcement feature in Canvas, but you should check this document yourselves on a daily basis, as we will note the version and date of update in this document.
 
@@ -21,8 +21,8 @@ In this next iteration we will implement regression testing, the observer patter
 
 | <span id="a1">Date</a> | Item | Description of Verification and Validation of Deliverable(s) |
 |:----:|:-----|:------------|
-| WED, April 1, 11:55pm | Regression Tests and Fixing the Unit Tests from Iteration 1 | submit via Github; Pass automated tests and by inspection |
-| Fri, April 10, 11:55pm | Design and Implement the Observer Pattern for observing one Bus, and a Bus Depot that incorporates strategies for deploying buses. | Pass automated tests and by inspection |
+| WED, April 1, 11:55pm | Regression Test ~and Fixing the Unit Tests from Iteration 1~ | submit via Github; Pass automated tests and by inspection |
+| Fri, April 10, 11:55pm | Design and Implement the Observer Pattern for observing one Bus, and a Bus Depot that incorporates strategies for deploying buses. Updated Unit Tests from Iteration 1 | Pass automated tests and by inspection |
 
 Your completed project deliverables should demonstrate good software design by implementing the appropriate design methodologies and development practices. You should rigorously follow the process for using version control you learned in lab 10 and documentation procedures learned in lab 07. 
 
@@ -32,7 +32,7 @@ For this iteration you will be submitting the following deliverables based upon 
 
 1. First deliverables: 
 
-Create a regression test designed to ensure that changes to your existing program development environment (e.g., makefile) or code does not adversely affect the existing features of the simulation that have already been implemented (that is, your code still works as it was working before -- unless you intentionally altered it and expected new results). Fix the unit tests from the first iteration based upon the feedback you received.  Further details can be found in the section Deliverables and Submission Process.
+Create a regression test designed to ensure that changes to your existing program development environment (e.g., makefile) or code does not adversely affect the existing features of the simulation that have already been implemented (that is, your code still works as it was working before -- unless you intentionally altered it and expected new results). ~~  Further details can be found in the section Deliverables and Submission Process.
 
 2. Final deliverables: 
 
@@ -41,15 +41,16 @@ Create a regression test designed to ensure that changes to your existing progra
 The strategy pattern may be useful for designing and implementing this capability. **See: [Strategy Pattern](https://www.geeksforgeeks.org/strategy-pattern-set-1/)** for an overview of the strategy pattern.  See the following links for examples of implementation of the strategy patten in Java and C++: </br>
          a. https://www.geeksforgeeks.org/strategy-pattern-set-2 (in Java), </br>
          b. https://sourcemaking.com/design_patterns/strategy/cpp/1) (in C++)</br>
-    2. In your Doxygen mainpage add a section named: **"Desiging and Implementing the Observer Pattern"** that discusses the design and implementation of your observer pattern for observing information about a bus as it proceeds along a route. Specify what classes and methods you had to add and where you had to add them -- and include pictures where applicable and possible. Note which parts of the design and implementation were most difficult for you, and include any tips or advice on how to understand and implement the pattern -- for example, what sources of information (e.g. documentation, lecture, lab) helped you understand that pattern, and what enabled you to design and implement it (e.g. links to web sites, books, lecture, lab).
-    4.  Ensure all new classes and methods you have written are properly documented. All header files must document the classes and their methods using Doxygen, and all implementation (that is, \*.cc) files must have self-documenting code. **You do not need to document the web server code base.** 
-    5. Correct and update your UML class diagram from Iteration 1 to include the changes to your code, including all classes you added to complete the iteration 2 requirements and their relationships to each other and the previously existing classes.
+   3. Fix the unit tests from the first iteration based upon the feedback you received.
+   4. In your Doxygen mainpage add a section named: **"Desiging and Implementing the Observer Pattern"** that discusses the design and implementation of your observer pattern for observing information about a bus as it proceeds along a route. Specify what classes and methods you had to add and where you had to add them -- and include pictures where applicable and possible. Note which parts of the design and implementation were most difficult for you, and include any tips or advice on how to understand and implement the pattern -- for example, what sources of information (e.g. documentation, lecture, lab) helped you understand that pattern, and what enabled you to design and implement it (e.g. links to web sites, books, lecture, lab).
+    5.  Ensure all new classes and methods you have written are properly documented. All header files must document the classes and their methods using Doxygen, and all implementation (that is, \*.cc) files must have self-documenting code. **You do not need to document the web server code base.** 
+    6. Correct and update your UML class diagram from Iteration 1 to include the changes to your code, including all classes you added to complete the iteration 2 requirements and their relationships to each other and the previously existing classes.
     
 **NOTE, if you are unable to complete all or a portion of an implementation item, include a discussion of your PROPOSED design of the observer pattern in your mainpage, and your PROPOSED class design / changes for all your implementation items in your UML, and note that in a paragraph at the top of your mainpage so you receive credit for your design efforts. (Tell us what you did not sucessfully implement -- success is defined as the functionality compiles and executes.)**
 
 #### Deliverables and Submission Process
 
-With the exception of the PDF versions of your UML diagrams, which will be submitted via an assignment item on Canvas, you will submit all your deliverables via GitHub according to the process specified lab 10.  We will tag and pull your repository at the specified due dates and grade them according to the contents at that time. **The first deliverables due on April 1 (regression test, updated unit tests) should be in your devel branch. Your final deliverables (due April 10) should in your master branch.**
+With the exception of the PDF versions of your UML diagrams, which will be submitted via an assignment item on Canvas, you will submit all your deliverables via GitHub according to the process specified lab 10.  We will tag and pull your repository at the specified due dates and grade them according to the contents at that time. **The first deliverables due on April 1 (regression test, updated unit tests) should be in your devel branch. Your final deliverables (due April 10) should in your master branch.** **Note -** *failure to submit you deliverables in the required branch in your repository on github will result in a deduction of at least 10% from your grade for the deliverable for iteration 2.*
 
 >#### You must verify that your submission compiles on a cselabs machine and it is complete. You will receive zero or be heavily penalized if your code does not compile and/or we cannot generate documentation using Doxygen as specified in Lab 7 upon submission.
 
@@ -64,14 +65,14 @@ You can convert this requirements document to pdf using this tool: http://www.ma
 In this iteration, you will do the following development:
 
 - enhancing/modifying the base code.
-- formulating regression tests with Google Test.
+- formulating regression tests (one in lab, and another one that you will submit on the first delivery date).
 - implementing at least one new design pattern: the observer pattern, and potentially the strategy pattern.
 - augmenting the simulation class structure. 
 - augmenting the design discussion in your Doxygen mainpage to include a discussion on your design and implementation of the observer pattern. 
 - ensuring Google style guide compliance.
 - modifying/updating your iteration UML design documentation to include the classes and methods you add or refactor in iteration 2.
-- using Doxygen to document and generate documentation.
-- using Git, and producing self-documenting code (i.e. good organization and naming conventions). 
+- using Doxygen to document all new classes and methods you add or modify in iteration 2 (in the header files only) and generate documentation.
+- using Git, and producing self-documenting code (i.e. good organization and naming conventions in the header and cc files). 
 
 Teaching staff (Undergraduate TA's, Graduate TA's, and Instructors)  will also be working diligently to provide the structure and support for development, testing, and documentation. Automation in unit testing, style compliance, in-house GitHub testing, and documentation will make this an easier process, however, it means that you will have to develop within the constraints of these systems. Often there is a learning curve and a lot of systems troubleshooting to get it all working, so start early!
 
@@ -234,22 +235,22 @@ Finally, self-documenting code should be present for all classes, methods, and f
 
 ### Code Assessment ( 50% )
 
-#### First Deliverable: Regression Testing Submission and Fixed Google Tests From Iteration 1 ( 10% )  **UPDATE**
+#### First Deliverable: Regression Testing Submission and Fixed Google Tests From Iteration 1 ( 8% )  **UPDATE**
 
 Prior to the due date of the completed iteration, we will confirm that you have submitted work for Preliminary Turn-in #1.
 
-Your Google Tests from iteration 1 should be revised and updated based upon the feedback provided to you in the first iteration. 
+~Your Google Tests from iteration 1 should be revised and updated based upon the feedback provided to you in the first iteration.~ 
 
 Implementation of your regression test should be complete. 
 
-Points you earn in the first deliverable are independent of the 40% points for the final submission.
+Points you earn in the first deliverable are independent of the 42% points for the final submission.
 
-**Your tests should be in the development branch in your repository on github.umn.edu by the end of the day Wednesday,  April 1.**  _Remember to GIT ADD, GIT COMMIT and GIT PUSH them before the deadline_
+**Your regression test should be in the development branch in your repository on github.umn.edu by the end of the day Wednesday,  April 1.**  _Remember to GIT ADD, GIT COMMIT and GIT PUSH them before the deadline_
 
 
-#### Completed Iteration Code ( 40% )
+#### Completed Iteration Code ( 42% )
 
-Code functionality will be tested with automated tests through GitHub. We expect you to have basic feedback running by the end of week two of Iteration 2. In that case, you will see _some_ of the elements we'll be testing in our assessment. Review the automated feedback prior to final submission, as it will identify any issues with directory structure, compilation issues, or failed unit tests. Assessment will also include a visual inspection of the simulation and its output, as well as a visual inspection of the code.
+We expect you to have partial functionality running by the end of week two of Iteration 2. By doing so, you will have an indication of  _some_ of the elements we'll be testing in our assessment. You should run and review the feedback from your tests (google unit tests and regression test) prior to final submission, as it may identify any issues with your code. Instructional staff assessment will include a visual inspection of the simulation and its output, as well as a visual inspection of the code, in addition to our automated assessment.
 
 <hr>
 
