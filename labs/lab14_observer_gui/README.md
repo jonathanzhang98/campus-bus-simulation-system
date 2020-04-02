@@ -28,7 +28,7 @@ For this requirement we will be giving you the following items to assist you in 
 Since this is a distributed architecture it is necessary to understand the sequence of steps you need to follow to implement the observer pattern for buses. The sequence diagram below shows the interaction between all of the domains of the Transit Simulation.  
 
 <p align="center">
-<img src="./UML_sequence_diag.jpeg" width="80%">
+<img src="./UML_sequence_diag.jpeg" width="90%">
 </p> 
 
 ### Deliverables:
