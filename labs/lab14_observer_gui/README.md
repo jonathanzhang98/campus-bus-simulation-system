@@ -44,13 +44,16 @@ Since this is a distributed architecture it is necessary to understand the seque
 
 The sequence of steps to modify the current simulation to implement the observer pattern are as follows:
 
-1. Once the animation has started, clicking on a bus starts executing the code used to implement the observer pattern. (`Sketch.js` performs this task and we have given you the code that performs this action.) **This file does not need to be modified.**
+1. Add a new AddListenerCommand to `web_code/web/main.cpp`, similarly to how to you implemented the pause button:
+`state.commands["listen"] = new AddListenerCommand(mySim);`
 
-2. Sketch.js sends a message to the my_web_server_command.cc containing the ID of the bus that was clicked. **This file does not need to be modified.** You should examine this file since it contains several methods you might find helpful.  
+2. Once the animation has started, clicking on a bus starts executing the code used to implement the observer pattern. (`Sketch.js` performs this task and we have given you the code that performs this action.) **This file does not need to be modified.**
 
-3. The WebServerCommand sends the bus id to the Visualization_Simulator. **You will need to change the Visualization_Simulator.cc and Visual_Simulation.h files to include these methods:**
+3. `Sketch.js` sends a message to the `my_web_server_command.cc` containing the ID of the bus that was clicked. **This file does not need to be modified.** You should examine this file since it contains several methods you might find helpful.  
 
-    - `ClearListeners` This Method is invoked if the bus is currenlty being observed (i.e. toggling off). It has no parameters and it removes all bus observers currently in the simulation. This is accomplished by invoking the method `ClearObservers` from the `IObservable` class.
+4. The WebServerCommand sends the bus id to the VisualizationSimulator. **You will need to change the Visualization_Simulator.cc and Visualization_Simulation.h files to include these methods:**
+
+    - `ClearListeners` This method is invoked if the bus is currently being observed (i.e. toggling off). It has no parameters and it removes all bus observers currently in the simulation. This is accomplished by invoking the method `ClearObservers` from the `IObservable` class.
     - `AddListener` This method is invoked if the bus has not been observed. It adds an observer to a specific Bus (using bus id) in the simulation. This is accomplished by invoking the method `RegisterObserver` from the `IObservable` class.
          
 
