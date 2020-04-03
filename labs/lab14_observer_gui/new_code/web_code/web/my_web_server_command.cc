@@ -129,6 +129,13 @@ void UpdateCommand::execute(MyWebServerSession* session, picojson::value& comman
 }
 
 
+PauseCommand::PauseCommand(VisualizationSimulator* sim) : mySim(sim) {}
+
+void PauseCommand::execute(MyWebServerSession* session, picojson::value& command, MyWebServerSessionState* state) {
+    mySim->TogglePause();
+}
+
+
 class BusWebObserver : public IObserver<BusData*> {
 public:
     BusWebObserver(MyWebServerSession* session) : session(session) {}
