@@ -1,6 +1,7 @@
 # Enhancing and Extending The Visual Transit System Simulator
 
 ## Iteration 2
+### Version 2, April 4th - Factory requirements specified in detail
 ### Version 1, March 31st - Unit tests update moved to final deliverable, regression test requirements updated, code assessment section revised. 
 ### Initial Release, March 23
 ## NOTE: This document will be subject to change. In most cases you will be notified of the changes via the announcement feature in Canvas, but you should check this document yourselves on a daily basis, as we will note the version and date of update in this document.
@@ -115,10 +116,68 @@ Designing and implementing the observer design pattern, and how to proceed, will
 
 #### Priority Level 3 : Implement a Bus Depot Utilizing a Strategy Pattern
 
-To enhance the simulation even further, you will create a Bus Depot that uses strategies to determine the type of buses to be deployed on a route. 
-For example, depending on the name of the route and the time of day, only medium and large buses may be deployed in an alternating manner -- or only small buses. 
+To enhance the simulation even further, you will create a Bus Depot (a re-factoring of your factory pattern) that uses strategies to determine the type of buses to be deployed on a route. 
+For example, depending on the time of day, only medium and large buses may be deployed in an a prespecifed sequence -- or only small buses. 
 
-This document will be updated with more information on the specifications for this functionality in the coming weeks.
+More specifically, the implementation requirements for iteration 2 require you to refactor your factory to use a time-based bus deployment strategy to determine the size of the bus to be created whenever a new bus is created by the transit simulation.  For iteration 2, the overall bus creation/deployment strategy should (that is, is required to) behave as follows:
+
+```
+Determine the current local time
+If the current local time is:
+6am or later but before 8 am
+		Deploy the bus using strategy 1
+8am or later but before 3pm 
+		Deploy the bus using strategy 2
+3pm or later but before 8pm
+		Deploy the bus using strategy 3
+Otherwise
+		Deploy a small bus
+
+The deployment strategies you should implement are as follows:
+    Strategy 1 deploys busses in the following repeating sequence:
+Small, Regular, Small, Regular, etc. (the sequence keeps repeating)
+    Strategy 2 deploys busses in the following repeating sequence:
+Regular, Large, Regular, Large, etc. (the sequence keeps repeating)
+    Strategy 3 deploys busses in the following repeating sequence:
+Small, Regular, Large, Small, Regular, Large, etc. (the sequence keeps 
+repeating)
+```
+
+Each time the simulation is required to create a new bus, it should use the bus size returned by the strategy that is currently in effect.
+
+**Note, when a strategy function / method is called for strategies 1, 2, and 3, it will return the next size bus in a repeating sequence.**  *One way to implement this functionality is to enable each strategy to keep track of its state.*
+
+So for example, when the strategy in effect is Strategy 3:
+
+* When Strategy 3 is in state 0, a small bus is returned, and the state transitions to state 1. 
+* When Strategy 3 is in state 1, a regular bus is returned and the state transitions to state 2. 
+* When Strategy 3 is in state 2, a large bus is returned – and the State is then reset to state 0. 
+ 
+ Thus,  the next bus returned will be a small bus.  The sequence is then repeated, etc. 
+
+You may find it useful to use a **static** variable and the **modulus operator** to keep track of the state and generate a repeating sequence for each strategy function / method.
+ 
+You are NOT required to implement a particular design pattern to implement this behavior in your simulation, but the strategy pattern would be a good choice. However, you will be graded on your simulation’s ability to carry out the behavior specified above (and below in the additional requirements) for this required new functionality for iteration 2.
+
+**Additional Requirements:**
+
+Your simulation should print the time (in any format), strategy (1,2,3, or small), and bus size (small, regular, large) returned from by the overall bus deployment strategy to the terminal window each time the overall deployment strategy functionality is used to create a new bus. 
+
+Other constructs and suggestions you may find helpful in formulating your design and implementation:
+
+The strategy pattern:
+    https://refactoring.guru/design-patterns/strategy/cpp/example
+    https://www.geeksforgeeks.org/strategy-pattern-set-1/?ref=rp
+
+The C++ ctime library, and the functions, time and localtime:				
+    http://www.cplusplus.com/reference/ctime/
+    
+The struct tm (for obtaining current time in hours and minutes :	
+    http://www.cplusplus.com/reference/ctime/tm/?kw=tm 
+
+Finally, it may be helpful to convert the current time and the times used in the selection statement above (i.e., in the civilian time format) to a military time, or a variant of military time:
+	https://www.ontheclock.com/convert-military-24-hour-time.aspx
+
 
 <hr>
 
