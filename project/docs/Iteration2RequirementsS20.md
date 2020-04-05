@@ -1,6 +1,7 @@
 # Enhancing and Extending The Visual Transit System Simulator
 
 ## Iteration 2
+### Version 3, April 5th - clarifications to Version 2
 ### Version 2, April 4th - Factory requirements specified in detail
 ### Version 1, March 31st - Unit tests update moved to final deliverable, regression test requirements updated, code assessment section revised. 
 ### Initial Release, March 23
