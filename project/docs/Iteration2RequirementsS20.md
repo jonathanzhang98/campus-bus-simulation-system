@@ -114,7 +114,7 @@ Implementing the observer pattern will entail modifying the graphical user inter
 
 Designing and implementing the observer design pattern, and how to proceed, will be covered in more detail in lecture and lab.
 
-#### Priority Level 3 : Implement a Bus Depot Utilizing a Strategy Pattern
+#### Priority Level 3 : Implement a Bus Depot (Refactor the Factory) so it uses Deployment Strategies
 
 To enhance the simulation even further, you will create a Bus Depot (a re-factoring of your factory pattern) that uses strategies to determine the type of buses to be deployed on a route. 
 For example, depending on the time of day, only medium and large buses may be deployed in an a prespecifed sequence -- or only small buses. 
@@ -175,7 +175,7 @@ The C++ ctime library, and the functions, time and localtime:
 The struct tm (for obtaining current time in hours and minutes :	
     http://www.cplusplus.com/reference/ctime/tm/?kw=tm 
 
-Finally, it may be helpful to convert the current time and the times used in the selection statement above (i.e., in the civilian time format) to a military time, or a variant of military time:
+Finally, it may be helpful to convert the current time and the times used in the selection statement above (i.e., in the civilian time format) to military time, or a variant of military time:
 	https://www.ontheclock.com/convert-military-24-hour-time.aspx
 
 
