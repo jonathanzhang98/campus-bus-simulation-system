@@ -209,8 +209,8 @@ The tag `--root=..` impacts the header guard. The header guards provided in the 
 ## Documentation
 
 - UML diagrams
-- Doxygen generated web pages including mainpage.h 
-- Self-Documenting code that is Google Style compliant
+- Doxygen generated web pages for all new and modifed code (classes and methods in the .h files) including mainpage.h 
+- Self-Documenting code that is Google Style compliant (for all new and modified iteration 2 code in the .cc files)
 
 Code documentation comes in many forms for many audiences. For this project, **your audience is other programmers**, who need to understand class interfaces, function parameters, function behavior, code organization, class organization, and code logic. Self-documenting code (i.e. using good organization and naming conventions) is an efficient means of communicating, since you have to write the code anyway. _Good_ comments -- not too much, not too little -- help guide others through the logic and class interfaces. For the larger picture of code and class structure, use UML diagrams and Doxygen-generated (automatic) web pages.
 
