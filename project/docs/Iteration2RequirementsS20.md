@@ -1,7 +1,7 @@
 # Enhancing and Extending The Visual Transit System Simulator
 
 ## Iteration 2
-### Version 3, April 5th - clarifications to Version 2, and correction to documentation directions - you do not need to document the code in project/web_graphics, you do need to document new code or code you change (using Doxygen and self-documenting code in the project/web_code/web directory, along with any changes you make to code in the project/src directory)
+### Version 3, April 5th - clarifications to Version 2, and correction to documentation directions - you do not need to document the code in project/web_graphics, you do need to document new code or code you change (using Doxygen and self-documenting code in the project/web_code/web directory, along with any changes you make to code in the project/src directory). Finally, weighting of grades for implementation and design have been updated.
 ### Version 2, April 4th - Factory requirements specified in detail
 ### Version 1, March 31st - Unit tests update moved to final deliverable, regression test requirements updated, code assessment section revised. 
 ### Initial Release, March 23
@@ -260,9 +260,9 @@ Your software will be assessed through automatic testing and by the TAs. If poss
 This is the breakdown for point distribution:
 
 20% : Iteration \#2
-- 10% : Preliminary Regression Testing Submission
+- 8% : Preliminary Regression Testing Submission
 - 50% : Final Documentation
-- 40% : Final Code
+- 42% : Final Code
 
 ### Complete Iteration Documentation Assessment ( 50% )
 
