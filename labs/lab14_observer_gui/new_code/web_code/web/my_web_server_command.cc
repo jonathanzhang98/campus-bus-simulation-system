@@ -136,7 +136,7 @@ void PauseCommand::execute(MyWebServerSession* session, picojson::value& command
 }
 
 
-class BusWebObserver : public IObserver<BusData*> {
+class BusWebObserver : public IObserver {
 public:
     BusWebObserver(MyWebServerSession* session) : session(session) {}
 
@@ -147,7 +147,7 @@ public:
         ss << "Bus " << info->id << "\n";
         ss << "-----------------------------\n";
         ss << "  * Position: (" << info->position.x << "," << info->position.y << ")\n";
-        ss << "  * Passnegers: " << info->num_passengers << "\n";
+        ss << "  * Passengers: " << info->num_passengers << "\n";
         ss << "  * Capacity: " << info->capacity << "\n";
         data["text"] = picojson::value(ss.str());
         picojson::value ret(data);
