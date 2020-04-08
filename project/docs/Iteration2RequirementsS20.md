@@ -1,6 +1,7 @@
 # Enhancing and Extending The Visual Transit System Simulator
 
 ## Iteration 2
+### Version 4, April 7th - clarified documentation items - only writing about observer pattern this iteration.
 ### Version 3, April 5th - clarifications to Version 2, and correction to documentation directions - you do not need to document the code in project/web_graphics, you do need to document new code or code you change (using Doxygen and self-documenting code in the project/web_code/web directory, along with any changes you make to code in the project/src directory). Finally, weighting of grades for implementation and design have been updated.
 ### Version 2, April 4th - Factory requirements specified in detail
 ### Version 1, March 31st - Unit tests update moved to final deliverable, regression test requirements updated, code assessment section revised. 
