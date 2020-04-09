@@ -8,7 +8,7 @@ For this requirement we will be giving you the following items to assist you in 
 1. A UML diagram of our implementation:  
 
 <p align="center">
-<img src="./Observer_UML.jpg" width="80%">
+<img src="./Observer_UML.png" width="80%">
 </p> 
 
 2. The `BusWebObserver` code which is used to display bus information in the GUI and the `sketch.js` that will detect the mouse click on the bus. 
