@@ -13,11 +13,15 @@
 #include <iostream>
 #include <list>
 #include <string>
+#include <chrono>
+#include <ctime>
+#include <time.h>
 
 #include "src/small_bus.h"
 #include "src/regular_bus.h"
 #include "src/large_bus.h"
 #include "src/route.h"
+#include "src/strategies.h"
 
 using namespace std;
 
@@ -46,6 +50,13 @@ class ConcreteBusFactory {
   * @return GenerateBus returns a bus pointer.
   */
   static Bus * GenerateBus(string id, Route * outbound, Route * inbound
-                                      , int busType, double speed = 1);
+                                      , double speed = 1);
+//   static int GenerateStrategy();
+//  private:
+  static ConcreteStrategyA s1;
+  static ConcreteStrategyB s2;
+  static ConcreteStrategyC s3;
 };
+
 #endif  // SRC_CONCRETE_BUS_FACTORY_H_
+

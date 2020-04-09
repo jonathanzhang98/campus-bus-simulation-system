@@ -57,13 +57,15 @@ void VisualizationSimulator::Update() {
             Route * outbound = prototypeRoutes_[2 * i];
             Route * inbound = prototypeRoutes_[2 * i + 1];
             
-            std::random_device dev;
-            std::mt19937 rng(dev());
-            std::uniform_int_distribution<std::mt19937::result_type> dist1(1, 3);
-            int rand_int = dist1(rng);
+            // std::random_device dev;
+            // std::mt19937 rng(dev());
+            // std::uniform_int_distribution<std::mt19937::result_type> dist1(1, 3);
+            // int rand_int = dist1(rng);
             // std::cout << "Random generated: -------------------------------------" << rand_int << std::endl;
             // old code: busses_.push_back(new Bus(std::to_string(busId), outbound->Clone(), inbound->Clone(), 60, 1));
-            busses_.push_back(ConcreteBusFactory::GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), rand_int, 1));
+            // busses_.push_back(ConcreteBusFactory::GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), rand_int, 1));
+
+            busses_.push_back(ConcreteBusFactory::GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), 1));
             busId++;
             
             timeSinceLastBus_[i] = busStartTimings_[i];
