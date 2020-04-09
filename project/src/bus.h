@@ -21,6 +21,8 @@
 #include "src/passenger_unloader.h"
 #include "src/route.h"
 #include "src/stop.h"
+#include "src/i_observer.h"
+#include "src/i_observable.h"
 
 class PassengerUnloader;
 class PassengerLoader;
@@ -36,7 +38,7 @@ class Stop;
  * 
  *
  */
-class Bus {
+class Bus : public IObservable {
  public:
  /**
   * @brief Construct a Passenger obejct with a destination_stop_id and a name.
@@ -175,6 +177,16 @@ class Bus {
   * @return Update does not return anything.
   */
   void skip();
+
+//  /**
+//   * @brief Report the states of the bus.
+//   *
+//   * This function will be used for simulation purposes.
+//   *
+//   *
+//   * @return Report does not return anything.
+//   */
+//   void NotifyObserver(IObserver * observer) override;
 
  private:
   int UnloadPassengers();  // returning revenue delta

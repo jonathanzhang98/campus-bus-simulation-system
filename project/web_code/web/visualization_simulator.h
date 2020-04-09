@@ -8,9 +8,13 @@
 #include "web_interface.h"
 #include "config_manager.h"
 #include "src/concrete_bus_factory.h"
+#include "src/i_observable.h"
+#include "src/i_observer.h"
 
 #include <vector>
 #include <random>
+#include <string>
+
 
 
 class Route;
@@ -34,6 +38,8 @@ class VisualizationSimulator {
         * @return Pause does not return anything.
         */
         void Pause();
+        void ClearListeners();
+        void AddListener(std::string *, IObserver *);
 
     private:
         WebInterface* webInterface_;

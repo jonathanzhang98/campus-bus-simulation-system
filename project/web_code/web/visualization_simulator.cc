@@ -109,3 +109,21 @@ void VisualizationSimulator::Pause() {
     }
     paused = !paused;
 }
+
+void VisualizationSimulator::ClearListeners() {
+    // std::vector<Bus *> busses_;
+    for(std::vector<Bus*>::const_iterator iter = busses_.begin(); iter != busses_.end(); ++iter)
+    {
+        (*iter)->ClearObserver();
+    }
+}
+
+void VisualizationSimulator::AddListener(std::string * id, IObserver * observer) {
+    for(std::vector<Bus*>::const_iterator iter = busses_.begin(); iter != busses_.end(); ++iter)
+    {
+        if((*iter)->GetBusData().id.compare(*id) == 0)
+        {
+            (*iter)->RegisterObserver(observer);
+        }
+    }
+}

@@ -173,6 +173,7 @@ void Bus::skip() {
 void Bus::Update() {  // using common Update format
   Move();
   UpdateBusData();
+  NotifyObserver(&bus_data_);
 }
 
 void Bus::Report(std::ostream& out) {
@@ -236,3 +237,13 @@ void Bus::UpdateBusData() {
 BusData Bus::GetBusData() const {
     return bus_data_;
 }
+
+// void Bus::NotifyObserver(IObserver * observer) {
+//   for(vector<IObserver*>::const_iterator iter = observer_.begin(); iter != observer_.end(); ++iter)
+//     {
+//         if(*iter != 0)
+//         {
+//             (*iter)->UpdateObserver(bus_data_);
+//         }
+//     }
+// }
