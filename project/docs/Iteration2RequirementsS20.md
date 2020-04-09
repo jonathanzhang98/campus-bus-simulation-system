@@ -1,7 +1,10 @@
 # Enhancing and Extending The Visual Transit System Simulator
 
 ## Iteration 2
-
+### Version 4, April 7th - clarified documentation items - only writing about observer pattern this iteration.
+### Version 3, April 5th - clarifications to Version 2, and correction to documentation directions - you do not need to document the code in project/web_graphics, you do need to document new code or code you change (using Doxygen and self-documenting code in the project/web_code/web directory, along with any changes you make to code in the project/src directory). Finally, weighting of grades for implementation and design have been updated.
+### Version 2, April 4th - Factory requirements specified in detail
+### Version 1, March 31st - Unit tests update moved to final deliverable, regression test requirements updated, code assessment section revised. 
 ### Initial Release, March 23
 ## NOTE: This document will be subject to change. In most cases you will be notified of the changes via the announcement feature in Canvas, but you should check this document yourselves on a daily basis, as we will note the version and date of update in this document.
 
@@ -21,8 +24,8 @@ In this next iteration we will implement regression testing, the observer patter
 
 | <span id="a1">Date</a> | Item | Description of Verification and Validation of Deliverable(s) |
 |:----:|:-----|:------------|
-| WED, April 1, 11:55pm | Regression Tests and Fixing the Unit Tests from Iteration 1 | submit via Github; Pass automated tests and by inspection |
-| Fri, April 10, 11:55pm | Design and Implement the Observer Pattern for observing one Bus, and a Bus Depot that incorporates strategies for deploying buses. | Pass automated tests and by inspection |
+| WED, April 1, 11:55pm | Regression Test ~and Fixing the Unit Tests from Iteration 1~ | submit via Github; Pass automated tests and by inspection |
+| Fri, April 10, 11:55pm | Design and Implement the Observer Pattern for observing one Bus, and a Bus Depot that incorporates strategies for deploying buses. Updated Unit Tests from Iteration 1 | Pass automated tests and by inspection |
 
 Your completed project deliverables should demonstrate good software design by implementing the appropriate design methodologies and development practices. You should rigorously follow the process for using version control you learned in lab 10 and documentation procedures learned in lab 07. 
 
@@ -32,7 +35,7 @@ For this iteration you will be submitting the following deliverables based upon 
 
 1. First deliverables: 
 
-Create a regression test designed to ensure that changes to your existing program development environment (e.g., makefile) or code does not adversely affect the existing features of the simulation that have already been implemented (that is, your code still works as it was working before -- unless you intentionally altered it and expected new results). Fix the unit tests from the first iteration based upon the feedback you received.  Further details can be found in the section Deliverables and Submission Process.
+Create a regression test designed to ensure that changes to your existing program development environment (e.g., makefile) or code does not adversely affect the existing features of the simulation that have already been implemented (that is, your code still works as it was working before -- unless you intentionally altered it and expected new results). ~~  Further details can be found in the section Deliverables and Submission Process.
 
 2. Final deliverables: 
 
@@ -41,15 +44,16 @@ Create a regression test designed to ensure that changes to your existing progra
 The strategy pattern may be useful for designing and implementing this capability. **See: [Strategy Pattern](https://www.geeksforgeeks.org/strategy-pattern-set-1/)** for an overview of the strategy pattern.  See the following links for examples of implementation of the strategy patten in Java and C++: </br>
          a. https://www.geeksforgeeks.org/strategy-pattern-set-2 (in Java), </br>
          b. https://sourcemaking.com/design_patterns/strategy/cpp/1) (in C++)</br>
-    2. In your Doxygen mainpage add a section named: **"Desiging and Implementing the Observer Pattern"** that discusses the design and implementation of your observer pattern for observing information about a bus as it proceeds along a route. Specify what classes and methods you had to add and where you had to add them -- and include pictures where applicable and possible. Note which parts of the design and implementation were most difficult for you, and include any tips or advice on how to understand and implement the pattern -- for example, what sources of information (e.g. documentation, lecture, lab) helped you understand that pattern, and what enabled you to design and implement it (e.g. links to web sites, books, lecture, lab).
-    4.  Ensure all new classes and methods you have written are properly documented. All header files must document the classes and their methods using Doxygen, and all implementation (that is, \*.cc) files must have self-documenting code. **You do not need to document the web server code base.** 
-    5. Correct and update your UML class diagram from Iteration 1 to include the changes to your code, including all classes you added to complete the iteration 2 requirements and their relationships to each other and the previously existing classes.
+   3. Fix the unit tests from the first iteration based upon the feedback you received.
+   4. In your Doxygen mainpage add a section named: **"Designing and Implementing the Observer Pattern"** that discusses the design and implementation of your observer pattern for observing information about a bus as it proceeds along a route. Specify what classes and methods you had to add and where you had to add them -- and include pictures where applicable and possible. Note which parts of the design and implementation were most difficult for you, and include any tips or advice on how to understand and implement the pattern -- for example, what sources of information (e.g. documentation, lecture, lab) helped you understand that pattern, and what enabled you to design and implement it (e.g. links to web sites, books, lecture, lab).
+    5.  Ensure all new classes and methods you have written are properly documented. All header files must document the classes and their methods using Doxygen, and all implementation (that is, \*.cc) files must have self-documenting code. **You do not need to document the web GRAPHICS code base.** 
+    6. Correct and update your UML class diagram from Iteration 1 to include the changes to your code, including all classes you added to complete the iteration 2 requirements and their relationships to each other and the previously existing classes.
     
 **NOTE, if you are unable to complete all or a portion of an implementation item, include a discussion of your PROPOSED design of the observer pattern in your mainpage, and your PROPOSED class design / changes for all your implementation items in your UML, and note that in a paragraph at the top of your mainpage so you receive credit for your design efforts. (Tell us what you did not sucessfully implement -- success is defined as the functionality compiles and executes.)**
 
 #### Deliverables and Submission Process
 
-With the exception of the PDF versions of your UML diagrams, which will be submitted via an assignment item on Canvas, you will submit all your deliverables via GitHub according to the process specified lab 10.  We will tag and pull your repository at the specified due dates and grade them according to the contents at that time. **The first deliverables due on April 1 (regression test, updated unit tests) should be in your devel branch. Your final deliverables (due April 10) should in your master branch.**
+With the exception of the PDF versions of your UML diagrams, which will be submitted via an assignment item on Canvas, you will submit all your deliverables via GitHub according to the process specified lab 10.  We will tag and pull your repository at the specified due dates and grade them according to the contents at that time. **The first deliverables due on April 1 (regression test, updated unit tests) should be in your devel branch. Your final deliverables (due April 10) should in your master branch.** **Note -** *failure to submit you deliverables in the required branch in your repository on github will result in a deduction of at least 10% from your grade for the deliverable for iteration 2.*
 
 >#### You must verify that your submission compiles on a cselabs machine and it is complete. You will receive zero or be heavily penalized if your code does not compile and/or we cannot generate documentation using Doxygen as specified in Lab 7 upon submission.
 
@@ -64,14 +68,14 @@ You can convert this requirements document to pdf using this tool: http://www.ma
 In this iteration, you will do the following development:
 
 - enhancing/modifying the base code.
-- formulating regression tests with Google Test.
+- formulating regression tests (one in lab, and another one that you will submit on the first delivery date).
 - implementing at least one new design pattern: the observer pattern, and potentially the strategy pattern.
 - augmenting the simulation class structure. 
 - augmenting the design discussion in your Doxygen mainpage to include a discussion on your design and implementation of the observer pattern. 
 - ensuring Google style guide compliance.
 - modifying/updating your iteration UML design documentation to include the classes and methods you add or refactor in iteration 2.
-- using Doxygen to document and generate documentation.
-- using Git, and producing self-documenting code (i.e. good organization and naming conventions). 
+- using Doxygen to document all new classes and methods you add or modify in iteration 2 (in the header files only) and generate documentation.
+- using Git, and producing self-documenting code (i.e. good organization and naming conventions in the header and cc files). 
 
 Teaching staff (Undergraduate TA's, Graduate TA's, and Instructors)  will also be working diligently to provide the structure and support for development, testing, and documentation. Automation in unit testing, style compliance, in-house GitHub testing, and documentation will make this an easier process, however, it means that you will have to develop within the constraints of these systems. Often there is a learning curve and a lot of systems troubleshooting to get it all working, so start early!
 
@@ -112,12 +116,70 @@ Implementing the observer pattern will entail modifying the graphical user inter
 
 Designing and implementing the observer design pattern, and how to proceed, will be covered in more detail in lecture and lab.
 
-#### Priority Level 3 : Implement a Bus Depot Utilizing a Strategy Pattern
+#### Priority Level 3 : Implement a Bus Depot (Refactor the Factory) so it uses Deployment Strategies
 
-To enhance the simulation even further, you will create a Bus Depot that uses strategies to determine the type of buses to be deployed on a route. 
-For example, depending on the name of the route and the time of day, only medium and large buses may be deployed in an alternating manner -- or only small buses. 
+To enhance the simulation even further, you will create a Bus Depot (a re-factoring of your factory pattern) that uses strategies to determine the type of buses to be deployed on a route. 
+For example, depending on the time of day, only medium and large buses may be deployed in an a prespecifed sequence -- or only small buses. 
 
-This document will be updated with more information on the specifications for this functionality in the coming weeks.
+More specifically, the implementation requirements for iteration 2 require you to refactor your factory to use a time-based bus deployment strategy to determine the size of the bus to be created whenever a new bus is created by the transit simulation.  For iteration 2, the overall bus creation/deployment strategy should (that is, is required to) behave as follows:
+
+```
+Determine the current local time
+If the current local time is:
+6am or later but before 8 am
+		Deploy the bus using strategy 1
+8am or later but before 3pm 
+		Deploy the bus using strategy 2
+3pm or later but before 8pm
+		Deploy the bus using strategy 3
+Otherwise
+		Deploy a small bus
+
+The deployment strategies you should implement are as follows:
+    Strategy 1 deploys busses in the following repeating sequence:
+Small, Regular, Small, Regular, etc. (the sequence keeps repeating)
+    Strategy 2 deploys busses in the following repeating sequence:
+Regular, Large, Regular, Large, etc. (the sequence keeps repeating)
+    Strategy 3 deploys busses in the following repeating sequence:
+Small, Regular, Large, Small, Regular, Large, etc. (the sequence keeps 
+repeating)
+```
+
+Each time the simulation is required to create a new bus, it should use the bus size returned by the strategy that is currently in effect.
+
+**Note, when a strategy function / method is called for strategies 1, 2, and 3, it will return the next size bus in a repeating sequence.**  *One way to implement this functionality is to enable each strategy to keep track of its state.*
+
+So for example, when the strategy in effect is Strategy 3:
+
+* When Strategy 3 is in state 0, a small bus is returned, and the state transitions to state 1. 
+* When Strategy 3 is in state 1, a regular bus is returned and the state transitions to state 2. 
+* When Strategy 3 is in state 2, a large bus is returned – and the State is then reset to state 0. 
+ 
+ Thus,  the next bus returned will be a small bus.  The sequence is then repeated, etc. 
+
+You may find it useful to use a **static** variable and the **modulus operator** to keep track of the state and generate a repeating sequence for each strategy function / method.
+ 
+You are NOT required to implement a particular design pattern to implement this behavior in your simulation, but the strategy pattern would be a good choice. However, you will be graded on your simulation’s ability to carry out the behavior specified above (and below in the additional requirements) for this required new functionality for iteration 2.
+
+**Additional Requirements:**
+
+Your simulation should print the time (in any format), strategy (1,2,3, or small), and bus size (small, regular, large) returned from by the overall bus deployment strategy to the terminal window each time the overall deployment strategy functionality is used to create a new bus. 
+
+Other constructs and suggestions you may find helpful in formulating your design and implementation:
+
+The strategy pattern:
+    https://refactoring.guru/design-patterns/strategy/cpp/example
+    https://www.geeksforgeeks.org/strategy-pattern-set-1/?ref=rp
+
+The C++ ctime library, and the functions, time and localtime:				
+    http://www.cplusplus.com/reference/ctime/
+    
+The struct tm (for obtaining current time in hours and minutes :	
+    http://www.cplusplus.com/reference/ctime/tm/?kw=tm 
+
+Finally, it may be helpful to convert the current time and the times used in the selection statement above (i.e., in the civilian time format) to military time, or a variant of military time:
+	https://www.ontheclock.com/convert-military-24-hour-time.aspx
+
 
 <hr>
 
@@ -148,8 +210,8 @@ The tag `--root=..` impacts the header guard. The header guards provided in the 
 ## Documentation
 
 - UML diagrams
-- Doxygen generated web pages including mainpage.h 
-- Self-Documenting code that is Google Style compliant
+- Doxygen generated web pages for all new and modifed code (classes and methods in the .h files) including mainpage.h 
+- Self-Documenting code that is Google Style compliant (for all new and modified iteration 2 code in the .cc files)
 
 Code documentation comes in many forms for many audiences. For this project, **your audience is other programmers**, who need to understand class interfaces, function parameters, function behavior, code organization, class organization, and code logic. Self-documenting code (i.e. using good organization and naming conventions) is an efficient means of communicating, since you have to write the code anyway. _Good_ comments -- not too much, not too little -- help guide others through the logic and class interfaces. For the larger picture of code and class structure, use UML diagrams and Doxygen-generated (automatic) web pages.
 
@@ -199,15 +261,15 @@ Your software will be assessed through automatic testing and by the TAs. If poss
 This is the breakdown for point distribution:
 
 20% : Iteration \#2
-- 10% : Preliminary Regression Testing Submission
+- 8% : Preliminary Regression Testing Submission
 - 50% : Final Documentation
-- 40% : Final Code
+- 42% : Final Code
 
 ### Complete Iteration Documentation Assessment ( 50% )
 
 #### Design Document and UML 
 
-Documentation includes a design overview of the core domain elements (the classes you're building) provided in mainpage.h in /src and your final updated UML diagram in PDF file format. The mainpage instructions for how to obtain, configure, compile, and execute the simulation should be written in prose and your discussion of the design and implementation of the bus depot. It should be at least 2 pages of text (if it were on an 8.5x11 paper), probably not more than 3.5. You should highlight important elements of your bus depot design and implementation, and the structure of your domain elements. We will look for a well written and well organized document that clearly articulates the design. It must stand alone in the sense that anyone reading it should not have to look at code to understand the design. This will likely require images of UML and/or snippets of code included. 
+Documentation includes a design overview of the core domain elements (the classes you're building) provided in mainpage.h in /src and your final updated UML diagram in PDF file format. The mainpage should include, in prose: instructions for how to obtain, configure, compile, and execute the simulation; the important elements of your observer pattern design and implementation; and the structure of your domain elements. There is no specific length requirement, but you must include enough detail to thoroughly address item (iv) of the Final Deliverables section above. We will look for a well written and well organized document that clearly articulates the design. It must stand alone in the sense that anyone reading it should not have to look at code to understand the design. This will likely require images of UML and/or snippets of code included. 
 
 Your final UML diagram from iteration 1 should be updated to include the class(es), methods, and relationships that you have added or changed during your iteration 2 development activities. The UML syntax you should use is specified and documented here: https://cppcodetips.wordpress.com/2013/12/23/uml-class-diagram-explained-with-c-samples/. We will be looking for general proper use of UML syntax, and a correct depiction of the code structure of the existing project code (code from shared-upstream's support-code branch). 
 
@@ -234,22 +296,22 @@ Finally, self-documenting code should be present for all classes, methods, and f
 
 ### Code Assessment ( 50% )
 
-#### First Deliverable: Regression Testing Submission and Fixed Google Tests From Iteration 1 ( 10% )  **UPDATE**
+#### First Deliverable: Regression Testing Submission and Fixed Google Tests From Iteration 1 ( 8% )  **UPDATE**
 
 Prior to the due date of the completed iteration, we will confirm that you have submitted work for Preliminary Turn-in #1.
 
-Your Google Tests from iteration 1 should be revised and updated based upon the feedback provided to you in the first iteration. 
+~Your Google Tests from iteration 1 should be revised and updated based upon the feedback provided to you in the first iteration.~ 
 
 Implementation of your regression test should be complete. 
 
-Points you earn in the first deliverable are independent of the 40% points for the final submission.
+Points you earn in the first deliverable are independent of the 42% points for the final submission.
 
-**Your tests should be in the development branch in your repository on github.umn.edu by the end of the day Wednesday,  April 1.**  _Remember to GIT ADD, GIT COMMIT and GIT PUSH them before the deadline_
+**Your regression test should be in the development branch in your repository on github.umn.edu by the end of the day Wednesday,  April 1.**  _Remember to GIT ADD, GIT COMMIT and GIT PUSH them before the deadline_
 
 
-#### Completed Iteration Code ( 40% )
+#### Completed Iteration Code ( 42% )
 
-Code functionality will be tested with automated tests through GitHub. We expect you to have basic feedback running by the end of week two of Iteration 2. In that case, you will see _some_ of the elements we'll be testing in our assessment. Review the automated feedback prior to final submission, as it will identify any issues with directory structure, compilation issues, or failed unit tests. Assessment will also include a visual inspection of the simulation and its output, as well as a visual inspection of the code.
+We expect you to have partial functionality running by the end of week two of Iteration 2. By doing so, you will have an indication of  _some_ of the elements we'll be testing in our assessment. You should run and review the feedback from your tests (google unit tests and regression test) prior to final submission, as it may identify any issues with your code. Instructional staff assessment will include a visual inspection of the simulation and its output, as well as a visual inspection of the code, in addition to our automated assessment.
 
 <hr>
 
