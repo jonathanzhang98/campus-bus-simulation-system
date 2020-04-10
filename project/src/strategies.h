@@ -11,7 +11,7 @@
  * Includes
  ******************************************************************************/
 
-using namespace std;
+// using namespace std;
 
 /*******************************************************************************
  * Class Definitions
@@ -28,7 +28,6 @@ class Strategy {
  public:
     // generate int buytype and update strategy statte
     virtual int DoAlgorithm() = 0;
-
 };
 
 /*******************************************************************************
@@ -47,9 +46,9 @@ class ConcreteStrategyA : public Strategy {
   * @return DoAlgorithm return a busType.
   */
   int DoAlgorithm() override {
-   int bus_type = state;
-   state = (state + 1) % 2;
-   return bus_type + 1;
+    int bus_type = state;
+    state = (state + 1) % 2;
+    return bus_type + 1;
   }
  private:
   int state = 0;
@@ -70,9 +69,9 @@ class ConcreteStrategyB : public Strategy {
   * @return DoAlgorithm return a busType.
   */
   int DoAlgorithm() override {
-   int bus_type = state;
-   state = (state + 1) % 2;
-   return bus_type + 2;
+    int bus_type = state;
+    state = (state + 1) % 2;
+    return bus_type + 2;
   }
  private:
   int state = 0;
@@ -94,9 +93,9 @@ class ConcreteStrategyC : public Strategy {
   * @return DoAlgorithm return a busType.
   */
   int DoAlgorithm() override {
-   int bus_type = state;
-   state = (state + 1) % 3;
-   return bus_type + 1;
+    int bus_type = state;
+    state = (state + 1) % 3;
+    return bus_type + 1;
   }
  private:
   int state = 0;

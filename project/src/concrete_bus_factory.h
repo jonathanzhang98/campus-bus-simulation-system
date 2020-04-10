@@ -10,12 +10,12 @@
 /*******************************************************************************
  * Includes
  ******************************************************************************/
+#include <time.h>
 #include <iostream>
 #include <list>
 #include <string>
 #include <chrono>
 #include <ctime>
-#include <time.h>
 
 #include "src/small_bus.h"
 #include "src/regular_bus.h"
@@ -23,7 +23,7 @@
 #include "src/route.h"
 #include "src/strategies.h"
 
-using namespace std;
+// using namespace std;
 
 /*******************************************************************************
  * Class Definitions

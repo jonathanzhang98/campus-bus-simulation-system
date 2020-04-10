@@ -58,6 +58,7 @@ class IObservable {
   * @return NotifyObserver does not return anything.
   */
   void NotifyObserver(BusData * bus_data);
+
  private:
   std::vector<IObserver *> observer_;
 };

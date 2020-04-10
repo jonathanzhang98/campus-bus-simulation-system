@@ -90,6 +90,6 @@
  * 1. https://sourcemaking.com/design_patterns/strategy/cpp/1 
  * 2. Head First Design Patterns
  * 3. https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/
- */ 
- 
+ */
+
 #endif  // SRC_MAINPAGE_H_
