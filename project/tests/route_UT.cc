@@ -294,25 +294,25 @@ TEST_F(RouteTests, IsAtEnd) {
 
   EXPECT_EQ(CC_EB.IsAtEnd(), false);
 
-  CC_EB.NextStop();
-  CC_EB.NextStop();
-  CC_EB.NextStop();
-  CC_EB.NextStop();
-  CC_EB.NextStop();
-  CC_EB.NextStop();
+  CC_EB.ToNextStop();
+  CC_EB.ToNextStop();
+  CC_EB.ToNextStop();
+  CC_EB.ToNextStop();
+  CC_EB.ToNextStop();
+  CC_EB.ToNextStop();
 
   EXPECT_EQ(CC_EB.IsAtEnd(), true);
 
   EXPECT_EQ(CC_WB.IsAtEnd(), false);
 
-  CC_WB.NextStop();
-  CC_WB.NextStop();
+  CC_WB.ToNextStop();
+  CC_WB.ToNextStop();
   EXPECT_EQ(CC_WB.IsAtEnd(), false);
-  CC_WB.NextStop();
-  CC_WB.NextStop();
-  CC_WB.NextStop();
+  CC_WB.ToNextStop();
+  CC_WB.ToNextStop();
+  CC_WB.ToNextStop();
   EXPECT_EQ(CC_WB.IsAtEnd(), false);
-  CC_WB.NextStop();
+  CC_WB.ToNextStop();
 
   EXPECT_EQ(CC_WB.IsAtEnd(), true);
 }

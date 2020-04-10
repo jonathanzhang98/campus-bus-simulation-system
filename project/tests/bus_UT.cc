@@ -308,6 +308,7 @@ TEST_F(BusTests, IsTripComplete) {
   campus_connector1.Move();
   campus_connector1.Move();
   campus_connector1.Move();
+  EXPECT_EQ(campus_connector1.IsTripComplete(), false);
   campus_connector1.Move();
   campus_connector1.Move();
   campus_connector1.Move();
@@ -390,7 +391,7 @@ TEST_F(BusTests, Move) {
   CC_EB_probs.push_back(.025); //O&W
   CC_EB_probs.push_back(.05); //Pre-transit
   CC_EB_probs.push_back(.05); //STP 1
-  CC_EB_probs.push_back(0); //STP 1
+  CC_EB_probs.push_back(0); //STP 2
   //TODO: is this always true? If so, we may want to reduce the length of probs to_char_type
   //        remove possibility of generating passengers with nowhere to go
   
@@ -401,7 +402,6 @@ TEST_F(BusTests, Move) {
   CC_WB_probs.push_back(.01); //O&W
   CC_WB_probs.push_back(.02); //CMU
   CC_WB_probs.push_back(0); //WB
-  
   
   RandomPassengerGenerator CC_EB_generator(CC_EB_probs, CC_EB_stops_list);
   RandomPassengerGenerator CC_WB_generator(CC_WB_probs, CC_WB_stops_list);

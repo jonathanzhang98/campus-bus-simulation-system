@@ -64,7 +64,6 @@ bool Bus::Move() {
   }
     int passengers_handled = 0;  // counts those on or off bus at this location
 
-
     // if there's no more distance
     // (OFF BY ONE ERROR ISSUE - do we unload if exactly zero after a move?
     // or only if there was time remaining?)
@@ -126,7 +125,7 @@ bool Bus::Move() {
         current_route->ToNextStop();
 
         // If we have incremented past the end of the outgoing route, set our
-        // next stop to actually be the first stpo in incoming
+        // next stop to actually be the first stop in incoming
         if (current_route->IsAtEnd()) {
             next_stop_ = incoming_route_->GetDestinationStop();
             distance_remaining_ += incoming_route_->GetNextStopDistance();

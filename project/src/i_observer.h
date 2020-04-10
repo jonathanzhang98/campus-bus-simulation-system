@@ -26,6 +26,15 @@
  */
 class IObserver {
  public:
+ /**
+  * @brief Update current observer base on info.
+  *
+  * This function will be used for simulation purposes.
+  *
+  * @param[in] info 
+  *
+  * @return UpdateObserver does not return anything.
+  */
   virtual void UpdateObserver(BusData* info) = 0;
 };
 

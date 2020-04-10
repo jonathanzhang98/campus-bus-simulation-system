@@ -27,8 +27,36 @@
  */
 class IObservable {
  public:
+ /**
+  * @brief Register a new observer.
+  *
+  * This function will be used for simulation purposes.
+  *
+  * @param[in] observer 
+  *
+  * @return RegisterObserver does not return anything.
+  */
   void RegisterObserver(IObserver * observer);
+
+  /**
+  * @brief Clear all observers.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return ClearObserver does not return anything.
+  */
   void ClearObserver();
+
+  /**
+  * @brief Notify all observers using bus_data.
+  *
+  * This function will be used for simulation purposes.
+  *
+  * @param[in] bus_data
+  *
+  * @return NotifyObserver does not return anything.
+  */
   void NotifyObserver(BusData * bus_data);
  private:
   std::vector<IObserver *> observer_;

@@ -44,7 +44,6 @@ class ConcreteBusFactory {
   * @param[in] id
   * @param[in] outbound
   * @param[in] inbound
-  * @param[in] busType
   * @param[in] speed
   *
   * @return GenerateBus returns a bus pointer.

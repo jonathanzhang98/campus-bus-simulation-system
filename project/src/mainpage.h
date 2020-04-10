@@ -63,5 +63,33 @@
  * Nevertheless, this extra layer of an abstract factory adds much more complexity to the implementation process of it. Typically an abstract factory requires more classes to be implemented to achieve the same functionality of an concrete factory. 
  * 
  * In the context of this simulation, there's no need to an extra layer of complexity since we only need to classify our buses in terms of their capacity. In this case, a concrete bus factory will be much easier to implement and reduces the complexity of our simulation.
- */
+ *
+ *
+ 
+ \section C Designing and Implementing the Observer Pattern
+ * To implement the observer pattern for observing information about a bus as it proceeds along a route, we must first idenify what is the observer and what is the subject.
+ * In our case, the bus class is our subject since it contains the information we want and this information changes over time. And our frontend UI interface is the observer
+ * which shows the information when being notified.
+ *
+ * Therefore, I added two classes that's key to the observer pattern: IObserver and IObservable.
+ *
+ * IObserver defines an observer interface. And since an observer need to update itself when information is passed along to it, IObserver has a method called 'UpdateObserver'. I defined it to be a pure virtual function since it cannot be implemented without further information.
+ * 
+ * IObservable defines a subject interface. It has a private member field called observer_ to store all the observers it needs to notify. It also supports several operations which are: 
+ * 1. RegisterObserver: this function add an observer to the subject's observer list.
+ * 2. ClearObserver: this function clears out all observers of this subject.
+ * 3. NotifyObserver: this function notifies all observers with updated information.
+ * Unlike IObserver, IObservable can implement all three of these functions.
+ * 
+ * After creating the interfaces of the observer pattern.
+ * I modified bus.h file and let Bus class inherit from IObservable class to change Bus to a subject in the observer pattern. Then, I added a line of code in the update method to call the NotifyObserver function because bus_data_ is changed by update method.
+ * 
+ * For me, the most difficult part of designing and implementing this pattern is to understand how all the classes and methods fit together and why we should use observer pattern. I would suggest first understand what are the downsides of the brute force solution before diving into the observer pattern.
+ * 
+ * Resources that helped me understand the observer pattern:
+ * 1. https://sourcemaking.com/design_patterns/strategy/cpp/1 
+ * 2. Head First Design Patterns
+ * 3. https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/
+ */ 
+ 
 #endif  // SRC_MAINPAGE_H_

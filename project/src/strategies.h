@@ -10,31 +10,20 @@
 /*******************************************************************************
  * Includes
  ******************************************************************************/
-// #include <iostream>
-// #include <list>
-// #include <string>
-// #include <chrono>
-// #include <ctime>
-// #include <time.h>
-
-// #include "src/small_bus.h"
-// #include "src/regular_bus.h"
-// #include "src/large_bus.h"
-// #include "src/route.h"
 
 using namespace std;
 
 /*******************************************************************************
  * Class Definitions
  ******************************************************************************/
-
 /**
- * The Strategy interface declares operations common to all supported versions
+ * @brief The Strategy interface declares operations common to all supported versions
  * of some algorithm.
- *
  * The Context uses this interface to call the algorithm defined by Concrete
  * Strategies.
+ * 
  */
+
 class Strategy {
  public:
     // generate int buytype and update strategy statte
@@ -42,8 +31,21 @@ class Strategy {
 
 };
 
+/*******************************************************************************
+ * Class Definitions
+ ******************************************************************************/
+/**
+ * @brief The Strategy Concrete class implements the Strategy interface.
+ * 
+ */
 class ConcreteStrategyA : public Strategy {
  public:
+  /**
+  * @brief Generate busType base on current state.
+  *
+  *
+  * @return DoAlgorithm return a busType.
+  */
   int DoAlgorithm() override {
    int bus_type = state;
    state = (state + 1) % 2;
@@ -52,9 +54,21 @@ class ConcreteStrategyA : public Strategy {
  private:
   int state = 0;
 };
-
+/*******************************************************************************
+ * Class Definitions
+ ******************************************************************************/
+/**
+ * @brief The Strategy Concrete class implements the Strategy interface.
+ * 
+ */
 class ConcreteStrategyB : public Strategy {
  public:
+ /**
+  * @brief Generate busType base on current state.
+  *
+  *
+  * @return DoAlgorithm return a busType.
+  */
   int DoAlgorithm() override {
    int bus_type = state;
    state = (state + 1) % 2;
@@ -64,8 +78,21 @@ class ConcreteStrategyB : public Strategy {
   int state = 0;
 };
 
+/*******************************************************************************
+ * Class Definitions
+ ******************************************************************************/
+/**
+ * @brief The Strategy Concrete class implements the Strategy interface.
+ * 
+ */
 class ConcreteStrategyC : public Strategy {
  public:
+ /**
+  * @brief Generate busType base on current state.
+  *
+  *
+  * @return DoAlgorithm return a busType.
+  */
   int DoAlgorithm() override {
    int bus_type = state;
    state = (state + 1) % 3;
