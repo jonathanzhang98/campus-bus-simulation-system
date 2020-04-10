@@ -48,7 +48,7 @@ class ConcreteBusFactory {
   *
   * @return GenerateBus returns a bus pointer.
   */
-  static Bus * GenerateBus(string id, Route * outbound, Route * inbound
+  static Bus * GenerateBus(std::string id, Route * outbound, Route * inbound
                                       , double speed = 1);
 //   static int GenerateStrategy();
 //  private:

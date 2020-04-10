@@ -13,7 +13,7 @@ ConcreteStrategyC ConcreteBusFactory::s3;
 
 // Bus * ConcreteBusFactory::GenerateBus(string id, Route * outbound,
 //                     Route * inbound, int busType, double speed) {
-Bus * ConcreteBusFactory::GenerateBus(string id, Route * outbound,
+Bus * ConcreteBusFactory::GenerateBus(std::string id, Route * outbound,
                     Route * inbound, double speed) {
   // generate strategy
   time_t theTime = time(NULL);
