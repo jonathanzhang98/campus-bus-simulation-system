@@ -19,7 +19,7 @@ In this next iteration you will perform statistical analysis using the singleton
 
 | <span id="a1">Date</a> | Item | Description of Verification and Validation of Deliverable(s) |
 |:----:|:-----|:------------|
-| Fri, May 1, 11:55pm | Perform statistical analysis on the simulation output data using the singleton pattern. Implement a decorator pattern to change the color of a bus and change the intensity of the color of a bus based upon the number of passengers.  Add functionality to the observer pattern so it can be used to observer a single stop, and finally if needed, fix the problems/issues for your iteration 2 code. | Pass automated tests and by inspection |
+| Fri, May 1, 11:55pm | Perform statistical analysis on the simulation output data using the singleton pattern. Implement a decorator pattern to change the color of a bus and change the intensity of the color of a bus based upon the number of passengers.  Add functionality to the observer pattern so it can be used to observe a single stop, and finally if needed, fix the problems/issues for your iteration 2 code. | Pass automated tests and by inspection |
 
 Your completed project deliverables should demonstrate good software design by implementing the appropriate design methodologies and development practices. You should rigorously follow the process for using version control you learned in lab 10 and documentation procedures learned in lab 07. 
 
@@ -28,17 +28,29 @@ For this iteration there there is only one delivery date, and all final delivera
 1. Final deliverables: 
 
     1. Fix the pause button from iteration from iteration 1, which we broke in iteration 2.
-    2. If necessary fix your observer pattern for one bus from iteration 2. </br>
+    2. If necessary, fix your observer pattern for one bus from iteration 2. </br>
             a. If you did not use templates in the implementation of your observer pattern for one bus, then change the implementation to use templates. 
-    3.  If necessary fix your implementation of a Bus Depot to employ different strategies for the deployment of buses based upon differing sets of criteria, for example: time of day and/or route information, etc. Further details can be found in the iteration 2 requirements.
-The strategy pattern may be useful for designing and implementing this capability. **See: [Strategy Pattern](https://www.geeksforgeeks.org/strategy-pattern-set-1/)** for an overview of the strategy pattern.  See the following links for examples of implementation of the strategy patten in Java and C++: </br>
-         a. https://www.geeksforgeeks.org/strategy-pattern-set-2 (in Java), </br>
-         b. https://sourcemaking.com/design_patterns/strategy/cpp/1) (in C++)</br>
-    4. Implement the functionality to observe one stop (which may be changed during execution) using the observer pattern. Further details can be found in the section Deliverables and Submission Process. **See: [Observer Pattern]( https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/)** for an overview of the observer pattern. 
-   5. Implement the singleton pattern to help formulate statistics from the output of the transit simulation. **See: [Singleton Pattern](https://www.geeksforgeeks.org/singleton-design-pattern-introduction/?ref=lbp)** for an overview of the singleton pattern. Further details can be found in the section Deliverables and Submission.
-   6. You will using the decorator pattern to change the color of the bus depending if it is inbound or outbound and changing the intensity of the color which will be dependent on the number of passengers on the bus. **See: [Decorator Pattern](https://www.geeksforgeeks.org/decorator-pattern/?ref=lbp)** for an overview of the decorator pattern. Further details can be found in the section Deliverables and Submission
-   7. In your Doxygen mainpage add a section named: **"Designing and Implementing the Decorator Pattern"** that discusses the design and implementation of your decorator pattern for changing the color of the bus depending on whether it is on the inbound or outbound route. Additionally,  your design and implementation should also include functionality for changing the intensity of the bus color based upon the number of passengers. Specify what classes and methods you had to add and where you had to add them -- and include UML in your discussion. You should discuss at least two designs, one which you implemented and one which you did not implement.  Your discussion should include at least one advantage and one disadvantage for each design. For the decorator design you implement,  note which parts of the design and implementation were most difficult for you, and include any tips or advice on how to understand and implement the pattern -- for example, what sources of information (e.g. documentation, lecture, lab) helped you understand that pattern, and fianlly, what enabled you to design and implement it (e.g. links to web sites, books, lectures, lab).
-    8.  Ensure all **new classes and methods you have written are properly documented**. All header files must document the classes and their methods using Doxygen, and all implementation (that is, \*.cc) files must have self-documenting code. **You do not need to document the web GRAPHICS code base.** 
+    3.  If necessary, fix your implementation of a Bus Depot to employ different strategies for the deployment of buses based upon differing sets of criteria. For example: time of day and/or route information, etc. Further details can be found in the iteration 2 requirements. The strategy pattern may be useful for designing and implementing this capability.
+         >  **See: [Strategy Pattern](https://www.geeksforgeeks.org/strategy-pattern-set-1/)** for an overview of the strategy pattern.  
+         The following links contain examples of implementation of the strategy patten in Java and C++: </br>
+            - https://www.geeksforgeeks.org/strategy-pattern-set-2 (in Java), </br>
+            - https://sourcemaking.com/design_patterns/strategy/cpp/1) (in C++)</br>
+    4. Implement the functionality to observe one stop (which may be changed during execution) using the observer pattern.   
+         > **See: [Observer Pattern]( https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/)** for an overview of the observer pattern. Further details can be found in the section Deliverables and Submission Process. 
+   5. Implement the singleton pattern to help formulate statistics from the output of the transit simulation. 
+      > **See: [Singleton Pattern](https://www.geeksforgeeks.org/singleton-design-pattern-introduction/?ref=lbp)** for an overview of the singleton pattern. Further details can be found in the section Deliverables and Submission.
+   6. You will be using the decorator pattern to change the color of the bus depending if it is inbound or outbound and to change the intensity of the color which will be dependent on the number of passengers on the bus. 
+      > **See: [Decorator Pattern](https://www.geeksforgeeks.org/decorator-pattern/?ref=lbp)** for an overview of the decorator pattern. Further details can be found in the section Deliverables and Submission
+   7. In your Doxygen mainpage add a section named: **"Designing and Implementing the Decorator Pattern"** that discusses:  
+      - the design and implementation of your decorator pattern for changing the color of the bus depending on whether it is on the inbound or outbound route. Additionally,  your design and implementation should also include functionality for changing the intensity of the bus color based upon the number of passengers. 
+      - The classes and methods you had to add and where you had to add them   
+         > Include a UML in your discussion.
+      - At least two designs, one which you implemented and one which you did not implement.  
+         >Your discussion should include at least one advantage and one disadvantage for each design. 
+      - Which parts of the design and implementation were most difficult for you, and include any tips or advice on how to understand and implement the pattern  
+         > for example, what sources of information (e.g. documentation, lecture, lab) helped you understand that pattern, and fianlly, what enabled you to design and implement it (e.g. links to web sites, books, lectures, lab).
+    8.  Ensure all **new classes and methods you have written are properly documented**. All header files must document the classes and their methods using Doxygen, and all implementation (that is, \*.cc) files must have self-documenting code. 
+         > **You do not need to document the web GRAPHICS code base.** 
     9. Correct and update your UML class diagram from Iteration 3 to include the changes to your code, including all classes you added to complete the iteration 3 requirements and their relationships to each other and the previously existing classes.
     
 **NOTE, if you are unable to complete all or a portion of an implementation item, include a discussion of your PROPOSED design of the decorator pattern in your mainpage, and your PROPOSED class design / changes for all your implementation items in your UML, and note that in a paragraph at the top of your mainpage so you receive credit for your design efforts. (Tell us what you did not sucessfully implement -- success is defined as the functionality compiles and executes.)**
@@ -72,7 +84,7 @@ In this iteration, you will do the following development:
 
 Teaching staff (Undergraduate TA's, Graduate TA's, and Instructors)  will also be working diligently to provide the structure and support for development, testing, and documentation. Automation in unit testing, style compliance, in-house GitHub testing, and documentation will make this an easier process, however, it means that you will have to develop within the constraints of these systems. Often there is a learning curve and a lot of systems troubleshooting to get it all working, so start early!
 
-In the first and second iterations, you enhanced the core functionality of the simulation. In this iteration, you will design and implement: an singleton pattern to collect statistical data;  an observer pattern to display information about a single stop to the user; and using the decorator pattern to apply color to the bus to indicate if the bus is either inbound/outbound and changing the color intensity of the bus based upon the number of passengers currently on the bus. 
+In the first and second iterations, you enhanced the core functionality of the simulation. In this iteration, you will design and implement: a singleton pattern to collect statistical data;  an observer pattern to display information about a single stop to the user; and using the decorator pattern to apply color to the bus to indicate if the bus is either inbound/outbound and changing the color intensity of the bus based upon the number of passengers currently on the bus. 
 
 <hr>
 
@@ -105,23 +117,16 @@ Statistics that need to be calculated are:
  - the average number of passengers per bus, and
  - the total number of passengers that rode the bus during the simulation. 
 
-Designing and implementing the Singleton Pattern for statistical analysis will be covered in more detail in lecture and lab.
-
-The singleton pattern:
-   https://www.geeksforgeeks.org/singleton-design-pattern-introduction/?ref=lbp
-
-Statistical Definitions
-   https://www.statisticssolutions.com/common-statistical-formulas/    
-
-The stringstream classes in C++ you might find useful
-   http://www.cplusplus.com/reference/sstream/stringstream/
-   http://www.cplusplus.com/reference/sstream/ostringstream/
+> Designing and implementing the Singleton Pattern for statistical analysis will be covered in more detail in lecture and lab.  
+      - [The singleton pattern](https://www.geeksforgeeks.org/singleton-design-pattern-introduction/?ref=lbp)  
+      - [Statistical Definitions](https://www.statisticssolutions.com/common-statistical-formulas/)  
+      - The stringstream classes in C++ you might find useful: [stringstream](http://www.cplusplus.com/reference/sstream/stringstream/) and [ostringstream](http://www.cplusplus.com/reference/sstream/ostringstream/)
    
 #### Priority Level 3 : Coloring the bus using the Decorator Pattern
 
 In the current implementation the bus color remains the same throughout the simulation process. A bus on an inbound route is the same color as the outbound route which makes them indistinguishable. For this part of the implementation you will need to make the color of the bus distinguishable depending on if the bus is on inbound route or an outbound route. This can be accomplished by using the decorator pattern and implementing the appropriate logic to change the color of the bus dependent on the type of route the bus is currently traveling. The two colors to use are marooon and gold since this is the University of Minnesota Transit System. 
 
-Designing and implementing the above Decorator Pattern for coloring the bus will be covered in more detail in lecture and lab.
+> Designing and implementing the above Decorator Pattern for coloring the bus will be covered in more detail in lecture and lab.
 
 #### Priority Level 4 : Implement an Observer Pattern to Display Relevant Stop Information for One Stop.
 
@@ -141,7 +146,7 @@ Designing and implementing the above will be covered in more detail in lecture a
 
 #### Challenge:  Fix your regression test to work for iteration 3 updated bus, passenger, stop, and factory classes.
 
-For regression tests, the goal is to verify that features that worked once stay working, even as you continue to fix, add, and/or refactor the code base and the development environment (e.g. makefiles).
+For regression tests, the goal is to verify that features that worked once still work, even as you continue to fix, add, and/or refactor the code base and the development environment (e.g. makefiles).
 
 For our transit simulation, that means designing and implementing a structured scenario that can be run repeatedly and produce the same output each time it is executed while employing as many of the domain classes as possible.
 
@@ -149,15 +154,13 @@ While developing this test, you should store any config files you need in `proje
 
 <hr>
 
-### Unit Testing with Google Test
+### [Unit Testing with Google Test](https://github.com/google/googletest)
 
-https://github.com/google/googletest
 
-Unit tests are essential in a large-scale project, because the entire code base can be tested regularly and automatically as it is being developed. In the strictest application of Test-Driven Development (TDD), the tests are written _before_ the code, which helps solidify requirements and write testable code. Modify your unit tests based upon the feedback you have received, and ensure your existing unit tests (which tests the methods present in iteration 1 - even if they have been modified in successive iterations) compile and execute for iteration 3. *For this iteration, they should be on the master branch on github.* 
+Unit tests are essential in a large-scale project, because the entire code base can be tested regularly and automatically as it is being developed. In the strictest application of Test-Driven Development (TDD), the tests are written _before_ the code, which helps solidify requirements and write testable code. Modify your unit tests based upon the feedback you have received, and ensure your existing unit tests (which tested the methods present in iteration 1 - even if they have been modified in successive iterations) compile and execute for iteration 3.  
+> For this iteration, they should all be on the master branch on github. 
 
-### Google Style Guide Compliance
-
-https://google.github.io/styleguide/cppguide.html
+### [Google Style Guide Compliance](https://google.github.io/styleguide/cppguide.html)
 
 Consistency in code organization, naming conventions, file structure, and formatting makes code easier to read and integrate. There are many options with various merits, so it is up to the development team to establish these
 conventions, or, in the words of Kevin Wendt, an instructor for previous iterations of the course, "The only style guide that really matters is the one your boss uses." We decided to use the Google style guide because it is published, documented, and has automated tests. We don't agree with every decision, but we are complying so that we are all coding to a single standard.
@@ -195,7 +198,7 @@ The UML diagram is a visual aid that helps other programmers better understand t
 
 The final diagram you submit for iteration 2 UML should reflect the changes you made while completing the code requirements. We will be looking for proper use of UML components, and a correct depiction of the code structure.
 
-There are many free tools that you can use to create the UML including Doxygen, and  draw.io (see: https://www.draw.io/). **Submit your UML in a .pdf file via the submission item on Canvas**.
+There are many free tools that you can use to create the UML including Doxygen, and  [draw.io](https://www.draw.io). **Submit your UML in a .pdf file via the submission item on Canvas**.
 
 #### Doxygen
 
@@ -210,7 +213,7 @@ Doxygen automatically generates documentation of class and code structure when y
 -  add a section named: **"Designing and Implementing the Decorator Pattern"** that discusses the design and implementation of your decorator pattern for the bus, as per the description in the final deliverables discussion above. 
 
 
-***- FINALLY: The /html directory generated by Doxygen should *not* be in your repo in github.umn.edu - nor should your build directory, executable files, or object files.***  **Your submission will be assessed a penalty if they are!**
+#### FINALLY: The /html directory generated by Doxygen should NOT be in your repo in github.umn.edu - nor should your build directory, executable files, or object files. ***Your submission will be assessed a penalty if they are!***
 
 > As part of your fresh clone prior to submission, please also compile the Doxygen documentation and look at the generated webpages.
 
@@ -237,7 +240,7 @@ This is the breakdown for point distribution:
 
 Documentation includes a design overview of the core domain elements (the classes you're building) provided in mainpage.h in /src and your final updated UML diagram in PDF file format. The mainpage should be augmented to add a design and implementation discussion of the Decorator Pattern (**"Designing and Implementing the Decorator Pattern"**) as specified above. It should be as long as you need it to be to write a discussion that addresses all items noted in the requirements above  (if it were on an 8.5x11 paper) - but should probably not be more than 3.5 pages.  We will look for a well written and well organized document that clearly articulates the design. It must stand alone in the sense that anyone reading it should not have to look at code to understand the design. This will likely require images of UML and/or snippets of code included. 
 
-Your final UML diagram from iteration 2 should be updated to include the class(es), methods, and relationships that you have added or changed during your iteration 3 development activities. The UML syntax you should use is specified and documented here: https://cppcodetips.wordpress.com/2013/12/23/uml-class-diagram-explained-with-c-samples/. We will be looking for general proper use of UML syntax, and a correct depiction of the code structure of the existing project code (code from shared-upstream's support-code branch). 
+Your final UML diagram from iteration 2 should be updated to include the class(es), methods, and relationships that you have added or changed during your iteration 3 development activities. The UML syntax you should use is specified and documented [here](https://cppcodetips.wordpress.com/2013/12/23/uml-class-diagram-explained-with-c-samples/). We will be looking for general proper use of UML syntax, and a correct depiction of the code structure of the existing project code (code from shared-upstream's support-code branch). 
 
 **Submit your final version of your UML diagram in a .pdf file via the submission item on Canvas.**
 
@@ -283,27 +286,27 @@ We expect you to have some completed functionality implemented running by the en
 ## Additional Resources
 
 Local System and Compilation:
-- Repo: https://github.umn.edu/umn-csci-3081-s20/csci3081-shared-upstream
-- Compilation: https://gcc.gnu.org/
-- Linux quick reference: https://files.fosswire.com/2007/08/fwunixref.pdf
-- Makefile Resources: https://www.cs.bu.edu/teaching/cpp/writing-makefiles/
+- [Repo](https://github.umn.edu/umn-csci-3081-s20/csci3081-shared-upstream)
+- [Compilation](https://gcc.gnu.org/)
+- [Linux quick reference](https://files.fosswire.com/2007/08/fwunixref.pdf)
+- [Makefile Resources](https://www.cs.bu.edu/teaching/cpp/writing-makefiles/)
 
 
 Testing:
-- https://github.com/google/googletest
-- Unit Testing: https://martinfowler.com/bliki/UnitTest.html
+- [Google Testing](https://github.com/google/googletest)
+- [Unit Testing](https://martinfowler.com/bliki/UnitTest.html)
 
 Style:
-- https://google.github.io/styleguide/cppguide.html
-- https://github.com/google/styleguide/tree/gh-pages/cpplint
-- https://www.python.org/downloads/
+- [cppguide style guide](https://google.github.io/styleguide/cppguide.html)
+- [cpplint](https://github.com/google/styleguide/tree/gh-pages/cpplint)
+- [python](https://www.python.org/downloads/)
 
 Documentation:
-- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+- [Markdown-cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 IDEs:
-- Xemacs: https://www.xemacs.org/
-- vi: http://www.lagmonster.org/docs/vi.html
-- Atom: https://atom.io/
-- Sublime: https://www.sublimetext.com/
-- Eclipse: https://eclipse.org/
+- [Xemacs](https://www.xemacs.org/)
+- [vi](http://www.lagmonster.org/docs/vi.html)
+- [Atom](https://atom.io/)
+- [Sublime](https://www.sublimetext.com/)
+- [Eclipse](https://eclipse.org/)
