@@ -1,5 +1,6 @@
 # Enhancing and Extending The Visual Transit System Simulator
 
+### Version 1, April 13 Change in Deliverables and Submission: Failure to submit your deliverables in the required branch in your repository on github will result in a score of zero.
 ### Initial Release, April 11
 ## NOTE: This document will be subject to change. In most cases you will be notified of the changes via the announcement feature in Canvas, but you should check this document yourselves on a daily basis, as we will note the version and date of update in this document.
 
@@ -57,7 +58,7 @@ For this iteration there there is only one delivery date, and all final delivera
 
 #### Deliverables and Submission Process
 
-With the exception of the PDF versions of your UML diagrams, which will be submitted via an assignment item on Canvas, you will submit all your deliverables via GitHub according to the process specified lab 10.  We will tag and pull your repository at the specified due date and grade them according to the contents at that time. With the exeception of your updated/corrected UML diagram - **All, your  final deliverables (due May 1) should in your master branch.** **Note -** *failure to submit your deliverables in the required branch in your repository on github will result in a deduction of at least 10% from your grade for the deliverable for iteration 3.*
+With the exception of the PDF versions of your UML diagrams, which will be submitted via an assignment item on Canvas, you will submit all your deliverables via GitHub according to the process specified lab 10.  We will tag and pull your repository at the specified due date and grade them according to the contents at that time. With the exeception of your updated/corrected UML diagram - **All, your  final deliverables (due May 1) should in your master branch.** **Note -** *failure to submit your deliverables in the required branch in your repository on github will result in a score of zero.*
 
 >#### You must verify that your submission compiles on a cselabs machine and it is complete. You will receive zero or be heavily penalized if your code does not compile and/or we cannot generate documentation using Doxygen as specified in Lab 7 upon submission.
 
