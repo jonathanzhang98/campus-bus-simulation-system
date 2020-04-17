@@ -34,7 +34,7 @@ Bus Data:
 compute the required statistics must be present, correct, and labelled clearly so that any user familiar with the simulation can
 understand it.**
 
-In our implementation we decided to send all of the data to a `stringstream` object -- in particular, an `ostringstream` object -- instead of directly to a file. A `stringstream` object can be used in place of standard input/output. So an `ostringstream` object can be used in place of `cout` or file input. All information is stored in the `ostringstream` object. All `stringstream` objects can be converted to a `string` object by using the method `.str()`, i.e. suppose we have the C++ statements:
+In our implementation we decided to send all of the data to a `stringstream` object -- in particular, an `ostringstream` object -- instead of directly to a file. A `stringstream` object can be used in place of standard input/output. So an `ostringstream` object can be used in place of `cout` or file output. All information is stored in the `ostringstream` object. All `stringstream` objects can be converted to a `string` object by using the method `.str()`, i.e. suppose we have the C++ statements:
 
     ostringstream foo;
     string temp;
