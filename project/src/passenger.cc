@@ -51,3 +51,11 @@ void Passenger::Report(std::ostream& out) const {
   out << "\tWait at Stop: " << wait_at_stop_ << std::endl;
   out << "\tTime on bus: " << time_on_bus_ << std::endl;
 }
+
+void Passenger::Display(std::ostream& out) {
+  out << "Name," << name_ << ","
+    << "Destination," << destination_stop_id_ << ","
+    << "Total,Wait," << wait_at_stop_ + time_on_bus_<< ","
+    << "Wait,at,Stop," << wait_at_stop_ << ","
+    << "Time,on,bus," << time_on_bus_;
+}

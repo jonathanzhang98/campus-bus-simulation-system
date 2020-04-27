@@ -168,6 +168,16 @@ class Bus : public IObservable {
   */
   int GetCapacity() const { return passenger_max_capacity_; }
 
+  /**
+  * @brief Get the capacity of the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return GetCapacity returns the capacity of the bus.
+  */
+  int GetTotalPassengers() const { return total_passsengers_; }
+
  /**
   * @brief Skip prints "skip" if the next stop should be skipped.
   *
@@ -191,6 +201,7 @@ class Bus : public IObservable {
  private:
   int UnloadPassengers();  // returning revenue delta
   // bool Refuel();
+  int total_passsengers_;
   PassengerUnloader * unloader_;
   PassengerLoader * loader_;
   std::list<Passenger *> passengers_;

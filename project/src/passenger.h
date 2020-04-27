@@ -12,6 +12,8 @@
  ******************************************************************************/
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <fstream>
 
 /*******************************************************************************
  * Class Definitions
@@ -83,6 +85,17 @@ class Passenger {  // : public Reporter {
   * @return GetDestination returns the destination of the passenger as an integer id.
   */
   int GetDestination() const;
+
+  /**
+  * @brief Log infomation to ostream.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return GetName does not return anything.
+  */
+  void Display(std::ostream& out);
+
 
  /**
   * @brief Report prints out the status of a passenger to the output stream.

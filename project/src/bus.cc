@@ -16,6 +16,7 @@ Bus::Bus(std::string name, Route * out, Route * in,
   next_stop_ = out->GetDestinationStop();
   unloader_ = new PassengerUnloader;
   loader_ = new PassengerLoader;
+  total_passsengers_ = 0;
 }
 
 bool Bus::IsTripComplete() {
@@ -35,6 +36,7 @@ bool Bus::LoadPassenger(Passenger * new_passenger) {
   if (loader_->LoadPassenger(new_passenger, passenger_max_capacity_,
       &passengers_) > 0) {
     added_passenger = true;
+    total_passsengers_++;
     // revenue_ += 0; //No revenue tracking at this time.
   }
   return added_passenger;
@@ -179,6 +181,7 @@ void Bus::Report(std::ostream& out) {
   out << "Name: " << name_ << std::endl;
   out << "Speed: " << speed_ << std::endl;
   out << "Distance to next stop: " << distance_remaining_ << std::endl;
+  out << "Total Passengers: " << total_passsengers_ << std::endl;
   out << "\tPassengers (" << passengers_.size() << "): " << std::endl;
   for (std::list<Passenger *>::iterator it = passengers_.begin();
                                         it != passengers_.end(); it++) {

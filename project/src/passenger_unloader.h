@@ -14,6 +14,10 @@
 #include <list>
 #include "src/passenger.h"
 #include "src/stop.h"
+#include "src/file_writer.h"
+#include <iostream>
+#include <sstream>
+#include <fstream>
 class Stop;
 class Passenger;
 

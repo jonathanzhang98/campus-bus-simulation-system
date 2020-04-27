@@ -3,6 +3,9 @@
 
 #include "bus.h"
 #include "route.h"
+#include <iostream>
+#include <sstream>
+#include <fstream>
 
 VisualizationSimulator::VisualizationSimulator(WebInterface* webI, ConfigManager* configM) {
     webInterface_ = webI;
@@ -82,6 +85,11 @@ void VisualizationSimulator::Update() {
         busses_[i]->Update();
 
         if (busses_[i]->IsTripComplete()) { 
+            std::ostringstream outStr;
+            outStr << "Name," << busses_[i]->GetName() << ","
+            << "Total,Num,of,Passengers," << busses_[i]->GetTotalPassengers();
+            FileWriter::GetInstance()->Write("BusData.csv", outStr);
+
             webInterface_->UpdateBus(busses_[i]->GetBusData(), true);
             busses_.erase(busses_.begin() + i);
             continue;
