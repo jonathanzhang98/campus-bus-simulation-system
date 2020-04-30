@@ -13,6 +13,7 @@
 #include "src/i_bus.h"
 #include "src/bus_decorator.h"
 #include "src/bus_color_decorator.h"
+#include "src/bus_intensity_decorator.h"
 
 #include <vector>
 #include <random>

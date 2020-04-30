@@ -69,6 +69,7 @@ void VisualizationSimulator::Update() {
             // busses_.push_back(ConcreteBusFactory::GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), rand_int, 1));
 
             IBus * new_bus = new BusColorDecorator(ConcreteBusFactory::GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), 1));
+            new_bus = new BusIntensityDecorator(new_bus);
             // busses_.push_back(ConcreteBusFactory::GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), 1));
             busses_.push_back(new_bus);
             busId++;
