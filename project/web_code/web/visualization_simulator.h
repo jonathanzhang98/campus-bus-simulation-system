@@ -10,6 +10,9 @@
 #include "src/concrete_bus_factory.h"
 #include "src/i_observable.h"
 #include "src/i_observer.h"
+#include "src/i_bus.h"
+#include "src/bus_decorator.h"
+#include "src/bus_color_decorator.h"
 
 #include <vector>
 #include <random>
@@ -53,7 +56,7 @@ class VisualizationSimulator {
         bool started = false;
 
         std::vector<Route *> prototypeRoutes_;
-        std::vector<Bus *> busses_;
+        std::vector<IBus *> busses_;
 
         int busId = 1000;
 };

@@ -68,7 +68,9 @@ void VisualizationSimulator::Update() {
             // old code: busses_.push_back(new Bus(std::to_string(busId), outbound->Clone(), inbound->Clone(), 60, 1));
             // busses_.push_back(ConcreteBusFactory::GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), rand_int, 1));
 
-            busses_.push_back(ConcreteBusFactory::GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), 1));
+            IBus * new_bus = new BusColorDecorator(ConcreteBusFactory::GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), 1));
+            // busses_.push_back(ConcreteBusFactory::GenerateBus(std::to_string(busId), outbound->Clone(), inbound->Clone(), 1));
+            busses_.push_back(new_bus);
             busId++;
             
             timeSinceLastBus_[i] = busStartTimings_[i];
@@ -122,14 +124,14 @@ void VisualizationSimulator::Pause() {
 
 void VisualizationSimulator::ClearListeners() {
     // std::vector<Bus *> busses_;
-    for(std::vector<Bus*>::const_iterator iter = busses_.begin(); iter != busses_.end(); ++iter)
+    for(std::vector<IBus*>::const_iterator iter = busses_.begin(); iter != busses_.end(); ++iter)
     {
         (*iter)->ClearObserver();
     }
 }
 
 void VisualizationSimulator::AddListener(std::string * id, IObserver * observer) {
-    for(std::vector<Bus*>::const_iterator iter = busses_.begin(); iter != busses_.end(); ++iter)
+    for(std::vector<IBus*>::const_iterator iter = busses_.begin(); iter != busses_.end(); ++iter)
     {
         if((*iter)->GetBusData().id.compare(*id) == 0)
         {

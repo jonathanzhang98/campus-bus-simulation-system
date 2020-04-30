@@ -23,6 +23,7 @@
 #include "src/stop.h"
 #include "src/i_observer.h"
 #include "src/i_observable.h"
+#include "src/i_bus.h"
 
 class PassengerUnloader;
 class PassengerLoader;
@@ -38,7 +39,7 @@ class Stop;
  * 
  *
  */
-class Bus : public IObservable {
+class Bus : public IBus {
  public:
  /**
   * @brief Construct a Passenger obejct with a destination_stop_id and a name.
@@ -187,6 +188,26 @@ class Bus : public IObservable {
   * @return Update does not return anything.
   */
   void skip();
+
+  /**
+  * @brief Get the capacity of the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return GetCapacity returns the capacity of the bus.
+  */
+  Route * GetIncomingRoute() const { return incoming_route_; }
+
+  /**
+  * @brief Get the capacity of the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return GetCapacity returns the capacity of the bus.
+  */
+  Route * GetOutgoingRoute() const { return outgoing_route_; }
 
 //  /**
 //   * @brief Report the states of the bus.

@@ -75,6 +75,13 @@ void GetBussesCommand::execute(MyWebServerSession* session, picojson::value& com
 
         s["position"] = picojson::value(pStruct);
 
+        picojson::object cStruct;
+        cStruct["red"] = picojson::value(static_cast<double>(busses[i].color.red));
+        cStruct["green"] = picojson::value(static_cast<double>(busses[i].color.green));
+        cStruct["blue"] = picojson::value(static_cast<double>(busses[i].color.blue));
+        cStruct["alpha"] = picojson::value(static_cast<double>(busses[i].color.alpha));
+        s["color"] = picojson::value(cStruct);
+
         bussesArray.push_back(picojson::value(s));
     }
 

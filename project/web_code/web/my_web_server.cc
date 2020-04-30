@@ -24,6 +24,7 @@ void MyWebServer::UpdateBus(const BusData& bData, bool deleted) {
         busses[index].position = bData.position;
         busses[index].num_passengers = bData.num_passengers;
         busses[index].capacity = bData.capacity;
+        busses[index].color = bData.color;
     } else {
         busses.push_back(bData);
     }

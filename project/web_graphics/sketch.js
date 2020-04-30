@@ -49,11 +49,18 @@ function Position(x, y) {
 	this.x = x;
 	this.y = y;
 }
-function Bus(id, position, numPasengers, capacity) {
+function Color(r, g, b, a) {
+    this.red = r;
+    this.green = g;
+    this.blue = b;
+    this.alpha = a;
+}
+function Bus(id, position, numPasengers, capacity, color) {
 	this.id = id;
 	this.position = position;
     this.numPassengers = numPassengers;
     this.capacity = capacity;
+    this.color = color;
 }
 function Stop(id, position, numPeople) {
 	this.id = id;
@@ -90,7 +97,10 @@ function setupSocket() {
                     y = data.busses[i].position.y;
                     position = new Position(x, y);
 
-                    busses.push(new Bus(id, position, numPassengers, capacity));
+                    var color = data.busses[i].color;
+                    color = new Color(color.red, color.green, color.blue, color.alpha);
+
+                    busses.push(new Bus(id, position, numPassengers, capacity, color));
                 }
             }
             if (data.command == "updateRoutes") {
@@ -288,12 +298,13 @@ function render() {
         x = busses[i].position.x;
         y = busses[i].position.y;
         var pos = myMap.latLngToPixel(x, y);
+        var color = busses[i].color;
 
         pos.x = pos.x + imageX;
         pos.y = pos.y + imageY;
 
         push();
-        fill(255, 0, 0, 255);
+        fill(color.red, color.green, color.blue, color.alpha);
         rectMode(CENTER);
         rect(pos.x, pos.y, 45, 30, 20);
 
