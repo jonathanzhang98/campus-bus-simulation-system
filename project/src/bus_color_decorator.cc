@@ -5,7 +5,7 @@
  */
 #include "src/bus_color_decorator.h"
 
-BusData BusColorDecorator::GetBusData() const{
+BusData BusColorDecorator::GetBusData() const {
     BusData bus_data_ = bus->GetBusData();
 
     // Get the correct route and early exit

@@ -17,12 +17,9 @@ int PassengerUnloader::UnloadPassengers(std::list<Passenger *>* passengers,
       it != (*passengers).end();
       it++) {
     if ((*it)->GetDestination() == current_stop->GetId()) {
-      
       ostringstream outStr;
       (*it)->Display(outStr);
       FileWriter::GetInstance()->Write("PassData.csv", outStr);
-      
-
       // could be used to inform scheduler of end-of-life?
       // This could be a destructor issue as well.
       // *it->FinalUpdate();
@@ -36,3 +33,4 @@ int PassengerUnloader::UnloadPassengers(std::list<Passenger *>* passengers,
 
   return passengers_unloaded;
 }
+

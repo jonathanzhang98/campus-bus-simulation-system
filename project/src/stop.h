@@ -15,6 +15,7 @@
 
 #include "src/bus.h"
 #include "src/passenger.h"
+#include "src/i_observable.h"
 
 class Bus;
 
@@ -27,7 +28,7 @@ class Bus;
  * 
  * 
  */
-class Stop {
+class Stop : public IObservable <StopData> {
  public:
  /**
   * @brief Construct a Passenger obejct with a destination_stop_id and a name.

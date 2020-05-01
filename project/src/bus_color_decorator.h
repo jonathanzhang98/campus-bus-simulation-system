@@ -44,13 +44,31 @@ class BusColorDecorator : public BusDecorator {
  public:
 //   virtual Bus(std::string name, Route * out, Route * in, int capacity = 60,
 //                                                  double speed = 1) = 0;
-  BusColorDecorator(IBus * baseBus): BusDecorator(baseBus) {}
+ /**
+  * @brief Construct a BusDecorator obejct with a destination_stop_id and a name.
+  *
+  * This function will be used for simulation purposes.
+  *
+  * @param[in] baseBus
+  *
+  * @return Constructor does not return anything.
+  */
+  explicit BusColorDecorator(IBus * baseBus): BusDecorator(baseBus) { }
   // virtual bool IsTripComplete() = 0;
   // virtual bool LoadPassenger(Passenger *) = 0;
   // virtual bool Move() = 0;
   // virtual void Update() = 0;
   // virtual void Report(std::ostream&) = 0;
   // virtual void UpdateBusData() = 0;
+
+/**
+  * @brief Get the data concerning the bus.
+  *
+  * This function will be used for simulation purposes.
+  *
+  *
+  * @return GetBusData returns the data concerning the bus as a BusData struct.
+  */
   virtual BusData GetBusData() const;
 
   // virtual std::string GetName() const = 0;

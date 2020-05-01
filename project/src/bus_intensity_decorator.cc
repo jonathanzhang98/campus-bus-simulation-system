@@ -5,7 +5,7 @@
  */
 #include "src/bus_intensity_decorator.h"
 
-BusData BusIntensityDecorator::GetBusData() const{
+BusData BusIntensityDecorator::GetBusData() const {
     BusData bus_data_ = bus->GetBusData();
 
     int num_passengers = bus->GetNumPassengers();

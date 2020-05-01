@@ -14,6 +14,8 @@
 #include "src/bus_decorator.h"
 #include "src/bus_color_decorator.h"
 #include "src/bus_intensity_decorator.h"
+#include "bus.h"
+#include "route.h"
 
 #include <vector>
 #include <random>
@@ -42,8 +44,29 @@ class VisualizationSimulator {
         * @return Pause does not return anything.
         */
         void Pause();
-        void ClearListeners();
-        void AddListener(std::string *, IObserver *);
+        void ClearBusListeners();
+        void ClearStopListeners();
+        void AddBusListener(std::string * id, IObserver<BusData> * observer) {
+            for(std::vector<IBus*>::const_iterator iter = busses_.begin(); iter != busses_.end(); ++iter)
+            {
+                if((*iter)->GetBusData().id.compare(*id) == 0)
+                {
+                    (*iter)->RegisterObserver(observer);
+                }
+            }
+        }
+        void AddStopListener(std::string * id, IObserver<StopData> * observer) {
+            for(std::vector<Route*>::const_iterator route_iter = prototypeRoutes_.begin(); route_iter != prototypeRoutes_.end(); ++route_iter) {
+                std::list<Stop*> stops = (*route_iter)->GetStops();
+                for(std::list<Stop*>::const_iterator iter = stops.begin(); iter != stops.end(); ++iter)
+                {
+                    if((*iter)->GetId() == std::stoi(*id))
+                    {
+                        (*iter)->RegisterObserver(observer);
+                    }
+                }
+            }
+        }
 
     private:
         WebInterface* webInterface_;

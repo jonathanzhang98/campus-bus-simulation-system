@@ -123,20 +123,46 @@ void VisualizationSimulator::Pause() {
     paused = !paused;
 }
 
-void VisualizationSimulator::ClearListeners() {
+void VisualizationSimulator::ClearBusListeners() {
     // std::vector<Bus *> busses_;
     for(std::vector<IBus*>::const_iterator iter = busses_.begin(); iter != busses_.end(); ++iter)
     {
         (*iter)->ClearObserver();
     }
+
 }
 
-void VisualizationSimulator::AddListener(std::string * id, IObserver * observer) {
-    for(std::vector<IBus*>::const_iterator iter = busses_.begin(); iter != busses_.end(); ++iter)
-    {
-        if((*iter)->GetBusData().id.compare(*id) == 0)
+void VisualizationSimulator::ClearStopListeners() {
+
+    // clear stop observers
+    for(std::vector<Route*>::const_iterator route_iter = prototypeRoutes_.begin(); route_iter != prototypeRoutes_.end(); ++route_iter) {
+        std::list<Stop*> stops = (*route_iter)->GetStops();
+        for(std::list<Stop*>::const_iterator iter = stops.begin(); iter != stops.end(); ++iter)
         {
-            (*iter)->RegisterObserver(observer);
+            (*iter)->ClearObserver();
         }
     }
 }
+
+
+// void VisualizationSimulator::AddBusListener(std::string * id, IObserver<BusData> * observer) {
+//     for(std::vector<IBus*>::const_iterator iter = busses_.begin(); iter != busses_.end(); ++iter)
+//     {
+//         if((*iter)->GetBusData().id.compare(*id) == 0)
+//         {
+//             (*iter)->RegisterObserver(observer);
+//         }
+//     }
+// }
+
+// void VisualizationSimulator::AddStopListener(std::string * id, IObserver<StopData> * observer) {
+//     for(std::vector<Route*>::const_iterator route_iter = prototypeRoutes_.begin(); route_iter != prototypeRoutes_.end(); ++route_iter) {
+//         for(std::list<Stop*>::const_iterator iter = (*route_iter)->GetStops().begin(); iter != (*route_iter)->GetStops().end(); ++iter)
+//         {
+//             if((*iter)->GetId() == std::stoi(*id))
+//             {
+//                 (*iter)->RegisterObserver(observer);
+//             }
+//         }
+//     }
+// }

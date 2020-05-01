@@ -25,6 +25,7 @@
  *
  * 
  */
+template <typename T>
 class IObservable {
  public:
  /**
@@ -36,7 +37,9 @@ class IObservable {
   *
   * @return RegisterObserver does not return anything.
   */
-  void RegisterObserver(IObserver * observer);
+  void RegisterObserver(IObserver<T> * observer) {
+    observer_.push_back(observer);
+  }
 
   /**
   * @brief Clear all observers.
@@ -46,7 +49,9 @@ class IObservable {
   *
   * @return ClearObserver does not return anything.
   */
-  void ClearObserver();
+  void ClearObserver() {
+    observer_.erase(observer_.begin(), observer_.end());
+  }
 
   /**
   * @brief Notify all observers using bus_data.
@@ -57,10 +62,18 @@ class IObservable {
   *
   * @return NotifyObserver does not return anything.
   */
-  void NotifyObserver(BusData * bus_data);
+  void NotifyObserver(T * data) {
+    for (typename std::vector<IObserver<T>*>::const_iterator
+     iter = observer_.begin();
+     iter != observer_.end(); ++iter) {
+      if (*iter != 0) {
+          (*iter)->UpdateObserver(data);
+      }
+    }
+  }
 
  private:
-  std::vector<IObserver *> observer_;
+  std::vector<IObserver<T> *> observer_;
 };
 
 #endif  // SRC_I_OBSERVABLE_H_

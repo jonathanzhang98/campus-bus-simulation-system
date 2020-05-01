@@ -190,22 +190,22 @@ class Bus : public IBus {
   void skip();
 
   /**
-  * @brief Get the capacity of the bus.
+  * @brief Get the incoming route.
   *
   * This function will be used for simulation purposes.
   *
   *
-  * @return GetCapacity returns the capacity of the bus.
+  * @return GetIncomingRoute returns the incoming route.
   */
   Route * GetIncomingRoute() const { return incoming_route_; }
 
   /**
-  * @brief Get the capacity of the bus.
+  * @brief Get the outgoing route.
   *
   * This function will be used for simulation purposes.
   *
   *
-  * @return GetCapacity returns the capacity of the bus.
+  * @return GetOutgoingRoute returns the outgoing route.
   */
   Route * GetOutgoingRoute() const { return outgoing_route_; }
 

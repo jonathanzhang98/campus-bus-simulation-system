@@ -42,8 +42,8 @@ var busTimeOffsetsYOffset = 50;
 var runRectYPos = 450;
 var runYPos = 465;
 var startYPos = 500;
-var observedText = ""
-
+var observedBusText = "";
+var observedStopText = "";
 // Data for vis. Matches data_structs.h in C++
 function Position(x, y) {
 	this.x = x;
@@ -123,7 +123,9 @@ function setupSocket() {
                             y = data.routes[i].stops[j].position.y;
                             position = new Position(x, y);
 
-                            stops.push(new Stop(stop_id, position, numPeople));
+                            var newStop = new Stop(stop_id, position, numPeople);
+                            stops.push(newStop);
+                            stopDropDown.option(newStop.id)
 
                             route_stop_indices.push(stops.length-1);
                         } else {
@@ -134,8 +136,11 @@ function setupSocket() {
                     routes.push(new Route(id, route_stop_indices));
                 }
             }
-            if (data.command == "observe") {
-                observedText = data.text;
+            if (data.command == "observeBus") {
+                observedBusText = data.text;
+            } 
+            if (data.command == "observeStop") {
+                observedStopText = data.text;
             }
         } 
     } catch(exception) {
@@ -160,7 +165,7 @@ function mapClick(event) {
         // If we are over the bus
         if (abs(mouseX - pos.x) < 25 && abs(mouseY - pos.y) < 15) {
             console.log("hit!!!");
-            socket.send(JSON.stringify({command: "listen", id: busses[i].id}));
+            socket.send(JSON.stringify({command: "listenBus", id: busses[i].id}));
             return;
         }
     }
@@ -194,6 +199,12 @@ function setup() {
     startButton.style('height', '20px');
     startButton.mousePressed(start);    
 
+    stopDropDown = createSelect();
+    stopDropDown.position(10, startYPos + 30);
+    stopDropDown.style('width', '200px');
+    stopDropDown.style('height', '20px');
+    stopDropDown.changed(dropDownSelect)
+    
     pauseButton = createButton('Pause');
     pauseButton.position(110, startYPos);
     pauseButton.style('width', '100px');
@@ -351,6 +362,10 @@ function start() {
     startTime = millis();
 }
 
+function dropDownSelect() {
+    let item = stopDropDown.value();
+    socket.send(JSON.stringify({command: "listenStop", id: item}))
+}
 function pause() {
     console.log("Pause button clicked");
 
@@ -411,5 +426,5 @@ function drawInfo() {
 
 
 function drawObservedInfo() {
-    text(observedText,1+imageWidth+270+5, simInfoYRectPos+200);
+    text(observedBusText + observedStopText,1+imageWidth+270+5, simInfoYRectPos+200);
 }

@@ -24,6 +24,7 @@
  *
  * 
  */
+template <typename T>
 class IObserver {
  public:
  /**
@@ -35,7 +36,7 @@ class IObserver {
   *
   * @return UpdateObserver does not return anything.
   */
-  virtual void UpdateObserver(BusData* info) = 0;
+  virtual void UpdateObserver(T* info) = 0;
 };
 
 #endif  // SRC_I_OBSERVER_H_

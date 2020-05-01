@@ -26,42 +26,27 @@
  */
 class FileWriter {
  public:
- 
  /**
-  * @brief Report the states of the bus.
+  * @brief Write the ostring stream to file.
   *
   * This function will be used for simulation purposes.
   *
   *
-  * @return Report does not return anything.
+  * @return Write the ostring stream to file.
   */
   void Write(std::string file_name, std::ostringstream& out);
- 
+
  /**
-  * @brief Report the states of the bus.
+  * @brief Get the singleton instance.
   *
   * This function will be used for simulation purposes.
   *
   *
-  * @return Report does not return anything.
+  * @return GetInstance does not return the singleton instance.
   */
   static FileWriter* GetInstance();
 
  private:
- /**
-  * @brief Generation of a large bus.
-  *
-  * This function will be used for simulation purposes.
-  *
-  * @param[in] name
-  * @param[in] out
-  * @param[in] in
-  * @param[in] speed
-  *
-  * @return Constructor does not return anything.
-  */
-//   FileWriter() {}
-
   static FileWriter *file_writer_;
 };
 

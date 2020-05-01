@@ -90,6 +90,49 @@
  * 1. https://sourcemaking.com/design_patterns/strategy/cpp/1 
  * 2. Head First Design Patterns
  * 3. https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/
+
+ \section D Designing and Implementing the Decorator Pattern
+ * Our rationale for using the decorator pattern is that we want to dynamically add behaviors to our base objects without the need to modifting exsiting code. At first, we came up with the idea of changing the color of buses based on the route they are on.
+ * Then, we came up with the idea of changing the intensity of buses based on the number of passengers on the buses. Therefore, it won't be a suprise if we want to add some other functionality to the bus class in the future.
+ * 
+ * Generally, we have two approaches for adding these functionalty. We can either directly modify the bus class to support these functionality or we can use decorator pattern to decorate bus objects so we don't need to modify the bus class again and again
+ * the next time we want to add some new functionality, which inevitably introduces new bugs and break things.
+ * 
+ * The classes and methods I added:
+ *
+ *
+ * 1. IBus as a general interface, it has all the methods that the bus class needs and all these methods are pure virtual.
+ * 2. BusDecorator class inherites from IBus interface and also has a constructor.
+ * 3. BusColorDecorator class inherites from BusDecorator and overrides the GetBusData() method to add the functionality of changing bus color based on the route the bus is on.
+ * 4. BusIntensityDecorator class inherites from BusDecorator and overrides the GetBusData() method to add the functionality of changing bus color intensity based on number of passengers on the bus.
+ * 
+ * The decorator pattern design I implemented is the standard one which involves a common component interface (both concrete components and decorator interface inherites from) and a decorator interface which concrete decorators inherites from.
+ * I chose this design because it adheres to the SOLID principles.
+ * 1. It adhere to the single responsibility principle because every class in this design has only one single responsibility, the bus class is not doing the job of decorator classes.
+ * 2. It adhere to the open/closed principle because we can add on behaviors to the bus class just by creating new decorator classes without modifying any existing code.
+ * 3. It adhere to the Liskov's substitution principle because subclasses in this design can substitude superclasses. Decorater classes can do all the job IBus interface can do.
+ * 4. It adhere to the interface segregation principle because no subclasses are enforced to inherite behaviors that they do not want.
+ * 5. It adhere to the dependency inversion principle because code that uses IBus do not know about any changes happend inside of the it.
+ *
+ * Another design for fullfiling this requirement is to have a class inheriting from Bus class and adds additional function of changing color based on routes by overriding some super class methods.
+ * This design is bad because it breaks some SOLID principles and causes some problems.
+ * 1. It breaks the single responsibility principle because the subclass is trying to do both the job of the bus class and the job of decorator class.
+ * 2. It breaks the dependency inversion principle because code that uses the subclasses of the Bus class needs to know which subclass to instantiate based on the requirements and the 'new' statement needs to change.
+ * 3. It is not dry because there can be two subclasses using the same behavior can code is duplicated between these two classes.
+ * 4. This design will lead to class explosion as wanted behaviors grow and the combination of wanted behaviors grow. If we have 10 wanted behavioors, we may need to have 2 ^ 10 = 1024 subclasses.
+ *
+ * The most difficult part of the design and implementation of the decorator pattern is to understand the inheritance hierarchy and figure out what methods should be pure virtual, what methods belong to the base class, and what methods belong to decorators
+ * (i.e. figure out the responsibilities of all the classes involved in the decorator pattern) 
+ * 
+ * Tips on how to understand and implement the decorator pattern:
+ * 1. Both decorators and concrete components inherite from components so both of them can be treated as component interface.
+ * 2. Decorators need to have a base class which they can decorate on.
+ * 3. Decorator pattern favors composition over inheritance.
+ * 4. Understand the responsibility of base class and decorators.
+ * 4. Draw the control flow from outside to the inside and back to the outside, and understand the relationships between decorators and base classes.
+ * 5. https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
+ * 6. https://refactoring.guru/design-patterns/decorator
+ * 7. https://www.geeksforgeeks.org/the-decorator-pattern-set-2-introduction-and-design/
  */
 
 #endif  // SRC_MAINPAGE_H_
