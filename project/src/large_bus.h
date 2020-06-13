@@ -1,7 +1,7 @@
 /**
  * @file large_bus.h
  *
- * @copyright 2019 3081 Staff, All rights reserved.
+ * @copyright 2020 Zixuan Zhang, All rights reserved.
  */
 #ifndef SRC_LARGE_BUS_H_
 #define SRC_LARGE_BUS_H_

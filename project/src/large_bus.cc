@@ -1,7 +1,7 @@
 /**
  * @file large_bus.cc
  *
- * @copyright 2019 3081 Staff, All rights reserved.
+ * @copyright 2020 Zixuan Zhang, All rights reserved.
  */
 #include "src/large_bus.h"
 

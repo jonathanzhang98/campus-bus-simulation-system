@@ -1,7 +1,7 @@
 /**
  * @file regular_bus.h
  *
- * @copyright 2019 3081 Staff, All rights reserved.
+ * @copyright 2020 Zixuan Zhang, All rights reserved.
  */
 #ifndef SRC_REGULAR_BUS_H_
 #define SRC_REGULAR_BUS_H_
